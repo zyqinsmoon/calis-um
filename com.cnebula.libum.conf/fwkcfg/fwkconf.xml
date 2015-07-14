@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameworkConfig name="CALIS EasyService Framework Configuration">
+	<!-- 
+	<bundle name="ESRemoteClient">
+		<component name="com.cnebula.es.test.hello.ESHelloRemoteClient"
+			pureClient="false">
+			<service noservice="true"></service>
+			<ref name="hello"
+				remoteBaseURL="es:ws-hassian-http://localhost:8080/easyservice/"
+				local="false" bind="setHelloRef" />
+
+		</component>
+	</bundle>
+	
+	<bundle name="com.cnebula.um.service">
+		<component name="com.cnebula.um.aas.UMAccessControlProvider">
+			<service>
+				<interfaces>
+					<String>com.cnebula.common.security.auth.ILoginValidateService</String>
+					<String>com.cnebula.common.security.auth.IAuthorizationService</String>
+					<String>com.cnebula.common.ejb.manage.ICRUDSupportAccessControlProvider</String>
+				</interfaces>
+				<property name="good" value="test"></property>
+			</service>
+			<ref name="crudService" target="(unit=calisum)"/>
+			<ref name="crudPrivateService" target="(unit=calisum)" />
+			<ref name="i18nService"
+				target="(namespace=com.cnebula.um.aas.UMAccessControlProviderTest)" />
+			<ref name="log" />
+			<ref name="accessControlProviderRegister" />
+			<ref name="setupService" />
+			<ref name="confAdmin" />
+			<ref name="register" />
+		</component>
+	</bundle>
+	 -->
+ <bundle name="com.cnebula.um.service">
+	 <properties>
+			<property name="umunit" value="calisum"></property>
+			<property name="umds" value="java:comp/env/jdbc/calisumDS"></property>
+		</properties>	
+	 </bundle>
+	 <bundle name="com.cnebula.um.service.imp">
+	 	<properties>
+			<property name="umunit" value="calisum"></property>
+			<property name="umds" value="java:comp/env/jdbc/calisumDS"></property>
+		</properties>	
+	 </bundle>
+	 <bundle name="com.cnebula.um.ejb">
+	 	<properties>
+			<property name="umunit" value="calisum"></property>
+			<property name="umds" value="java:comp/env/jdbc/calisumDS"></property>
+		</properties>	
+	 </bundle>
+	 <bundle name="com.cnebula.uas.service">
+	 	<properties>
+			<property name="umunit" value="calisum"></property>
+		</properties>	
+	 </bundle>
+	 <bundle name="com.cnebula.um.client.ui">
+	 	<properties>
+			<property name="umunit" value="calisum"></property>
+		</properties>	
+	 </bundle>
+	<bundle name="com.cnebula.um.client.ui2">
+	 	<properties>
+			<property name="umunit" value="calisum"></property>
+		</properties>	
+	 </bundle>
+	 <bundle name="com.cnebula.common.ejb.manage">
+	 	<properties>
+			<property name="umunit" value="calisum"></property>
+			<property name="umds" value="java:comp/env/jdbc/calisumDS"></property>
+		</properties>	
+	 </bundle>
+	<bundle name="com.cnebula.um.task.syn">
+	 	<properties>
+			<property name="umds" value="java:comp/env/jdbc/calisumDS"></property>
+			<property name="umunit" value="calisum"></property>
+			<property name="managerProxyId" value="um"></property>
+		</properties>	
+	 </bundle>
+	 <bundle name="com.cnebula.um.service.imp.estest">
+	 	<properties>
+			<property name="umds" value="java:comp/env/jdbc/calisumDS"></property>
+			<property name="umunit" value="calisum"></property>
+		</properties>	
+	 </bundle>
+
+	 <bundle name="com.cnebula.common.mail.service">
+	 	<properties>
+			<property name="dmpersistence" value="calisum"></property>
+		</properties>	
+	 </bundle>	 
+
+	 <bundle name="com.cnebula.um.simple.permission.imp">
+	 	<properties>
+			<property name="umunit" value="calisum"></property>
+			<property name="umds" value="java:comp/env/jdbc/calisumDS"></property>
+		</properties>	
+	 </bundle>	 
+
+</FrameworkConfig>

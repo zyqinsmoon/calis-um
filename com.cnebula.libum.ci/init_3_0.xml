@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<project name="init core build enviroment" default="init">
+	
+		<!--导入项目初始化Util脚本-->
+		<import file="init-util_1_0.xml"/>
+	
+		<!--导入由BUILD_PROPERTY_LOCATION指定路径的属性文件的属性-->
+		<property file="${BUILD_PROPERTY_LOCATION}">
+		</property>
+	
+		<property file="preset.properties">
+		</property>
+	
+		<property name="ftp.server" value="192.168.2.212"></property>
+		<property name="ftp.userid" value="anonymous"></property>
+		<property name="ftp.password" value="anonymous"></property>
+		<property name="remote.dist.root" value="/cnebula_dist"></property>
+		
+		<!--注意：在Ant脚本中，一个属性一旦被定义，将不能被覆盖，所以上面三个脚本的优先级依次为：
+		   ${BUILD_PROPERTY_LOCATION}，appms-preset.properties和init-global.properties
+		   init-global.properties一般由CI工具提供，提供了一些最常用的属性的默认值
+		-->
+		<target name="init">
+			<init.local/>
+			<init.target.platform/>
+			<get.remote remote.dir="/cnebula_dist/drivers/" local.dir="drivers"/>
+			<get.ci version="1.0"/>
+			<get.deploy.lib version="1.0"/>
+			<get.bootstrap version="1.0"/>
+			<!--CI依赖的Bundle-->
+			<get.dist.lib.build id="core" buildnumber="53"/>
+			
+			<get.dist.lib.build id="system" buildnumber="45"/>
+			
+			<get.dist.lib.build id="remote" buildnumber="73"/>
+			
+			<get.dist.lib.build id="db" buildnumber="10"/>
+			
+			<get.dist.lib.build id="ejb" buildnumber="29"/>
+			
+			<get.dist.lib.build id="webapp" buildnumber="21"/>
+			
+			<get.lib.bundle.build id="ci" buildnumber="29" bundle.jar.name="com.cnebula.junit_1.0.0.jar"/>
+			<get.lib.bundle.build id="ci" buildnumber="29" bundle.jar.name="com.cnebula.platform.admin_1.0.0.jar"/>
+			
+			<get.thirdparty.bundle bundle.name="cobertura" version="1.9.2"/>
+			<!--
+			-->
+			<inject.thirdparty/>
+					
+		</target>
+	
+	</project>

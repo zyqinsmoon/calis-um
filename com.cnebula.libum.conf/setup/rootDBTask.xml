@@ -1,0 +1,5 @@
+<SqlTask datasource="java:/comp/env/jdbc/calisumDS">
+	<dbTransaction  stmtEndTag="newline" name="initDB" autoCommit="false" except="select 1 from SEQ_EntityIdGenerator" 
+		srclist="setup/createAll.sql;setup/initData.sql;setup/ci-support.sql;setup/initUM.sql">
+	</dbTransaction>
+</SqlTask>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<i18nMultiNamespace>
+  <singleNamespace namespace="com.cnebula.um.client.ui">
+  	<item key="title" defaultLang="zh_CN">
+      <locale value="Reader Manage System" lang="en_US"/>
+      <locale value="读者管理系统" lang="zh_CN"/>
+  	</item>
+  	<item key="headerBarBackground/image" defaultLang="zh_CN">
+      <locale value="/nt-background-org.jpg" lang="zh_CN"/>
+  	</item>
+    <item key="library_name" defaultLang="zh_CN">
+      <locale value="*** Library" lang="en_US"/>
+      <locale value="***图书馆" lang="zh_CN"/>
+  	</item>
+   <item key="submit_button_letter" defaultLang="zh_CN">
+      <locale value="submit" lang="en_US"/>
+      <locale value="提交" lang="zh_CN"/>
+  	</item>
+  	<item key="reset_button_letter" defaultLang="zh_CN">
+      <locale value="reset" lang="en_US"/>
+      <locale value="重置" lang="zh_CN"/>
+  	</item>
+  	 <item key="must_input_item" defaultLang="zh_CN">
+      <locale value="* must" lang="en_US"/>
+      <locale value="* 为必填项" lang="zh_CN"/>
+     </item>
+
+  <item key="login_title" defaultLang="zh_CN">
+      <locale value="CALIS Library Reader Manage System" lang="en_US"/>
+      <locale value="CALIS读者管理系统" lang="zh_CN"/>
+  	</item>
+  	<item key="login_name" defaultLang="zh_CN">
+      <locale value="username" lang="en_US"/>
+      <locale value="帐户" lang="zh_CN"/>
+  	</item>
+  	<item key="login_password" defaultLang="zh_CN">
+      <locale value="password" lang="en_US"/>
+      <locale value="密码" lang="zh_CN"/>
+  	</item>
+  	 <item key="login_button_letter" defaultLang="zh_CN">
+      <locale value="login" lang="en_US"/>
+      <locale value="登录" lang="zh_CN"/>
+  	</item>
+  	<item key="register_button_letter" defaultLang="zh_CN">
+      <locale value="regis" lang="en_US"/>
+      <locale value="注册" lang="zh_CN"/>
+  	</item>
+    <item key="login_success" defaultLang="zh_CN">
+      <locale value="login success" lang="en_US"/>
+      <locale value="登录成功" lang="zh_CN"/>
+  	</item>
+  	<item key="login_failure" defaultLang="zh_CN">
+      <locale value="your account or password is wrong" lang="en_US"/>
+      <locale value="帐户或密码错误" lang="zh_CN"/>
+  	</item>
+  	<item key="show_user_infomation" defaultLang="zh_CN">
+      <locale value="watch my infomation" lang="en_US"/>
+      <locale value="查看我的资料" lang="zh_CN"/>
+  	</item>
+  	<item key="user_info_as_follows" defaultLang="zh_CN">
+      <locale value="my info as follows" lang="en_US"/>
+      <locale value="我的信息如下" lang="zh_CN"/>
+    </item>
+    <item key="male_select_item" defaultLang="zh_CN">
+      <locale value="male" lang="en_US"/>
+      <locale value="男" lang="zh_CN"/>
+     </item>
+     <item key="female_select_item" defaultLang="zh_CN">
+      <locale value="female" lang="en_US"/>
+      <locale value="女" lang="zh_CN"/>
+     </item>
+     <item key="card_active_item" defaultLang="zh_CN">
+      <locale value="active" lang="en_US"/>
+      <locale value="激活" lang="zh_CN"/>
+     </item>
+     <item key="card_prohibit_item" defaultLang="zh_CN">
+      <locale value="prohibit" lang="en_US"/>
+      <locale value="停用" lang="zh_CN"/>
+     </item>
+     <item key="card_destroy_item" defaultLang="zh_CN">
+      <locale value="destroy" lang="en_US"/>
+      <locale value="注销" lang="zh_CN"/>
+     </item>
+     <item key="image_not_display" defaultLang="zh_CN">
+      <locale value="user photo can't be right displayed" lang="en_US"/>
+      <locale value="用户头像不能显示" lang="zh_CN"/>
+     </item>
+     <item key="update_info_success" defaultLang="zh_CN">
+      <locale value="modify infomation successfully" lang="en_US"/>
+      <locale value="更改信息成功" lang="zh_CN"/>
+     </item>
+   <item key="modify_user_info" defaultLang="zh_CN">
+      <locale value="modify my infomation" lang="en_US"/>
+      <locale value="修改我的资料" lang="zh_CN"/>
+  	</item>
+  <item key="please_input_info" defaultLang="zh_CN">
+      <locale value="please input your message as follows" lang="en_US"/>
+      <locale value="请输入以下信息" lang="zh_CN"/>
+    </item>
+    <item key="ie_not_support" defaultLang="zh_CN">
+      <locale value="the IE not support this display mode" lang="en_US"/>
+      <locale value="浏览器对预览方式不支持" lang="zh_CN"/>
+     </item>
+     <item key="please_input_old_and_new_password" defaultLang="zh_CN">
+      <locale value="please input your old and new password" lang="en_US"/>
+      <locale value="请输入原密码和新密码" lang="zh_CN"/>
+     </item>
+    <item key="change_password" defaultLang="zh_CN">
+      <locale value="change password" lang="en_US"/>
+      <locale value="修改我的密码" lang="zh_CN"/>
+  	</item>
+    <item key="old_password_letter" defaultLang="zh_CN">
+      <locale value="old password" lang="en_US"/>
+      <locale value="原密码" lang="zh_CN"/>
+     </item>
+     <item key="new_password_letter" defaultLang="zh_CN">
+      <locale value="new password" lang="en_US"/>
+      <locale value="新密码" lang="zh_CN"/>
+     </item>
+     <item key="checked_password_letter" defaultLang="zh_CN">
+      <locale value="checked password" lang="en_US"/>
+      <locale value="确认密码" lang="zh_CN"/>
+     </item>
+     <item key="old_password_wrong" defaultLang="zh_CN">
+      <locale value="old password wrong" lang="en_US"/>
+      <locale value="原密码输入错误" lang="zh_CN"/>
+     </item>
+     <item key="new_password_not_empty" defaultLang="zh_CN">
+      <locale value="new password can't be empty" lang="en_US"/>
+      <locale value="新密码输入不许为空" lang="zh_CN"/>
+     </item>
+     <item key="new_password_not_same" defaultLang="zh_CN">
+      <locale value="new password not identical" lang="en_US"/>
+      <locale value="密码输入不一致" lang="zh_CN"/>
+     </item>
+     <item key="password_modify_success" defaultLang="zh_CN">
+      <locale value="password changed successfully" lang="en_US"/>
+      <locale value="密码修改成功" lang="zh_CN"/>
+     </item>
+   <item key="register_topic" defaultLang="zh_CN">
+      <locale value="register" lang="en_US"/>
+      <locale value="注册" lang="zh_CN"/>
+  	</item>
+  	<item key="remind_user_signal" defaultLang="zh_CN">
+      <locale value="please remember your account and password" lang="en_US"/>
+      <locale value="请记牢您的登录名和密码，如以后需办理图书卡请尽量将以下信息填写完整，以便加快您的办证流程" lang="zh_CN"/>
+    </item>
+    <item key="loginid_have_be_used" defaultLang="zh_CN">
+      <locale value="the login id you input have been used" lang="en_US"/>
+      <locale value="该登录名已经被使用" lang="zh_CN"/>
+    </item>
+    <item key="please_input_signal" defaultLang="zh_CN">
+      <locale value="please input your message as follows" lang="en_US"/>
+      <locale value="请输入以下信息" lang="zh_CN"/>
+    </item>
+    <item key="can_not_null" defaultLang="zh_CN">
+      <locale value="input can not null" lang="en_US"/>
+      <locale value="输入不能为空" lang="zh_CN"/>
+    </item>
+    <item key="error_maxlen_message" defaultLang="zh_CN">
+      <locale value="the maxlen no more than" lang="en_US"/>
+      <locale value="你输入的最大长度不能超过" lang="zh_CN"/>
+    </item>
+    <item key="error_minlen_message" defaultLang="zh_CN">
+      <locale value="the minlen no less than" lang="en_US"/>
+      <locale value="你输入的最小长度不能低于" lang="zh_CN"/>
+    </item>    
+  <item key="passportcard_letter" defaultLang="zh_CN">
+      <locale value="passportcard" lang="en_US"/>
+      <locale value="通行证" lang="zh_CN"/>
+  	</item>
+  	<item key="library_name_simp" defaultLang="zh_CN">
+      <locale value="南图" lang="en_US"/>
+      <locale value="nj_lib" lang="zh_CN"/>
+  	</item>
+  	<item key="quit_letter" defaultLang="zh_CN">
+      <locale value="quit" lang="en_US"/>
+      <locale value="退出" lang="zh_CN"/>
+  	</item>
+  	<item key="welcome_login" defaultLang="zh_CN">
+      <locale value="welcome login in" lang="en_US"/>
+      <locale value="欢迎登入" lang="zh_CN"/>
+  	</item>
+  	<item key="watch_user_roles" defaultLang="zh_CN">
+      <locale value="watch my roles" lang="en_US"/>
+      <locale value="查看我的角色" lang="zh_CN"/>
+  	</item>
+  	<item key="all_of_roles_as_follows" defaultLang="zh_CN">
+      <locale value="all of roles as follows" lang="en_US"/>
+      <locale value="我的所有角色如下" lang="zh_CN"/>
+  	</item>
+  	<item key="show_card" defaultLang="zh_CN">
+      <locale value="watch my card info" lang="en_US"/>
+      <locale value="查看我的图书卡" lang="zh_CN"/>
+  	</item>
+  	<item key="card_info_as_follows" defaultLang="zh_CN">
+      <locale value="card info as follows" lang="en_US"/>
+      <locale value="图书卡信息如下" lang="zh_CN"/>
+  	</item>
+  	<item key="show_additionalId" defaultLang="zh_CN">
+      <locale value="watch my addtionalId" lang="en_US"/>
+      <locale value="查看我的附加标识" lang="zh_CN"/>
+  	</item>
+  	<item key="additionalId_info_as_follows" defaultLang="zh_CN">
+      <locale value="all my addtionalIds as follows" lang="en_US"/>
+      <locale value="我的所有附加标识如下" lang="zh_CN"/>
+  	</item>
+  	<item key="monday" defaultLang="zh_CN">
+      <locale value="Mon" lang="en_US"/>
+      <locale value="一" lang="zh_CN"/>
+  	</item>
+  	<item key="tuesday" defaultLang="zh_CN">
+      <locale value="Tue" lang="en_US"/>
+      <locale value="二" lang="zh_CN"/>
+  	</item>
+   	<item key="wednesday" defaultLang="zh_CN">
+      <locale value="Wed" lang="en_US"/>
+      <locale value="三" lang="zh_CN"/>
+    </item> 
+  	<item key="thursday" defaultLang="zh_CN">
+      <locale value="Thu" lang="en_US"/>
+      <locale value="四" lang="zh_CN"/>
+  	</item>      
+	<item key="friday" defaultLang="zh_CN">
+      <locale value="Fri" lang="en_US"/>
+      <locale value="五" lang="zh_CN"/>
+  	</item>     
+  	<item key="saturday" defaultLang="zh_CN">
+      <locale value="Sat" lang="en_US"/>
+      <locale value="六" lang="zh_CN"/>
+  	</item> 
+	<item key="sunday" defaultLang="zh_CN">
+      <locale value="Sun" lang="en_US"/>
+      <locale value="日" lang="zh_CN"/>
+  	</item>  	
+	<item key="today" defaultLang="zh_CN">
+      <locale value="today" lang="en_US"/>
+      <locale value="今天" lang="zh_CN"/>
+  	</item>  	
+	<item key="premonth" defaultLang="zh_CN">
+      <locale value="pre month" lang="en_US"/>
+      <locale value="上一月" lang="zh_CN"/>
+  	</item>  	
+	<item key="nextmonth" defaultLang="zh_CN">
+      <locale value="next month" lang="en_US"/>
+      <locale value="下一月" lang="zh_CN"/>
+  	</item>  	
+	<item key="selectyear" defaultLang="zh_CN">
+      <locale value="click to select year" lang="en_US"/>
+      <locale value="点击选择年份" lang="zh_CN"/>
+  	</item>  	
+  	<item key="selectmonth" defaultLang="zh_CN">
+      <locale value="click to select month" lang="en_US"/>
+      <locale value="点击选择月份" lang="zh_CN"/>
+  	</item>
+	<item key="hour" defaultLang="zh_CN">
+      <locale value="h" lang="en_US"/>
+      <locale value="点" lang="zh_CN"/>
+  	</item>
+	<item key="minute" defaultLang="zh_CN">
+      <locale value="min" lang="en_US"/>
+      <locale value="分" lang="zh_CN"/>
+  	</item>  	
+	<item key="month" defaultLang="zh_CN">
+      <locale value="Mon" lang="en_US"/>
+      <locale value="月" lang="zh_CN"/>
+  	</item>  	
+  </singleNamespace>
+</i18nMultiNamespace>

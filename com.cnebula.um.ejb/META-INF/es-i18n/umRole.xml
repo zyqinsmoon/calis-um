@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<i18nMultiNamespace>
+	
+	<!-- 角色类型 -->
+	<singleNamespace
+		namespace="com.cnebula.um.ejb.entity.perm.Role.category">
+		<item key="2" defaultLang="zh_CN">
+			<locale value="system(2)" lang="en_US" />
+			<locale value="超级管理员专用(2)" lang="zh_CN" />
+		</item>
+		<item key="1" defaultLang="zh_CN">
+			<locale value="lib staff(1)" lang="en_US" />
+			<locale value="馆员专用(1)" lang="zh_CN" />
+		</item>
+		<item key="0" defaultLang="zh_CN">
+			<locale value="reader(0)" lang="en_US" />
+			<locale value="读者专用(0)" lang="zh_CN" />
+		</item>
+	</singleNamespace>
+	
+</i18nMultiNamespace>

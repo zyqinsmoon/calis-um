@@ -1,0 +1,111 @@
+== CACHE 安装、配置与示例 ==
+#toc
+===1 安装 ===
+# 从cvs上下载com.cnebula.ehcache.provider,这个bundle为ehcache的实现版本
+# ICache和ICacheProvider的接口声明如下：\\
+{{code}}
+public interface ICacheProvider {
+	
+	public ICache addCache(String name, Map properties) throws CacheException;
+	
+	public ICache getCache(String name);
+
+}
+{{/code}}
+{{code}}
+public interface ICache{
+	
+	public void putElement(Object k, Object v) ; 
+	
+	public Object getElement(Object k);
+	
+	public long getSize();
+
+}
+{{/code}}
+
+===2 配置===
+配置有两种方式：静态配置和动态配置。\\
+# 静态配置:在conf下新建CacheConfig.xml文件，文件的模板如下：\\
+{{code}}
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../config/ehcache.xsd">
+    <diskStore path="java.io.tmpdir"/>
+    <cache name="loginNameAndPassword"
+        maxElementsInMemory="500000"
+        eternal="true" 
+        statistics="false" 
+        overflowToDisk="true" /> 
+	<cache name="userInfo"
+        maxElementsInMemory="100000"
+        eternal="false"
+        statistics="false" 
+        overflowToDisk="false" />
+    <defaultCache maxElementsInMemory="10000" eternal="false" timeToIdleSeconds="120" timeToLiveSeconds="120" overflowToDisk="true" maxElementsOnDisk="10000000" diskPersistent="false" diskExpiryThreadIntervalSeconds="120" memoryStoreEvictionPolicy="LRU" />      
+</ehcache>
+
+{{/code}}
+其中，共有两个cache,一个命名为：loginNameAndPassword,另一个命名为userInfo。
+详细的配置项和配置说明请参考:http://www.ehcache.org 。
+# 动态配置:使用程序动态添加一个cache(参考最后的示例)，配置项、默认值如下代码所示：\\
+{{code}}
+public class EhcacheProvider implements ICacheProvider{
+	public static final String CONFIG_NAME="name";
+	public static final String CONFIG_MAXELEMENTS_IN_MEMORY="maxElementsInMemory";
+	public static final String CONFIG_MAXELEMENTS_ON_DISK="maxElementsOnDisk";
+	public static final String CONFIG_ETERNAL="eternal";
+	public static final String CONFIG_OVER_FLOW_TO_DISK="overflowToDisk";
+	public static final String CONFIG_TIME_TO_IDLE_SECONDS="timeToIdleSeconds";
+	public static final String CONFIG_TIME_TO_LIVE_SECONDS="timeToLiveSeconds";
+	public static final String CONFIG_DISK_PERSISTENT="diskPersistent";
+	public static final String CONFIG_DISK_EXPIRY_THREAD_INTERVAL_SECONDS="diskExpiryThreadIntervalSeconds";
+	public static final String CONFIG_DISK_SPOOL_BUFFER_SIZE_MB="diskSpoolBufferSizeMB";
+	public static final String CONFIG_DISK_ACCESS_STRIPE="diskAccessStripes";
+	public static final String CONFIG_MEMORYSTORE_EVICTION_POLICY="memoryStoreEvictionPolicy";
+	public static final String CONFIG_CLEAR_ON_FLUSH="clearOnFlush";
+	
+	
+	public static final Map<String,String> defaultConfig=new HashMap<String, String>();
+	
+	static{
+		defaultConfig.put(CONFIG_MAXELEMENTS_IN_MEMORY, "10000");
+		defaultConfig.put(CONFIG_MAXELEMENTS_ON_DISK, "0");
+		defaultConfig.put(CONFIG_ETERNAL, "false");
+		defaultConfig.put(CONFIG_OVER_FLOW_TO_DISK, "false");
+		defaultConfig.put(CONFIG_TIME_TO_IDLE_SECONDS, "0");
+		defaultConfig.put(CONFIG_TIME_TO_LIVE_SECONDS, "0");
+		defaultConfig.put(CONFIG_DISK_PERSISTENT, "false");
+		defaultConfig.put(CONFIG_DISK_EXPIRY_THREAD_INTERVAL_SECONDS, "120");
+		defaultConfig.put(CONFIG_DISK_SPOOL_BUFFER_SIZE_MB, "30");
+		defaultConfig.put(CONFIG_DISK_ACCESS_STRIPE, "1");
+		defaultConfig.put(CONFIG_MEMORYSTORE_EVICTION_POLICY, "LRU");
+		defaultConfig.put(CONFIG_CLEAR_ON_FLUSH, "true");
+		
+	}
+	}
+	{{/code}}
+
+===3 示例===
+在easyService下的使用示例如下：
+{{code}}
+@EasyService
+public class TestES {
+	
+	@ESRef
+	protected ICacheProvider cacheProvider;
+	
+	public static final String CACHE_NAME="test";
+	public static final String TEST_KEY="test_key";
+	public static final String TEST_OBJECT="test_object";
+	
+	protected void activate(ComponentContext ctx) {
+		Map<String,String> cacheConfig=new HashMap<String, String>();
+		cacheConfig.put(EhcacheProvider.CONFIG_MAXELEMENTS_IN_MEMORY, "100");
+		ICache userInfoCache=cacheProvider.addCache(CACHE_NAME, cacheConfig);
+		if(userInfoCache!=null){
+			userInfoCache.putElement(TEST_KEY, TEST_OBJECT);
+			System.err.println(userInfoCache.getSize());
+			System.err.println(userInfoCache.getElement(TEST_KEY));
+		}
+	}
+}
+{{/code}}

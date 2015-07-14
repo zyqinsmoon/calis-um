@@ -1,0 +1,1952 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<i18nMultiNamespace >
+ <namespaceList>
+  <singleNamespace namespace="com.cnebula.um.ejb.entity.assistant.MaintainInfo">
+   <items>
+    <item key="lastModTimeStamp" defaultLang="zh_CN">
+     <localeList>
+      <locale value="lastModTimeStamp" lang="en_US"/>
+      <locale value="lastModTimeStamp" lang="zh_CN"/>
+     </localeList>
+    </item>
+    <item key="lastModUserId" defaultLang="zh_CN">
+     <localeList>
+      <locale value="lastModUserId" lang="en_US"/>
+      <locale value="lastModUserId" lang="zh_CN"/>
+     </localeList>
+    </item>
+    <item key="lastModTime" defaultLang="zh_CN">
+     <localeList>
+      <locale value="lastModTime" lang="en_US"/>
+      <locale value="lastModTime" lang="zh_CN"/>
+     </localeList>
+    </item>
+    <item key="description" defaultLang="zh_CN">
+     <localeList>
+      <locale value="description" lang="en_US"/>
+      <locale value="description" lang="zh_CN"/>
+     </localeList>
+    </item>
+    <item key="createdUserId" defaultLang="zh_CN">
+     <localeList>
+      <locale value="createdUserId" lang="en_US"/>
+      <locale value="createdUserId" lang="zh_CN"/>
+     </localeList>
+    </item>
+    <item key="status" defaultLang="zh_CN">
+     <localeList>
+      <locale value="status" lang="en_US"/>
+      <locale value="status" lang="zh_CN"/>
+     </localeList>
+    </item>
+    <item key="createdTimeStamp" defaultLang="zh_CN">
+     <localeList>
+      <locale value="createdTimeStamp" lang="en_US"/>
+      <locale value="createdTimeStamp" lang="zh_CN"/>
+     </localeList>
+    </item>
+    <item key="createdTime" defaultLang="zh_CN">
+     <localeList>
+      <locale value="createdTime" lang="en_US"/>
+      <locale value="createdTime" lang="zh_CN"/>
+     </localeList>
+    </item>
+   </items>
+  </singleNamespace>
+  <!--  
+  <singleNamespace namespace="com.cnebula.um.ejb.entity.spec.SpecBaseInfo" >
+   <items>
+    <item key="editType" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="editType" lang="en_US" />
+      <locale value="editType" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="maintainInfo" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="maintainInfo" lang="en_US" />
+      <locale value="maintainInfo" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="dataType" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="dataType" lang="en_US" />
+      <locale value="dataType" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="dataItems" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="dataItems" lang="en_US" />
+      <locale value="dataItems" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="name" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="name" lang="en_US" />
+      <locale value="name" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="id" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="id" lang="en_US" />
+      <locale value="id" lang="zh_CN" />
+     </localeList>
+    </item>
+   </items>
+  </singleNamespace>
+  <singleNamespace namespace="com.cnebula.um.ejb.entity.spec.SpecDataItem" >
+   <items>
+    <item key="key" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="key" lang="en_US" />
+      <locale value="key" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="showOrder" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="showOrder" lang="en_US" />
+      <locale value="showOrder" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="i18nValues" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="i18nValues" lang="en_US" />
+      <locale value="i18nValues" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="description" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="description" lang="en_US" />
+      <locale value="description" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="defaultLanguage" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="defaultLanguage" lang="en_US" />
+      <locale value="defaultLanguage" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="children" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="children" lang="en_US" />
+      <locale value="children" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="id" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="id" lang="en_US" />
+      <locale value="id" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="parent" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="parent" lang="en_US" />
+      <locale value="parent" lang="zh_CN" />
+     </localeList>
+    </item>
+   </items>
+  </singleNamespace>
+  
+  <singleNamespace namespace="com.cnebula.um.ejb.entity.spec.I18nValue" >
+   <items>
+    <item key="value" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="value" lang="en_US" />
+      <locale value="value" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="lang" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="lang" lang="en_US" />
+      <locale value="lang" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="id" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="id" lang="en_US" />
+      <locale value="id" lang="zh_CN" />
+     </localeList>
+    </item>
+   </items>
+  </singleNamespace>
+  
+  <singleNamespace namespace="com.cnebula.um.ejb.entity.spec.DataType" >
+   <items>
+    <item key="name" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="name" lang="en_US" />
+      <locale value="name" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="schema" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="schema" lang="en_US" />
+      <locale value="schema" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="id" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="id" lang="en_US" />
+      <locale value="id" lang="zh_CN" />
+     </localeList>
+    </item>
+   </items>
+  </singleNamespace>
+  -->
+  <singleNamespace namespace="com.cnebula.common.um.service" >
+   <items>
+    <item key="Application.type" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="type" lang="en_US" />
+      <locale value="类型" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="Employee.id" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="id" lang="en_US" />
+      <locale value="身份证号" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="Application.name" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="name" lang="en_US" />
+      <locale value="名称" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="Employee.name" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="name" lang="en_US" />
+      <locale value="姓名" lang="zh_CN" />
+     </localeList>
+    </item>
+   </items>
+  </singleNamespace>
+  <singleNamespace namespace="com.cnebula.um.ejb.entity.Vender" >
+   <items>
+    <item key="apps" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="apps" lang="en_US" />
+      <locale value="应用系统" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="authCenter" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="authCenter" lang="en_US" />
+      <locale value="认证中心" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="maintainInfo" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="maintainInfo" lang="en_US" />
+      <locale value="维护信息" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="contactors" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="contactors" lang="en_US" />
+      <locale value="联系人" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="codeType" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="codeType" lang="en_US" />
+      <locale value="代码类型" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="ipRanges" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="ipRanges" lang="en_US" />
+      <locale value="IP段" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="type" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="type" lang="en_US" />
+      <locale value="类型" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="province" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="province" lang="en_US" />
+      <locale value="省" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="extAttrs" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="extAttrs" lang="en_US" />
+      <locale value="扩展属性" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="id" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="id" lang="en_US" />
+      <locale value="id" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="code" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="code" lang="en_US" />
+      <locale value="代码" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="abName" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="abName" lang="en_US" />
+      <locale value="抽象名称" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="url" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="url" lang="en_US" />
+      <locale value="url" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="name" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="name" lang="en_US" />
+      <locale value="名称" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="city" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="city" lang="en_US" />
+      <locale value="城市" lang="zh_CN" />
+     </localeList>
+    </item>
+   </items>
+  </singleNamespace>
+  <singleNamespace namespace="com.cnebula.um.ejb.entity.assistant.IPRange" >
+   <items>
+    <item key="maintainInfo" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="maintainInfo" lang="en_US" />
+      <locale value="维护信息" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="ipSegs" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="ipSegs" lang="en_US" />
+      <locale value="IP段" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="name" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="name" lang="en_US" />
+      <locale value="名称" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="id" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="id" lang="en_US" />
+      <locale value="id" lang="zh_CN" />
+     </localeList>
+    </item>
+   </items>
+  </singleNamespace>
+  <singleNamespace namespace="com.cnebula.um.ejb.entity.assign.PermissionSet" >
+   <items>
+    <item key="maintainInfo" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="maintainInfo" lang="en_US" />
+      <locale value="维护信息" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="role" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="role" lang="en_US" />
+      <locale value="角色" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="permissionItems" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="permissionItems" lang="en_US" />
+      <locale value="权限项" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="id" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="id" lang="en_US" />
+      <locale value="id" lang="zh_CN" />
+     </localeList>
+    </item>
+   </items>
+  </singleNamespace>
+  <singleNamespace namespace="com.cnebula.um.ejb.entity.User" >
+   <items>
+    <item key="accountStartDateStamp" defaultLang="zh_CN">
+     <localeList>
+      <locale value="accountStartDateStamp" lang="en_US"/>
+      <locale value="accountStartDateStamp" lang="zh_CN"/>
+     </localeList>
+    </item>
+   	<item key="accountEndDateStamp" defaultLang="zh_CN">
+     <localeList>
+      <locale value="accountEndDateStamp" lang="en_US"/>
+      <locale value="accountEndDateStamp" lang="zh_CN"/>
+     </localeList>
+    </item>
+     <item key="personality" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="personality" lang="en_US" />
+      <locale value="个性化" lang="zh_CN" />
+     </localeList>
+     </item>
+    <item key="phone" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="phone" lang="en_US" />
+      <locale value="电话" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="pwProblem" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="pwProblem" lang="en_US" />
+      <locale value="密码问题" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="maintainInfo" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="maintainInfo" lang="en_US" />
+      <locale value="维护信息" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="org" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="org" lang="en_US" />
+      <locale value="组织" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="position" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="position" lang="en_US" />
+      <locale value="职位" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="extAttrs" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="extAttrs" lang="en_US" />
+      <locale value="扩展属性" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="caIssuer" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="caIssuer" lang="en_US" />
+      <locale value="CA证书发行机构" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="education" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="education" lang="en_US" />
+      <locale value="文化程度" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="fax" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="fax" lang="en_US" />
+      <locale value="传真" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="id" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="id" lang="en_US" />
+      <locale value="id" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="department" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="department" lang="en_US" />
+      <locale value="部门" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="sex" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="sex" lang="en_US" />
+      <locale value="性别" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="postalCode" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="postalCode" lang="en_US" />
+      <locale value="邮政编码" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="accountStartDate" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="accountStartDate" lang="en_US" />
+      <locale value="帐户生效日期" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="ca" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="ca" lang="en_US" />
+      <locale value="CA证书" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="accountEndDate" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="accountEndDate" lang="en_US" />
+      <locale value="帐户失效日期" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="photo" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="photo" lang="en_US" />
+      <locale value="读者照片" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="msgType" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="msgType" lang="en_US" />
+      <locale value="网络消息传输工具类型" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="name" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="name" lang="en_US" />
+      <locale value="名称" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="password" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="password" lang="en_US" />
+      <locale value="密码" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="status" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="status" lang="en_US" />
+      <locale value="用户状态" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="applyForms" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="applyForms" lang="en_US" />
+      <locale value="申请表单" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="msgCode" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="msgCode" lang="en_US" />
+      <locale value="网络消息传输工具号码" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="pwAnswer" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="pwAnswer" lang="en_US" />
+      <locale value="密码答案" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="cards" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="cards" lang="en_US" />
+      <locale value="证卡" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="mailAddr" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="mailAddr" lang="en_US" />
+      <locale value="通信地址" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="accountId" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="accountId" lang="en_US" />
+      <locale value="帐户ID" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="officeAddr" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="officeAddr" lang="en_US" />
+      <locale value="办公地址" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="email" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="email" lang="en_US" />
+      <locale value="电子邮件" lang="zh_CN" />
+     </localeList>
+    </item>
+   </items>
+  </singleNamespace>
+  <singleNamespace namespace="com.cnebula.um.ejb.entity.assistant.Contactor" >
+   <items>
+    <item key="phone" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="phone" lang="en_US" />
+      <locale value="电话" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="maintainInfo" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="maintainInfo" lang="en_US" />
+      <locale value="维护信息" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="position" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="position" lang="en_US" />
+      <locale value="职务、职称" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="absOrg" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="absOrg" lang="en_US" />
+      <locale value="抽象组织" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="msgCode" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="msgCode" lang="en_US" />
+      <locale value="网络消息传输工具号码" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="fax" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="fax" lang="en_US" />
+      <locale value="传真" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="id" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="id" lang="en_US" />
+      <locale value="id" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="department" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="department" lang="en_US" />
+      <locale value="所在部门名称" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="postalCode" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="postalCode" lang="en_US" />
+      <locale value="邮政编码" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="sex" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="sex" lang="en_US" />
+      <locale value="性别" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="mailAddr" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="mailAddr" lang="en_US" />
+      <locale value="通信地址" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="officeAddr" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="officeAddr" lang="en_US" />
+      <locale value="办公地址" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="email" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="email" lang="en_US" />
+      <locale value="电子邮件" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="msgType" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="msgType" lang="en_US" />
+      <locale value="网络消息传输工具类型" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="name" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="name" lang="en_US" />
+      <locale value="名称" lang="zh_CN" />
+     </localeList>
+    </item>
+   </items>
+  </singleNamespace>
+  <singleNamespace namespace="com.cnebula.um.ejb.entity.assign.Policy" >
+   <items>
+    <item key="beginDate" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="beginDate" lang="en_US" />
+      <locale value="有效期开始日期" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="maintainInfo" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="maintainInfo" lang="en_US" />
+      <locale value="维护信息" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="rules" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="rules" lang="en_US" />
+      <locale value="规则" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="enabled" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="enabled" lang="en_US" />
+      <locale value="是否启用" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="endDate" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="endDate" lang="en_US" />
+      <locale value="有效期截止日期" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="name" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="name" lang="en_US" />
+      <locale value="名称" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="id" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="id" lang="en_US" />
+      <locale value="id" lang="zh_CN" />
+     </localeList>
+    </item>
+   </items>
+  </singleNamespace>
+  <singleNamespace namespace="com.cnebula.um.ejb.entity.Application" >
+   <items>
+    <item key="deployIndex" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="deployIndex" lang="en_US" />
+      <locale value="部署实例序号" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="isCenter" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="isCenter" lang="en_US" />
+      <locale value="是否中心系统" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="abName" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="abName" lang="en_US" />
+      <locale value="抽象名称" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="maintainInfo" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="maintainInfo" lang="en_US" />
+      <locale value="维护信息" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="ipRanges" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="ipRanges" lang="en_US" />
+      <locale value="IP范围" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="type" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="type" lang="en_US" />
+      <locale value="类型" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="vender" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="vender" lang="en_US" />
+      <locale value="提供商" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="url" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="url" lang="en_US" />
+      <locale value="url" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="reses" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="reses" lang="en_US" />
+      <locale value="资源" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="extAttrs" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="extAttrs" lang="en_US" />
+      <locale value="扩展属性" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="name" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="name" lang="en_US" />
+      <locale value="名称" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="id" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="id" lang="en_US" />
+      <locale value="id" lang="zh_CN" />
+     </localeList>
+    </item>
+   </items>
+  </singleNamespace>
+  <singleNamespace namespace="com.cnebula.um.ejb.entity.assign.OwnerFilterRule" >
+   <items>
+    <item key="maintainInfo" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="maintainInfo" lang="en_US" />
+      <locale value="维护信息" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="type" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="type" lang="en_US" />
+      <locale value="类型" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="enabled" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="enabled" lang="en_US" />
+      <locale value="是否启用" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="expression" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="expression" lang="en_US" />
+      <locale value="XCQL表达式" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="name" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="name" lang="en_US" />
+      <locale value="名称" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="ruleEffect" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="ruleEffect" lang="en_US" />
+      <locale value="是否允许使用策略的权限" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="id" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="id" lang="en_US" />
+      <locale value="id" lang="zh_CN" />
+     </localeList>
+    </item>
+   </items>
+  </singleNamespace>
+  <singleNamespace namespace="com.cnebula.um.ejb.entity.assistant.ExtAttribute" >
+   <items>
+    <item key="value" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="value" lang="en_US" />
+      <locale value="扩展属性值" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="showName" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="showName" lang="en_US" />
+      <locale value="扩展属性显示名称" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="status" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="status" lang="en_US" />
+      <locale value="扩展属性状态" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="id" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="id" lang="en_US" />
+      <locale value="id" lang="zh_CN" />
+     </localeList>
+    </item>
+   </items>
+  </singleNamespace>
+  
+  <singleNamespace namespace="com.cnebula.um.ejb.entity.AuthCenter" >
+   <items>
+    <item key="maintainInfo" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="maintainInfo" lang="en_US" />
+      <locale value="维护信息" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="abstOrgs" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="abstOrgs" lang="en_US" />
+      <locale value="旗下的机构" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="isCurrent" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="isCurrent" lang="en_US" />
+      <locale value="是否是当前认证系统" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="versionType" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="versionType" lang="en_US" />
+      <locale value="认证系统类型" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="name" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="name" lang="en_US" />
+      <locale value="认证系统名称" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="id" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="id" lang="en_US" />
+      <locale value="认证系统ID" lang="zh_CN" />
+     </localeList>
+    </item>
+   </items>
+  </singleNamespace>
+  <singleNamespace namespace="com.cnebula.um.ejb.entity.Organization" >
+   <items>
+    <item key="subOrgs" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="subOrgs" lang="en_US" />
+      <locale value="下属机构" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="authCenter" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="authCenter" lang="en_US" />
+      <locale value="认证机构" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="contactors" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="contactors" lang="en_US" />
+      <locale value="联系人" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="maintainInfo" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="maintainInfo" lang="en_US" />
+      <locale value="维护信息" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="fatherOrg" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="fatherOrg" lang="en_US" />
+      <locale value="上级组织" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="codeType" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="codeType" lang="en_US" />
+      <locale value="代码类型" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="ipRanges" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="ipRanges" lang="en_US" />
+      <locale value="IP地址段" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="type" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="type" lang="en_US" />
+      <locale value="类型" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="province" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="province" lang="en_US" />
+      <locale value="省" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="extAttrs" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="extAttrs" lang="en_US" />
+      <locale value="额外属性" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="id" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="ID" lang="en_US" />
+      <locale value="机构ID" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="principles" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="principles" lang="en_US" />
+      <locale value="原则" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="code" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="code" lang="en_US" />
+      <locale value="代码" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="abName" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="abName" lang="en_US" />
+      <locale value="抽象名称" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="url" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="url" lang="en_US" />
+      <locale value="机构url" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="name" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="name" lang="en_US" />
+      <locale value="名称" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="city" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="city" lang="en_US" />
+      <locale value="城市" lang="zh_CN" />
+     </localeList>
+    </item>
+   </items>
+  </singleNamespace>
+  <singleNamespace namespace="com.cnebula.um.ejb.entity.assistant.Card" >
+   <items>
+    <item key="code" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="code" lang="en_US" />
+      <locale value="代码" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="maintainInfo" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="maintainInfo" lang="en_US" />
+      <locale value="维护信息" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="startDate" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="startDate" lang="en_US" />
+      <locale value="开始时间" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="principle" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="principle" lang="en_US" />
+      <locale value="规则" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="type" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="type" lang="en_US" />
+      <locale value="类型" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="status" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="status" lang="en_US" />
+      <locale value="状态" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="endDate" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="endDate" lang="en_US" />
+      <locale value="结束日期" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="id" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="id" lang="en_US" />
+      <locale value="证卡id" lang="zh_CN" />
+     </localeList>
+    </item>
+   </items>
+  </singleNamespace>
+  <singleNamespace namespace="com.cnebula.um.ejb.entity.AbstractOrg" >
+   <items>
+    <item key="authCenter" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="authCenter" lang="en_US" />
+      <locale value="认证中心" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="maintainInfo" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="maintainInfo" lang="en_US" />
+      <locale value="维护信息" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="contactors" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="contactors" lang="en_US" />
+      <locale value="联系人" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="codeType" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="codeType" lang="en_US" />
+      <locale value="代码类型" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="type" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="type" lang="en_US" />
+      <locale value="类型" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="ipRanges" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="ipRanges" lang="en_US" />
+      <locale value="IP段" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="province" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="province" lang="en_US" />
+      <locale value="省" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="extAttrs" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="extAttrs" lang="en_US" />
+      <locale value="扩展属性" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="id" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="id" lang="en_US" />
+      <locale value="id" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="code" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="code" lang="en_US" />
+      <locale value="代码" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="abName" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="abName" lang="en_US" />
+      <locale value="抽象名称" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="url" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="url" lang="en_US" />
+      <locale value="url" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="name" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="name" lang="en_US" />
+      <locale value="名称" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="city" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="city" lang="en_US" />
+      <locale value="城市" lang="zh_CN" />
+     </localeList>
+    </item>
+   </items>
+  </singleNamespace>
+  <singleNamespace namespace="com.cnebula.um.ejb.entity.assign.PermissionItem" >
+   <items>
+    <item key="authorizable" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="authorizable" lang="en_US" />
+      <locale value="是否可授权" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="maintainInfo" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="maintainInfo" lang="en_US" />
+      <locale value="维护信息" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="permission" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="permission" lang="en_US" />
+      <locale value="对应权限" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="name" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="name" lang="en_US" />
+      <locale value="权限名称" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="id" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="id" lang="en_US" />
+      <locale value="id" lang="zh_CN" />
+     </localeList>
+    </item>
+   </items>
+  </singleNamespace>
+  
+  <singleNamespace namespace="com.cnebula.ejb.menu.UMMenu" >
+   <items>
+    <item key="add" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="Add" lang="en_US" />
+      <locale value="添加" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="basicSetting" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="basicSetting" lang="en_US" />
+      <locale value="基本设置" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="binderObject" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="binderObject" lang="en_US" />
+      <locale value="绑定对象" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="save" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="save" lang="en_US" />
+      <locale value="保存" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="pageNumber" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="pageNumber" lang="en_US" />
+      <locale value="页码" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="clickSort" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="Click and Sort" lang="en_US" />
+      <locale value="点击排序" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="new" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="New..." lang="en_US" />
+      <locale value="新建" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="editZone" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="editZone" lang="en_US" />
+      <locale value="编辑区域" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="listAll" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="List All" lang="en_US" />
+      <locale value="列出所有" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="total" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="total" lang="en_US" />
+      <locale value="总数" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="Remove" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="Remove" lang="en_US" />
+      <locale value="删除" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="queryCondition" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="queryCondition" lang="en_US" />
+      <locale value="查询条件" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="requiredOption" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="requiredOption" lang="en_US" />
+      <locale value="必填选项" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="name" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="name" lang="en_US" />
+      <locale value="名称" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="cancel" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="cancel" lang="en_US" />
+      <locale value="取消" lang="zh_CN" />
+     </localeList>
+    </item>
+     <item key="submitChoice" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="submit" lang="en_US" />
+      <locale value="提交选择" lang="zh_CN" />
+     </localeList>
+    </item>
+   </items>
+  </singleNamespace>
+  
+  <singleNamespace namespace="com.cnebula.um.ejb.entity.Staff" >
+   <items>
+    <item key="password" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="password" lang="en_US" />
+      <locale value="密码" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="phone" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="phone" lang="en_US" />
+      <locale value="电话" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="maintainInfo" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="maintainInfo" lang="en_US" />
+      <locale value="维护信息" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="org" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="org" lang="en_US" />
+      <locale value="所属机构" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="position" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="position" lang="en_US" />
+      <locale value="职务、职称" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="status" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="status" lang="en_US" />
+      <locale value="用户状态" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="applyForms" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="applyForms" lang="en_US" />
+      <locale value="用户申请表单" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="extAttrs" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="extAttrs" lang="en_US" />
+      <locale value="扩展属性" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="msgCode" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="msgCode" lang="en_US" />
+      <locale value="网络消息传输工具号码" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="fax" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="fax" lang="en_US" />
+      <locale value="传真" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="id" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="id" lang="en_US" />
+      <locale value="id" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="department" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="department" lang="en_US" />
+      <locale value="所在部门名称" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="postalCode" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="postalCode" lang="en_US" />
+      <locale value="邮政编码" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="sex" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="sex" lang="en_US" />
+      <locale value="性别" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="cards" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="cards" lang="en_US" />
+      <locale value="证卡" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="mailAddr" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="mailAddr" lang="en_US" />
+      <locale value="邮件地址" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="accountId" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="accountId" lang="en_US" />
+      <locale value="帐户ID" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="accountStartDate" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="accountStartDate" lang="en_US" />
+      <locale value="帐户生效日期" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="officeAddr" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="officeAddr" lang="en_US" />
+      <locale value="办公地点" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="email" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="email" lang="en_US" />
+      <locale value="电子邮件" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="accountEndDate" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="accountEndDate" lang="en_US" />
+      <locale value="帐户失效日期" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="msgType" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="msgType" lang="en_US" />
+      <locale value="网络消息传输工具类型" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="name" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="name" lang="en_US" />
+      <locale value="名称" lang="zh_CN" />
+     </localeList>
+    </item>
+     <item key="personality" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="personality" lang="en_US" />
+      <locale value="个性化" lang="zh_CN" />
+     </localeList>
+    </item>
+   </items>
+  </singleNamespace>
+  <singleNamespace namespace="com.cnebula.um.ejb.entity.Principle" >
+   <items>
+    <item key="password" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="password" lang="en_US" />
+      <locale value="密码" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="phone" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="phone" lang="en_US" />
+      <locale value="电话" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="maintainInfo" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="maintainInfo" lang="en_US" />
+      <locale value="维护信息" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="org" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="org" lang="en_US" />
+      <locale value="组织" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="position" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="position" lang="en_US" />
+      <locale value="职务、职称" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="status" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="status" lang="en_US" />
+      <locale value="用户状态" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="applyForms" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="applyForms" lang="en_US" />
+      <locale value="申请表" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="extAttrs" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="extAttrs" lang="en_US" />
+      <locale value="扩展属性" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="msgCode" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="msgCode" lang="en_US" />
+      <locale value="网络消息传输工具号码" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="fax" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="fax" lang="en_US" />
+      <locale value="传真" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="id" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="id" lang="en_US" />
+      <locale value="id" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="department" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="department" lang="en_US" />
+      <locale value="部门" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="postalCode" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="postalCode" lang="en_US" />
+      <locale value="邮政编码" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="sex" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="sex" lang="en_US" />
+      <locale value="性别" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="cards" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="cards" lang="en_US" />
+      <locale value="证卡" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="mailAddr" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="mailAddr" lang="en_US" />
+      <locale value="邮件地址" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="accountId" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="accountId" lang="en_US" />
+      <locale value="帐户ID" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="accountStartDate" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="accountStartDate" lang="en_US" />
+      <locale value="帐户生效日期" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="officeAddr" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="officeAddr" lang="en_US" />
+      <locale value="办公地址" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="email" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="email" lang="en_US" />
+      <locale value="电子邮件" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="accountEndDate" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="accountEndDate" lang="en_US" />
+      <locale value="帐户失效日期" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="msgType" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="msgType" lang="en_US" />
+      <locale value="网络消息传输工具类型" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="name" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="name" lang="en_US" />
+      <locale value="名称" lang="zh_CN" />
+     </localeList>
+    </item>
+     <item key="personality" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="personality" lang="en_US" />
+      <locale value="个性化" lang="zh_CN" />
+     </localeList>
+     </item>
+   </items>
+  </singleNamespace>
+  <singleNamespace namespace="com.cnebula.um.ejb.entity.assign.PermissionFilterRule" >
+   <items>
+    <item key="maintainInfo" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="maintainInfo" lang="en_US" />
+      <locale value="维护信息" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="type" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="type" lang="en_US" />
+      <locale value="类型" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="enabled" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="enabled" lang="en_US" />
+      <locale value="是否启用" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="permssSets" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="permssSets" lang="en_US" />
+      <locale value="权限集合" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="expression" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="expression" lang="en_US" />
+      <locale value="XCQL表达式" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="name" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="name" lang="en_US" />
+      <locale value="名称" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="ruleEffect" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="ruleEffect" lang="en_US" />
+      <locale value="是否允许用户使用策略的权限" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="id" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="id" lang="en_US" />
+      <locale value="id" lang="zh_CN" />
+     </localeList>
+    </item>
+   </items>
+  </singleNamespace>
+  <singleNamespace namespace="com.cnebula.um.ejb.entity.Resource" >
+   <items>
+    <item key="maintainInfo" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="maintainInfo" lang="en_US" />
+      <locale value="维护信息" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="permissions" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="permissions" lang="en_US" />
+      <locale value="权限" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="app" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="app" lang="en_US" />
+      <locale value="所属应用系统" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="subReses" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="subReses" lang="en_US" />
+      <locale value="下级资源" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="fatherRes" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="fatherRes" lang="en_US" />
+      <locale value="上级资源" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="extAttrs" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="extAttrs" lang="en_US" />
+      <locale value="扩展属性" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="entityType" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="entityType" lang="en_US" />
+      <locale value="抽象实体资源类型" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="name" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="name" lang="en_US" />
+      <locale value="名称" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="id" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="id" lang="en_US" />
+      <locale value="id" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="entityId" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="entityId" lang="en_US" />
+      <locale value="抽象实体标识" lang="zh_CN" />
+     </localeList>
+    </item>
+   </items>
+  </singleNamespace>
+  <singleNamespace namespace="com.cnebula.um.ejb.entity.assign.Rule" >
+   <items>
+    <item key="maintainInfo" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="maintainInfo" lang="en_US" />
+      <locale value="维护信息" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="type" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="type" lang="en_US" />
+      <locale value="类型" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="enabled" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="enabled" lang="en_US" />
+      <locale value="是否启用" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="expression" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="expression" lang="en_US" />
+      <locale value="XCQL表达式" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="name" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="name" lang="en_US" />
+      <locale value="名称" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="ruleEffect" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="ruleEffect" lang="en_US" />
+      <locale value="是否允许用户使用策略的权限" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="id" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="id" lang="en_US" />
+      <locale value="id" lang="zh_CN" />
+     </localeList>
+    </item>
+   </items>
+  </singleNamespace>
+  <singleNamespace namespace="com.cnebula.um.ejb.entity.assistant.IPSegment" >
+   <items>
+    <item key="iPEnd3" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="iPEnd3" lang="en_US" />
+      <locale value="终止IP段3" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="iPEnd1" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="iPEnd1" lang="en_US" />
+      <locale value="终止IP段1" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="iPStart3" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="iPStart3" lang="en_US" />
+      <locale value="起始IP段3" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="iPStart4" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="iPStart4" lang="en_US" />
+      <locale value="起始IP段4" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="iPEnd2" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="iPEnd2" lang="en_US" />
+      <locale value="终止IP段2" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="start" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="start" lang="en_US" />
+      <locale value="起始IP段" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="iPStart2" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="iPStart2" lang="en_US" />
+      <locale value="起始IP段2" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="end" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="end" lang="en_US" />
+      <locale value="终止IP段" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="iPEnd4" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="iPEnd4" lang="en_US" />
+      <locale value="终止IP段4" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="iPStart1" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="iPStart1" lang="en_US" />
+      <locale value="起始IP段1" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="id" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="id" lang="en_US" />
+      <locale value="id" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="iprange" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="iprange" lang="en_US" />
+      <locale value="IP范围" lang="zh_CN" />
+     </localeList>
+    </item>
+   </items>
+  </singleNamespace>
+  <singleNamespace namespace="com.cnebula.um.ejb.entity.assign.Role" >
+   <items>
+    <item key="maintainInfo" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="maintainInfo" lang="en_US" />
+      <locale value="维护信息" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="permissionsSet" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="permissionsSet" lang="en_US" />
+      <locale value="权限" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="enabled" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="enabled" lang="en_US" />
+      <locale value="是否启用" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="baseRole" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="baseRole" lang="en_US" />
+      <locale value="是否为基本角色" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="name" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="name" lang="en_US" />
+      <locale value="名称" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="id" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="id" lang="en_US" />
+      <locale value="id" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="sharable" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="sharable" lang="en_US" />
+      <locale value="是否可被共享" lang="zh_CN" />
+     </localeList>
+    </item>
+   </items>
+  </singleNamespace>
+  <singleNamespace namespace="com.cnebula.um.ejb.entity.Permission" >
+   <items>
+    <item key="action" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="action" lang="en_US" />
+      <locale value="权限操作" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="maintainInfo" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="maintainInfo" lang="en_US" />
+      <locale value="维护信息" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="id" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="id" lang="en_US" />
+      <locale value="id" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="res" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="res" lang="en_US" />
+      <locale value="资源" lang="zh_CN" />
+     </localeList>
+    </item>
+   </items>
+  </singleNamespace>
+  <singleNamespace namespace="com.cnebula.common.um.service.Employee" >
+   <items>
+    <item key="name" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="name" lang="en_US" />
+      <locale value="姓名" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="id" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="id" lang="en_US" />
+      <locale value="身份证号" lang="zh_CN" />
+     </localeList>
+    </item>
+   </items>
+  </singleNamespace>
+  <singleNamespace namespace="com.cnebula.um.ejb.entity.assistant.UserApplyForm" >
+   <items>
+    <item key="maintainInfo" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="maintainInfo" lang="en_US" />
+      <locale value="维护信息" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="principle" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="principle" lang="en_US" />
+      <locale value="抽象用户" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="id" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="id" lang="en_US" />
+      <locale value="id" lang="zh_CN" />
+     </localeList>
+    </item>
+   </items>
+  </singleNamespace>
+  <singleNamespace namespace="com.cnebula.um.ejb.entity.Personality" >
+   <items>
+    <item key="numPerPage" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="numPerPage" lang="en_US" />
+      <locale value="每页数目" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="principle" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="principle" lang="en_US" />
+      <locale value="用户" lang="zh_CN" />
+     </localeList>
+    </item>
+    <item key="id" defaultLang="zh_CN" >
+     <localeList>
+      <locale value="id" lang="en_US" />
+      <locale value="id" lang="zh_CN" />
+     </localeList>
+    </item>
+   </items>
+  </singleNamespace>
+ </namespaceList>
+</i18nMultiNamespace>

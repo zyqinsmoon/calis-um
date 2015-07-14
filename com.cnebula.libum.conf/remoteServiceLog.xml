@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RemoteServiceLogConfig>
+	<singleRemoteServiceLogConfig name="com.cnebula.common.security.auth.ILoginService">
+		<singleMethodLogConfig name="loginByNamePassword" />
+		<singleMethodLogConfig name="loginByIp" />
+		<singleMethodLogConfig name="loginByCredential" />
+		<singleMethodLogConfig name="loginByNamePasswordAndGetStatus" />
+		<singleMethodLogConfig name="loginByIpAndGetStatus" />
+		<singleMethodLogConfig name="loginByCredentialAndGetStatus" />
+	</singleRemoteServiceLogConfig>
+</RemoteServiceLogConfig>

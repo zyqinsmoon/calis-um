@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>同步任务使用说明</title>
+<style type="text/css"><!--
+/* @group RESET */
+/* --------------------------------------------------------------
+
+  Reset.css
+  * Resets default browser CSS styles.
+
+  Created by Erik Meyer:
+  * meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
+-------------------------------------------------------------- */
+
+* html {
+  overflow-y: auto;
+}
+html, body {
+    height: 100%;
+}
+--></style>
+<link type="text/css" rel="stylesheet" href="_cssAndJsDir_/zyxwiki.css"/>
+<link type="text/css" rel="stylesheet" href="_cssAndJsDir_/shThemeDefault.css"/>
+<link type="text/css" rel="stylesheet" href="_cssAndJsDir_/shCore.css"/>
+<script type="text/javascript" src="_cssAndJsDir_/shCore.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shCore.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushCpp.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushCSharp.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushCss.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushGroovy.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushJavaFX.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushJScript.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushPerl.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushPhp.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushPlain.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushPowerShell.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushPython.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushRuby.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushScala.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushSql.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushVb.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushXml.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushJava.js"></script>
+<script type="text/javascript">
+SyntaxHighlighter.config.clipboardSwf = '_cssAndJsDir_/clipboard.swf'
+SyntaxHighlighter.all();
+</script>
+  </head>
+  <body>
+
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+<h1><span id="同步任务使用说明">同步任务使用说明</span></h1>
+<p><img src="image/calis.png" alt="" title="" /><br/></p>
+<p><strong>中国高等教育文献保障系统（CALIS）管理中心<br/></strong>
+<strong>Administrative Center for China Academic Library &amp; Information System<br/></strong>
+<strong>版本：V3.0</strong></p>
+
+<hr/>
+
+<div class="xwikiToc"><ul>
+<li class="toc_level_1"><a href="#同步任务使用说明"><span class="toctext">同步任务使用说明</span></a></li>
+<li class="toc_level_2"><a href="#1:名词解释"><span class="toctext">1:名词解释</span></a></li>
+<li class="toc_level_2"><a href="#2:同步任务使用方法"><span class="toctext">2:同步任务使用方法</span></a></li>
+<li class="toc_level_3"><a href="#2.1文件数据源同步任务"><span class="toctext">2.1文件数据源同步任务</span></a></li>
+<li class="toc_level_4"><a href="#2.1.1新建同步任务"><span class="toctext">2.1.1新建同步任务</span></a></li>
+<li class="toc_level_4"><a href="#2.1.3更新同步任务"><span class="toctext">2.1.3更新同步任务</span></a></li>
+<li class="toc_level_4"><a href="#2.1.3删除同步任务"><span class="toctext">2.1.3删除同步任务</span></a></li>
+<li class="toc_level_4"><a href="#2.1.4开始同步任务"><span class="toctext">2.1.4开始同步任务</span></a></li>
+<li class="toc_level_4"><a href="#2.1.5停止同步任务"><span class="toctext">2.1.5停止同步任务</span></a></li>
+<li class="toc_level_4"><a href="#2.1.6重启同步任务"><span class="toctext">2.1.6重启同步任务</span></a></li>
+<li class="toc_level_4"><a href="#2.1.7强制停止同步任务"><span class="toctext">2.1.7强制停止同步任务</span></a></li>
+<li class="toc_level_4"><a href="#2.1.8任务日志"><span class="toctext">2.1.8任务日志</span></a></li>
+<li class="toc_level_2"><a href="#3:附录：文件格式规范"><span class="toctext">3:附录：文件格式规范</span></a></li>
+<li class="toc_level_3"><a href="#3.1文件夹结构规则"><span class="toctext">3.1文件夹结构规则</span></a></li>
+<li class="toc_level_3"><a href="#3.2文件规则"><span class="toctext">3.2文件规则</span></a></li>
+<li class="toc_level_3"><a href="#3.3数据格式"><span class="toctext">3.3数据格式</span></a></li>
+<li class="toc_level_3"><a href="#3.4示例"><span class="toctext">3.4示例</span></a></li>
+<li class="toc_level_3"><a href="#3.5其他说明"><span class="toctext">3.5其他说明</span></a></li>
+</ul>
+</div>
+
+<h2><span id="1:名词解释">1:名词解释</span></h2>
+<ul><li><strong>同步任务</strong>：一个同步任务为一个在指定运行时间段内，以指定运行时间间隔来多次运行的程序（同步任务程序）。
+它把其他系统的用户数据同步到本系统中来。
+例如：运行时间段为：05：00--07：00，指定运行时间间隔为：3600秒，现在时间为01：00.
+则同步任务程序会在05：00，06：00，07：00运行，共三次。</li>
+<li><strong>同步任务程序</strong>：具体执行把其他系统的用户数据同步到本系统的程序（系统进程），它在同步任务中以指定时间间隔来运行。</li>
+<li><strong>文件数据源同步任务</strong>：是指需要同步的用户数据的载体为文件，但该文件的命名、格式和存放位置是要符合规范的，具体规范详见<a href="#附录3:文件格式规范" rel="nofollow">附录3:文件格式规范</a></li>
+<li><strong>任务日志</strong>：是指在同步任务运行的过程中所产生的信息，通过它，可以了解一个同步任务的运行状态及结果。</li>
+<li><strong>新建同步任务</strong>：是指在服务器端建立一个同步任务。</li>
+<li><strong>密码策略</strong>：是指用哪些信息作为为密码，默认为原始密码，即：用户所在原有系统中使用的密码。</li>
+<li><strong>密码方案</strong>：本系统一共支持4种密码方案，第一种是原始密码，即使用用户在原有系统中的密码，但必须为明文；
+第二种是使用证件号码的后六位作为密码；第三种是使用姓名+生日作为密码；
+第四种是使用邮箱找回密码。密码方案可由管理员在创建同步任务时指定。</li>
+<li><strong>默认有效期（月）</strong>：如果在用户数据中，没有指定该用户的有效截止日期，则该用户的有效截止日期为该用户在本系统的创建时间+默认有效期。
+例如：创建时间为2009年2月3日，默认有效期为12，则该用户的有效截止日期为2010年2月3日。</li>
+<li><strong>更新同步任务</strong>：改变一个已经存在的同步任务的配置信息，如果该任务的同步任务程序正在运行，则无法保存，请等待其运行完毕或则强制停止后，方可保存。可改变的配置信息如：运行时间段、是否启用等。</li>
+<li><strong>删除同步任务</strong>：删除一个已经存在的同步任务，相应的任务日志也将被删除。但不删除该任务的数据源数据（文本文件）、已经同步的用户数据，如果该任务的同步任务程序正在运行，则无法删除，请等待其运行完毕或则强制停止后，方可删除。</li>
+<li><strong>开始同步任务</strong>：在同步任务程序下次运行之前，马上运行一次同步任务程序。如果该任务的同步任务程序正在运行，则无法开始，请等待其运行完毕或则强制停止后，方可开始。</li>
+<li><strong>停止同步任务</strong>：停止一个同步任务，使其在下次服务端重启之前不在运行。如果该任务的同步任务程序正在运行，则无法停止，请等待其运行完毕或则强制停止后，方可停止。
+如想在服务端重启之后，该任务也不运行，则应停用该任务（参考更新同步任务），或删除该任务。</li>
+<li><strong>重启同步任务</strong>：即先停止，再开始。</li>
+<li><strong>强制停止同步任务</strong>：是停止同步任务的增强功能，即：即使同步任务程序正在运行，也能将其强制停止.<br/></li></ul>
+<table border='1'><tr><td colspan="2"><img src="image/warning.png " alt="warning.png" title="warning.png" /><strong>强制停止并不保证用户数据的一致性和正确性，请慎用之！</strong><br/></td></tr>
+</table>
+<h2><span id="2:同步任务使用方法">2:同步任务使用方法</span></h2>
+<h3><span id="2.1文件数据源同步任务">2.1文件数据源同步任务</span></h3>
+<p>登陆管理端以后，选择左侧树形目录中的“数据同步管理器”节点下的“文件数据源同步任务”菜单，<br/>
+就会打开“文件数据源同步任务”窗口,如图：<br/>
+<img src="image/DataSynForm.bmp " alt="DataSynForm.bmp" title="DataSynForm.bmp" /><br/>
+工具栏上的按钮与显示数据中的表格右键菜单功能一致<br/>
+<img src="image/DataSynContextMenu.bmp " alt="DataSynContextMenu.bmp" title="DataSynContextMenu.bmp" /><br/>
+具体菜单内容含义请参加名词解释<a href="#1:名词解释" rel="nofollow">1:名词解释</a></p>
+<h4><span id="2.1.1新建同步任务">2.1.1新建同步任务</span></h4>
+<p>选择工具栏上的按钮<img src="image/add.bmp" alt="" title="" />或者选择右键菜单<img src="image/radd.bmp" alt="" title="" />，即可打开新建任务窗口<br/>
+<img src="image/new.jpg" alt="" title="" /><br/>填写好各项内容保存以后，就完成了一个同步任务的创建。</p>
+<h4><span id="2.1.3更新同步任务">2.1.3更新同步任务</span></h4>
+<p>鼠标双击下面任务列表中的一条记录，即可打开任务修改窗口<br/>
+<img src="image/update.jpg" alt="" title="" /><br/>,修改以后点击保存按钮即可。</p>
+<h4><span id="2.1.3删除同步任务">2.1.3删除同步任务</span></h4>
+<p>选中任务列表中的一条数据，点击工具栏中的删除按钮<img src="image/delete.bmp" alt="" title="" />或者右键菜单的<img src="image/rdelete.bmp" alt="" title="" />即可。</p>
+<h4><span id="2.1.4开始同步任务">2.1.4开始同步任务</span></h4>
+<p>选中任务列表中的一条数据，点击工具栏中的开始<img src="image/start.bmp" alt="" title="" />或者右键菜单的<img src="image/rstart.bmp" alt="" title="" /></p>
+<h4><span id="2.1.5停止同步任务">2.1.5停止同步任务</span></h4>
+<p>选中任务列表中的一条数据，点击工具栏中的开始<img src="image/stop.bmp" alt="" title="" />或者右键菜单的<img src="image/rstop.bmp" alt="" title="" /></p>
+<h4><span id="2.1.6重启同步任务">2.1.6重启同步任务</span></h4>
+<p>选中任务列表中的一条数据，点击工具栏中的开始<img src="image/restart.bmp" alt="" title="" />或者右键菜单的<img src="image/rrestart.bmp" alt="" title="" /></p>
+<h4><span id="2.1.7强制停止同步任务">2.1.7强制停止同步任务</span></h4>
+<p>选中任务列表中的一条数据，点击工具栏中的开始<img src="image/forcestop.bmp" alt="" title="" />或者右键菜单的<img src="image/rforcestop.bmp" alt="" title="" /></p>
+<h4><span id="2.1.8任务日志">2.1.8任务日志</span></h4>
+<p>登陆管理端以后，选择左侧树形目录中的“数据同步管理器”节点下的“任务日志”菜单，<br/>
+就会打开“任务日志”窗口,如图：<br/>
+<img src="image/tasklog.jpg" alt="" title="" /><br/>
+双击日志列表中的一条日志，就会显示出这条日志的详细内容<br/>
+如果日志过多，则可以在窗口上部的查询区域输入查询条件，查询需要的日志，如图：<br/>
+<img src="image/searchlog.jpg" alt="" title="" /><br/></p>
+<h2><span id="3:附录：文件格式规范">3:附录：文件格式规范</span></h2>
+<h3><span id="3.1文件夹结构规则">3.1文件夹结构规则</span></h3>
+<p>这里的文件夹特指用于存放同步数据的文件夹，用于把该文件夹下的相关文件中的数据<br/>
+同步到本系统中。该文件夹下设若干个子文件夹分别对应各个馆数据，文件夹的名字为馆代码！<br/>
+每个馆文件夹下又可以有若干个自己馆的子文件夹。<br/>
+例如：有两个馆需要同步，一个为北京大学，馆代码为：pku,有2个任务子目录，分别是subFolder1和subFolder2,<br/>
+一个为清华大学,馆代码为：tsinghua,有一个子目录subFolder，根文件夹为Datasyn,则相应的目录结构如下所示:<br/></p>
+<table border='1'><tr><td colspan="2"><img src="image/folder.bmp " alt="folder" title="folder" /><br/></td></tr>
+</table>
+<h3><span id="3.2文件规则">3.2文件规则</span></h3>
+<p>文件格式为TXT，编码为UTF-8，文件名必须是“${orgcode}@${date}”，其中${orgcode}<br/>
+是馆代码，${date}是该文件中记录的时间戳最大值,否则将会导致系统的时间戳大于文件的时间戳的错误。<br/>
+单个文件的大小上限为10MB,大于10MB不予导入<br/>
+例如：北京大学,要导入的数据为2009年十月十日十时十分十秒之前创建或更新的用户。<br/>
+文件名为：pku@20091010101010.txt<br/></p>
+<h3><span id="3.3数据格式">3.3数据格式</span></h3>
+<p>1.      数据项
+每一行一条记录， 各列以TAB键（&quot;\t&quot;）分隔，没有数据的列用 &quot;null&quot;填充,如不符合规范，将不予导入。依次的列为：<br/></p>
+<ul><li>登录密码   <br/>
+可以为空（null）。如果密码为加密密码或不使用原始密码方案。</li>
+<li>校园卡/图书证号  <br/>
+不能为空（null）。否则该条记录不能导入。<br/>
+注意：在一个馆内，请确保校园卡/图书证号的唯一性。</li>
+<li>证件号码<br/>
+可以为空（null）。但如要使用第二种密码方案（即证件号码后六位做为密码），此处不能为空（null）。<br/>
+注意：在一个馆内，请确保证件号码的唯一性。</li>
+<li>证件类型<br/>
+可以为空（null）。但如果证件号码不为空，则此处不能为空（null）。<br/>
+取值必须是数字，预置的类型如下：</li></ul>
+<table border='1'><tr><th>含义</th><th>类型值</th></tr>
+<tr><td>身份证号</td><td>1</td></tr>
+<tr><td>士官证号</td><td>2</td></tr>
+<tr><td>护照号</td><td>3</td></tr>
+<tr><td>工作证号</td><td>4</td></tr>
+<tr><td>其他号码</td><td>6</td></tr>
+</table>
+<p>如需新增类型，请找到配置文件夹（conf目录）下的es-i18n下的umentity-uas.xml,找到<br/>
+<div class="code"><pre class="brush:xml">
+	
+&lt;singleNamespace
+		namespace=&quot;com.cnebula.um.ejb.entity.usr.idCardType&quot;&gt;
+		&lt;item key=&quot;1&quot; defaultLang=&quot;zh_CN&quot;&gt;
+			&lt;locale value=&quot;ID Card(1)&quot; lang=&quot;en_US&quot; /&gt;
+			&lt;locale value=&quot;身份证号(1)&quot; lang=&quot;zh_CN&quot; /&gt;
+		&lt;/item&gt;
+
+		&lt;item key=&quot;2&quot; defaultLang=&quot;zh_CN&quot;&gt;
+			&lt;locale value=&quot;Officer Card(2)&quot; lang=&quot;en_US&quot; /&gt;
+			&lt;locale value=&quot;士官证号(2)&quot; lang=&quot;zh_CN&quot; /&gt;
+		&lt;/item&gt;
+
+		&lt;item key=&quot;3&quot; defaultLang=&quot;zh_CN&quot;&gt;
+			&lt;locale value=&quot;Passport(3)&quot; lang=&quot;en_US&quot; /&gt;
+			&lt;locale value=&quot;护照号(3)&quot; lang=&quot;zh_CN&quot; /&gt;
+		&lt;/item&gt;
+		&lt;item key=&quot;4&quot; defaultLang=&quot;zh_CN&quot;&gt;
+			&lt;locale value=&quot;Employee&#39;s Card(4)&quot; lang=&quot;en_US&quot; /&gt;
+			&lt;locale value=&quot;工作证号(4)&quot; lang=&quot;zh_CN&quot; /&gt;
+		&lt;/item&gt;
+		&lt;item key=&quot;6&quot; defaultLang=&quot;zh_CN&quot;&gt;
+			&lt;locale value=&quot;Other ID(6)&quot; lang=&quot;en_US&quot; /&gt;
+			&lt;locale value=&quot;其他号码(6)&quot; lang=&quot;zh_CN&quot; /&gt;
+		&lt;/item&gt;
+	&lt;/singleNamespace&gt;
+</pre></div>
+ 
+配置项,其中的&quot;6&quot;为类型值，&quot;其他号码&quot;为含义，请新增并修改为相应数据。<br/>
+注意：类型值必须为500以上！</p>
+<ul><li>证件号验证标识  <br/>
+可以为空（null）。但如果证件号码不为空，则此处不能为空（null），取值为true 或 false。<br/></li></ul>
+<p><strong>只能在 证件号码、证件类型和证件验证标识 都不为空的情况下才能导入证件号码</strong><br/></p>
+<ul><li>邮箱<br/>
+可以为空（null）。该用户的电子邮件地址（email）,但如要使用第四种密码方案（即使用邮箱找回密码），此处不能为空（null）。<br/>
+注意：在一个馆内，请确保邮箱的唯一性。</li>
+<li>邮箱证验证标识<br/>
+可以为空（null）。但如果邮箱不为空，则此处不能为空（null），则此处取值为true 或 false。<br/></li></ul>
+<p><strong>只能在 邮箱和邮箱验证标识 都不为空的情况下才能导入电子邮件</strong><br/></p>
+<ul><li>手机号<br/>
+可以为空（null）。该用户的手机号码（支持GSM网络或３Ｇ网络），可供用户日后登录系统用。</li>
+<li>有效截止日期<br/>
+可以为空（null）。该用户的有效截止日期，格式为&quot;yyyy-MM-dd&quot;,例如2012-01-01,表示2012年一月一日<br/>
+如此处为空（null）,则由管理员在同步时指定默认的有效期。则该用户的有效截止日期为该用户的创建日期+默认有效期。</li>
+<li>姓名<br/>
+不能为空（null）。中英文均可。</li>
+<li>性别<br/>
+不能为空（null）。男为&quot;m&quot;，女为&quot;f&quot;,必取二者之一。</li>
+<li>所属学院<br/>
+可以为空（null）。</li>
+<li>所属系<br/>
+可以为空（null）。</li>
+<li>所属专业<br/>
+可以为空（null）。</li>
+<li>用户类型<br/>
+不能为空（null）。取值 必须是数字，预置的类型如下：</li></ul>
+<table border='1'><tr><th>含义</th><th>类型值</th></tr>
+<tr><td>本科生</td><td>1</td></tr>
+<tr><td>研究生</td><td>2</td></tr>
+<tr><td>博士</td><td>3</td></tr>
+<tr><td>教师</td><td>4</td></tr>
+<tr><td>留学生</td><td>5</td></tr>
+<tr><td>成人教育</td><td>6</td></tr>
+<tr><td>校外读者</td><td>7</td></tr>
+<tr><td>其它</td><td>8</td></tr>
+</table>
+<p>如需新增类型，请找到配置文件夹（conf目录）下的es-i18n下的umentity-uas.xml,找到<br/>
+<div class="code"><pre class="brush:xml">
+	
+	&lt;singleNamespace
+		namespace=&quot;com.cnebula.um.ejb.entity.usr.UMPrincipalUserTypes&quot;&gt;
+		&lt;item key=&quot;1&quot; defaultLang=&quot;zh_CN&quot;&gt;
+			&lt;locale value=&quot;Undergraduate(1)&quot; lang=&quot;en_US&quot; /&gt;
+			&lt;locale value=&quot;本科生(1)&quot; lang=&quot;zh_CN&quot; /&gt;
+		&lt;/item&gt;
+		&lt;item key=&quot;2&quot; defaultLang=&quot;zh_CN&quot;&gt;
+			&lt;locale value=&quot;Master(2)&quot; lang=&quot;en_US&quot; /&gt;
+			&lt;locale value=&quot;研究生(2)&quot; lang=&quot;zh_CN&quot; /&gt;
+		&lt;/item&gt;
+		&lt;item key=&quot;3&quot; defaultLang=&quot;zh_CN&quot;&gt;
+			&lt;locale value=&quot;Doctor(3)&quot; lang=&quot;en_US&quot; /&gt;
+			&lt;locale value=&quot;博士(3)&quot; lang=&quot;zh_CN&quot; /&gt;
+		&lt;/item&gt;
+		&lt;item key=&quot;4&quot; defaultLang=&quot;zh_CN&quot;&gt;
+			&lt;locale value=&quot;Teacher(4)&quot; lang=&quot;en_US&quot; /&gt;
+			&lt;locale value=&quot;教师(4)&quot; lang=&quot;zh_CN&quot; /&gt;
+		&lt;/item&gt;
+		&lt;item key=&quot;5&quot; defaultLang=&quot;zh_CN&quot;&gt;
+			&lt;locale value=&quot;Student Abroad(5)&quot; lang=&quot;en_US&quot; /&gt;
+			&lt;locale value=&quot;留学生(5)&quot; lang=&quot;zh_CN&quot; /&gt;
+		&lt;/item&gt;
+		&lt;item key=&quot;6&quot; defaultLang=&quot;zh_CN&quot;&gt;
+			&lt;locale value=&quot;Adult Education(6)&quot; lang=&quot;en_US&quot; /&gt;
+			&lt;locale value=&quot;成人教育(6)&quot; lang=&quot;zh_CN&quot; /&gt;
+		&lt;/item&gt;
+		&lt;item key=&quot;7&quot; defaultLang=&quot;zh_CN&quot;&gt;
+			&lt;locale value=&quot;External reader(7)&quot; lang=&quot;en_US&quot; /&gt;
+			&lt;locale value=&quot;校外读者(7)&quot; lang=&quot;zh_CN&quot; /&gt;
+		&lt;/item&gt;
+		&lt;item key=&quot;8&quot; defaultLang=&quot;zh_CN&quot;&gt;
+			&lt;locale value=&quot;Others(8)&quot; lang=&quot;en_US&quot; /&gt;
+			&lt;locale value=&quot;其它(8)&quot; lang=&quot;zh_CN&quot; /&gt;
+		&lt;/item&gt;
+	&lt;/singleNamespace&gt;
+</pre></div>
+ 
+配置项,其中的“8”为类型值，“其他”为含义，请新增并修改为相应数据。<br/>
+注意：类型值必须为500以上！</p>
+<ul><li>地址<br/>
+可以为空（null）。该用户的通讯地址。如：北京大学图书馆。</li>
+<li>邮编<br/>
+可以为空（null）。</li>
+<li>本地用户ID<br/>
+可以为空（null）。用户在原有系统库中记录的ID。</li>
+<li>最后修改时间戳<br/>
+可以为空（null）。表示该条记录最后修改的时间，同步程序据此判断是否应更新该条记录，如不提供此信息，则同步程序默认为该条记录所在的文件名中的时间戳。<br/>
+格式为&quot;yyyyMMddhhmmss&quot;,例如：20091012121323，表示2009年10月12日12时13分23秒</li>
+<li>生日(&quot;birthday&quot;)<br/>
+可以为空（null）。格式为&quot;yyyy-MM-dd&quot;,例如2009-01-01,表示2009年一月一日<br/>
+但如要使用第三种密码方案（即使用姓名+生日作为密码），此处不能为空（null）。</li>
+<li>用户状态<br/>
+不能为空（null）。必须是数字，预置的类型如下：</li></ul>
+<table border='1'><tr><th>含义</th><th>类型值</th></tr>
+<tr><td>待审核</td><td>0</td></tr>
+<tr><td>普通</td><td>1</td></tr>
+<tr><td>合法</td><td>2</td></tr>
+<tr><td>注销</td><td>3</td></tr>
+<tr><td>停用</td><td>4</td></tr>
+<tr><td>无效</td><td>5</td></tr>
+</table>
+<h3><span id="3.4示例">3.4示例</span></h3>
+<p>Pku是北京大学的馆代码
+20090809101010表示文件中的时间戳的最大值为：2009年8月9号10点10分10秒.<br/>
+文件路径为：Datasyn\pku\subFolder1 (<strong>注：subFolder1是新建同步任务时指定的子目录</strong>)<br/>
+文件名为：pku@20090809101010.txt<br/>
+文件中的记录为：<br/></p>
+<table border='1'><tr><td>123456	</td><td>pku0000123</td><td>152301198001012030	</td><td>1</td><td>true	</td><td>ww@ss.com	</td><td>true	</td><td>13911112222	</td><td>2020-01-01	</td><td>zhangsan</td><td>m	</td><td>生化	学院</td><td>临床系</td><td>解剖学</td><td>1	</td><td>北京大学生化学院	</td><td>010010	</td><td>local_111123232</td><td>20071010101010	</td><td>1980-01-01</td><td>2</td></tr>
+<tr><td>asddff</td><td>pku0000564</td><td>152301198111112030	</td><td>1</td><td>true	</td><td>wf@ss.com	</td><td>true	</td><td>13910015572	</td><td>2020-01-01	</td><td>lishi</td><td>m	</td><td>计算机学院</td><td>计算机</td><td>计算机应用技术</td><td>1	</td><td>北京大学计算机学院	</td><td>010010	</td><td>local_1114444</td><td>20071010101010	</td><td>1981-11-11</td><td>4</td></tr>
+</table>
+<p>第一条记录的含义为：密码是123456，图书证号是：pku0000123，身份证号是：152301198001012030，身份证验证标识为：true，邮箱为
+ww@ss.com，邮箱验证标识为：true，手机号是：13911112222，账户有效截止日期为：2020-01-01，性别为：男性，所属学院：生化学院，所属系：
+临床系，专业：解刨学，通讯地址：北京大学生化学院，邮编：010010，内部ID：local_111123232，用户最后修改时间戳：20071010101010，生日：1980-01-01，用户状态为合法。</p>
+<table border='1'><tr><td><img src="image/data.bmp " alt=" data" title=" data" /></td><td colspan="2"><br/></td></tr>
+</table>
+<h3><span id="3.5其他说明">3.5其他说明</span></h3>
+<ul><li>导入流程概要<br/></li></ul>
+<ol><li>从库中读取上次同步的记录最新时间戳，记为lastTime（第一次默认为1970年）</li>
+<li>从文件夹中读取那些文件名中的时间戳大于lastTime的文本文件，记为txts</li>
+<li>对txts中的每一条记录，进行合法性检查，如不符合规范，则不予导入</li>
+<li>对txts中的每一条记录，如果库中没有，则新建，如果该条记录的时间戳大于lastTime，则更新</li>
+<li>更新lastTime为所有记录中的时间戳最大值（包括文本文件名中的时间戳），并入库lastTime</li></ol>
+<ul><li>关于日志<br/>
+由于日志会不断的增加，因此，数据库系统管理员应该定期删除库中的日志数据，删除日志的SQL语句参考如下：<br/>
+<div class="code"><pre class="brush:java">
+
+delete from um_syn_task_log g where g.id not in(
+       select max(l.id)　from um_syn_task_log l where l.lasttimestamp in (
+              select max(t.lasttimestamp) from um_syn_task_log t group by t.task_id
+       )
+       group by l.task_id
+)
+</pre></div>
+</li></ul>
+<ul><li>其他说明<br/></li></ul>
+<ol><li>时间戳必须在系统当前时间戳和最后更新时间戳之间</li>
+<li>任务运行的时间间隔最小为3600秒，即一个小时</li>
+<li>如果在同步任务程序正在运行过程中加入了新的数据源（txt文本）,则有可能导入不成功，请查看日志获取详情（查看文件名和文件大小是否和实际相符合）</li>
+<li>校园卡/图书证号用于关联该用户在本地的记录和该用户在原有系统的记录，因此卡号不可更新。</li>
+<li>密码没有位数限制，但建议至少为6位，以方便其在管理端的管理</li>
+<li>同步后的用户所在机构为该用户所在单位的顶级机构，如该机构不存在（即该机构不存在于本系统内），则用户所在机构为空</li>
+<li>新建同步任务时，留意密码方案的选择，这可能会影响到用户的登陆</li>
+<li>证件号更新依据为证件类型，即类型相同就认为是同一条记录</li>
+<li>证件号不能为邮箱或则手机号，如要想同步邮箱或则手机号，请在适当位置添加，请参考<a href="#3.3数据格式" rel="nofollow">3.3数据格式</a></li></ol>
+</div>
+</div>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.calis.edu.cn/UAS/V2/UMPrincipal"
+	xmlns:tns="http://www.calis.edu.cn/UAS/V2/UMPrincipal"
+	elementFormDefault="qualified">
+
+
+	<complexType name="UMPrincipalType">
+
+		<sequence>
+			<element name="Card" type="tns:CardType" minOccurs="0"
+				maxOccurs="1">
+			</element>
+			<element name="additionalIds" type="tns:additionalIdsType"
+				minOccurs="0" maxOccurs="1">
+			</element>
+			<element name="organization" type="tns:OrganizationType"
+				minOccurs="0" maxOccurs="1">
+			</element>
+
+			<element name="extAttributes" type="tns:ExtAttributesType">
+			</element>
+		</sequence>
+		<attribute name="id" type="string" use="required"></attribute>
+		<attribute name="name" type="string"></attribute>
+		<attribute name="valid" type="boolean"></attribute>
+		<attribute name="version" type="int"></attribute>
+		<attribute name="position" type="string"></attribute>
+		<attribute name="status" type="int"></attribute>
+		<attribute name="validDate" type="date"></attribute>
+		<attribute name="invalidDate" type="date"></attribute>
+		<attribute name="sex" type="tns:SexType"></attribute>
+		<attribute name="email" type="string"></attribute>
+		<attribute name="phone" type="string"></attribute>
+		<attribute name="msgType" type="string"></attribute>
+		<attribute name="msgCode" type="string"></attribute>
+		<attribute name="fax" type="string"></attribute>
+		<attribute name="officeAddr" type="string"></attribute>
+		<attribute name="mailAddr" type="string"></attribute>
+		<attribute name="postalCode" type="string"></attribute>
+		<attribute name="birthday" type="date"></attribute>
+		<attribute name="checkOrgIp" type="boolean"></attribute>
+		<attribute name="loginId" type="string"></attribute>
+		<attribute name="userType" type="int"></attribute>
+		<attribute name="institute" type="string"></attribute>
+		<attribute name="homeAddress" type="string"></attribute>
+		<attribute name="ipUser" type="boolean"></attribute>
+		<attribute name="otherPropertity1" type="string"></attribute>
+		<attribute name="otherPropertity2" type="string"></attribute>
+		<attribute name="otherPropertity3" type="string"></attribute>
+	</complexType>
+
+	<complexType name="CardType">
+		<sequence>
+			<element name="principle" type="tns:ReferenceType">
+			</element>
+		</sequence>
+		<attribute name="id" type="string"></attribute>
+		<attribute name="type" type="int"></attribute>
+		<attribute name="code" type="string"></attribute>
+		<attribute name="validDate" type="date"></attribute>
+		<attribute name="invalidDate" type="date"></attribute>
+		<attribute name="version" type="string"></attribute>
+		<attribute name="status" type="string"></attribute>
+	</complexType>
+
+	<complexType name="additionalIdsType">
+		<sequence>
+			<element name="additionalId" type="tns:additionalIdType"
+				minOccurs="0" maxOccurs="unbounded"></element>
+		</sequence>
+	</complexType>
+
+	<complexType name="additionalIdType">
+		<sequence>
+			<element name="owner" type="tns:ReferenceType"></element>
+		</sequence>
+		<attribute name="id" type="string"></attribute>
+		<attribute name="type" type="string"></attribute>
+		<attribute name="valid" type="boolean"></attribute>
+		<attribute name="status" type="int"></attribute>
+		<attribute name="code" type="string"></attribute>
+		<attribute name="validDate" type="date"></attribute>
+		<attribute name="invalidDate" type="date"></attribute>
+		<attribute name="updateType">
+			<simpleType>
+				<restriction base="int">
+					<minInclusive value="0"></minInclusive>
+					<maxInclusive value="4"></maxInclusive>
+				</restriction>
+			</simpleType>
+		</attribute>
+		<attribute name="loginType">
+			<simpleType>
+				<restriction base="int">
+					<minInclusive value="0"></minInclusive>
+					<maxInclusive value="2"></maxInclusive>
+				</restriction>
+			</simpleType>
+		</attribute>
+	</complexType>
+
+	<simpleType name="SexType">
+		<restriction base="string">
+			<enumeration value="m"></enumeration>
+			<enumeration value="f"></enumeration>
+		</restriction>
+	</simpleType>
+
+	<complexType name="OrganizationType"></complexType>
+
+	<complexType name="ReferenceType">
+		<attribute name="ref.id" type="int"></attribute>
+	</complexType>
+
+	<element name="UMPrincipal" type="tns:UMPrincipalType"></element>
+
+	<complexType name="ExtAttributesType">
+		<sequence>
+			<element name="attr" type="tns:ExtAttributeType" minOccurs="0"
+				maxOccurs="unbounded"></element>
+		</sequence>
+	</complexType>
+
+	<complexType name="ExtAttributeType">
+		<attribute name="name" type="string"></attribute>
+		<attribute name="value" type="string"></attribute>
+	</complexType>
+</schema>

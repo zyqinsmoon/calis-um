@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resourceOperationConfig version="0.1">
+	<languageBundle namespace=""/>
+	<resourceList>
+		<resouce type="">
+			<operationList>
+				<operation name="" />
+			</operationList>
+		</resouce>
+	</resourceList>
+</resourceOperationConfig>

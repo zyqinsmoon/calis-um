@@ -1,0 +1,51 @@
+@charset "utf-8";
+/* CSS Document */
+.header{
+	width:100%;
+	overflow:hidden;
+}
+.showUserInfoToolBar{
+	width:100%;
+	padding-top:3px;
+	padding-bottom:3px;
+}
+.mainBox td{
+	height:24px;
+	border-bottom:1px solid #E8F3FD;
+}
+.mainBox th{
+	height:24px;
+	width:15%;
+	text-align:center;	
+	font-family:"宋体", "新宋体", "Times New Roman", Times, serif;
+	font-size:12px;
+	font-weight:normal;
+	color:#40608E;
+	border-bottom:1px solid #E8F3FD;
+}
+.myInfoFrame{
+	overflow:hidden;
+	width:100%;
+}
+.updateInfoFrame{
+	overflow:hidden;
+	width:100%;
+}
+.changePasswordFrame{
+	overflow:hidden;
+	width:100%;
+}
+.myRoleFrame{
+	overflow:hidden;
+	width:100%;
+}
+.myAddIdFrame{
+	overflow:hidden;
+	width:100%;
+}
+.dijitReset .dijitInputField{
+	height: 20px;
+}
+.dijitReset .dijitValidationIcon{
+	height: 20px;
+}

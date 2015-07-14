@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<i18nMultiNamespace>
+	<singleNamespace namespace="com.cnebula.um.aas.UMAccessControlProvider">
+	   <item key="start_service"  defaultLang="zh_CN">
+	      <locale value="CALIS User Manager AAS Started with Config : {0}" lang="en_US" />
+	      <locale value="CALIS用户认证与授权服务启动，配置:{0}" lang="zh_CN" />
+	   </item>
+    </singleNamespace>
+    <singleNamespace namespace="com.cnebula.um.aas.UMAccessControlProviderTest">
+	   <item key="start_service"  defaultLang="zh_CN">
+	      <locale value="testCALIS User Manager AAS Started with Config : {0}" lang="en_US" />
+	      <locale value="testCALIS用户认证与授权服务启动，配置:{0}" lang="zh_CN" />
+	   </item>
+    </singleNamespace>
+    <singleNamespace
+		namespace="javax.security.auth.login.LoginException">
+		<item key="invalid_name_or_password" defaultLang="zh_CN">
+			<locale value="Invalid name , password or IP address"
+				lang="en_US" />
+			<locale value="错误用户名密码或非法的IP地址" lang="zh_CN" />
+		</item>
+		<item key="invalid_ip" defaultLang="zh_CN">
+			<locale value="Invalid IP address"
+				lang="en_US" />
+			<locale value="非法的IP地址" lang="zh_CN" />
+		</item>
+		<item key="invalid_login_object" defaultLang="zh_CN">
+			<locale value="Invalid Object for Credential"
+				lang="en_US" />
+			<locale value="错误的认证凭据，可能您的会话已经超时" lang="zh_CN" />
+		</item>
+	</singleNamespace>
+</i18nMultiNamespace>

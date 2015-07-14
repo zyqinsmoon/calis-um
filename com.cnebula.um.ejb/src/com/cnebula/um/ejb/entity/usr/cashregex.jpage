@@ -1,0 +1,4 @@
+java.util.regex.Pattern p = java.util.regex.Pattern.compile("\\d+(\\.\\d\\d)?");
+System.out.println(p.matcher("1.20").matches());
+System.out.println(p.matcher("1.").matches());
+System.out.println(p.matcher("1").matches());

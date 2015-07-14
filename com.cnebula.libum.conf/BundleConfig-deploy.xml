@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config system="appms" defaultLevel="4">
+ <bundles>
+ 	<bundle name="com.cnebula.um.client.ui" startLevel="-1" autoStart="true"/>
+	<bundle name="com.cnebula.um.ejb" startLevel="-1" autoStart="true"/>
+	<bundle name="com.cnebula.um.service" startLevel="-1" autoStart="true"/>
+	<bundle name="com.cnebula.um.service.imp" startLevel="-1" autoStart="true"/>
+	<bundle name="com.cnebula.um.service.imp.estest" startLevel="-1" autoStart="true"/>
+	<bundle name="com.cnebula.um.simple.permission" startLevel="-1" autoStart="true"/>
+	<bundle name="com.cnebula.um.simple.permission.imp" startLevel="-1" autoStart="true"/>
+	<bundle name="com.cnebula.um.task.syn" startLevel="-1" autoStart="true"/>
+ 
+	<bundle name="com.caucho.hessian" startLevel="-1" autoStart="true"/>
+	<bundle name="com.cnebula.common.conf.impl" startLevel="-1" autoStart="true"/>
+	<bundle name="com.cnebula.common.db" startLevel="-1" autoStart="true"/>
+	<bundle name="com.cnebula.common.dio" startLevel="-1" autoStart="true"/>
+	<bundle name="com.cnebula.common.ejb.impl" startLevel="-1" autoStart="true"/>
+	<bundle name="com.cnebula.common.ejb.lucene" startLevel="-1" autoStart="true"/>
+	<bundle name="com.cnebula.common.ejb.lucene.imp" startLevel="-1" autoStart="true"/>
+	<bundle name="com.cnebula.common.ejb.manage" startLevel="-1" autoStart="true"/>
+	<bundle name="com.cnebula.common.facelets" startLevel="-1" autoStart="true"/>
+	<bundle name="com.cnebula.common.i18n.impl" startLevel="-1" autoStart="true"/>
+	<bundle name="com.cnebula.common.jndi.impl" startLevel="-1" autoStart="true"/>
+	<bundle name="com.cnebula.common.log.impl" startLevel="-1" autoStart="true"/>
+	<bundle name="com.cnebula.common.mail.service" startLevel="-1" autoStart="true"/>
+	<bundle name="com.cnebula.common.management.impl" startLevel="-1" autoStart="true"/>
+	<bundle name="com.cnebula.common.remote.core" startLevel="-1" autoStart="true"/>
+	<bundle name="com.cnebula.common.remote.ejb.io" startLevel="-1" autoStart="true"/>
+	<bundle name="com.cnebula.common.remote.ejb.io" startLevel="-1" autoStart="true"/>
+	<bundle name="com.cnebula.common.remote.ws" startLevel="-1" autoStart="true"/>
+	<bundle name="com.cnebula.common.servlet.impl" startLevel="-1" autoStart="true"/>
+	<bundle name="com.cnebula.common.servlet.jsf.imp" startLevel="-1" autoStart="true"/>
+	<bundle name="com.cnebula.common.servlet.jsp.imp" startLevel="-1" autoStart="true"/>
+	<bundle name="com.cnebula.common.xml.impl" startLevel="-1" autoStart="true"/>
+	<bundle name="com.cnebula.ehcache.provider" startLevel="-1" autoStart="true"/>
+	<bundle name="com.cnebula.limit" startLevel="-1" autoStart="true"/>
+	<bundle name="com.sun.facelets" startLevel="-1" autoStart="true"/>
+	<bundle name="javax.persistence" startLevel="-1" autoStart="true"/>
+	<bundle name="javax.servlet" startLevel="-1" autoStart="true"/>
+	<bundle name="javax.servlet.jsp" startLevel="-1" autoStart="true"/>
+	<bundle name="javax.servlet.jsp.jstl" startLevel="-1" autoStart="true"/>
+	<bundle name="org.apache.common.lang" startLevel="-1" autoStart="true"/>
+	<bundle name="org.apache.commons.collections" startLevel="-1" autoStart="true"/>
+	<bundle name="org.apache.commons.el" startLevel="-1" autoStart="true"/>
+	<bundle name="org.apache.commons.logging" startLevel="-1" autoStart="true"/>
+	<bundle name="org.apache.jasper" startLevel="-1" autoStart="true"/>
+	<bundle name="org.apache.lucene" startLevel="-1" autoStart="true"/>
+	<bundle name="org.apache.myfaces" startLevel="-1" autoStart="true"/>
+	<bundle name="org.apache.myfaces.tomahawk" startLevel="-1" autoStart="true"/>
+	<bundle name="org.eclipse.equinox.event" startLevel="-1" autoStart="true"/>
+	<bundle name="org.eclipse.equinox.http.jetty" startLevel="-1" autoStart="true"/>
+	<bundle name="org.eclipse.equinox.http.servlet" startLevel="-1" autoStart="true"/>
+	<bundle name="org.eclipse.equinox.log" startLevel="-1" autoStart="true"/>
+	<bundle name="org.eclipse.osgi" startLevel="0" autoStart="true"/>
+	<bundle name="org.eclipse.osgi.services" startLevel="-1" autoStart="true"/>
+	<bundle name="org.junit4" startLevel="-1" autoStart="true"/>
+	<bundle name="org.knopflerfish.bundle.component" startLevel="-1" autoStart="true"/>
+	<bundle name="org.mortbay.jetty" startLevel="-1" autoStart="true"/>
+ </bundles>
+</Config>

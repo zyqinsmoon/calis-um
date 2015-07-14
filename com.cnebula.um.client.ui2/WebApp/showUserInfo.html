@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>用户信息</title>
+<style type="text/css">
+@import "js/dojo/dojox/highlight/resources/highlight.css";
+@import "js/dojo/dojox/highlight/resources/pygments/default.css";
+@import "js/dojo/dijit/themes/soria/soria.css";
+</style>
+<link rel=stylesheet href="css/dropDownMenu.css" type="text/css">
+</link>
+<link rel=stylesheet href="css/showUserInfo.css" type="text/css">
+</link>
+<script type="text/javascript"
+        djConfig="parseOnLoad: true, isDebug: false"
+        src="js/dojo/dojo/dojo.js">
+</script>
+<script type="text/javascript" src="js/easy/service.js"></script>
+<script type="text/javascript" src="/easyservice-util/EasyServiceClientFullZ.js"></script>
+
+<script type="text/javascript">
+dojo.addOnLoad(function(){   
+	showMyInfo();
+});   
+</script>
+
+</head>
+<body class="soria">
+<div class="header"><img border="0" src="images/uas.jpg"/></div>
+<!--end header-->
+<div id="showUserInfoToolBar" class="showUserInfoToolBar" dojoType="dijit.Toolbar">
+  <div id="passportCardDropDownButton" class="passportCardDropDownButton" dojoType="dijit.form.DropDownButton" label="我的通行证">
+    <div id="passportCardDialog" dojoType="dijit.TooltipDialog" 
+    	 style="height: 160px; width: 280px; text-align: left; visibility: hidden;">
+      <div class="passportCardTitle"> <span class="calisPassport">CALIS<font color="#FF3300">通行证</font></span> 
+      								  <span class="logout"><a href="#" onclick="logout();return false;">退出</a></span> </div>
+      <!--end passportCardTitle-->
+      <div class="passportCardMain" style="background:transparent url(images/pic001.gif);">
+        <div class="passportWelcomeBox">
+          <div class="loginIcoBox"> <a href="#"><img id="login_icoImg" alt="liyi" src="images/none.png"/></a> </div>
+          <!--end loginIcoBox-->
+          <div class="loginInfoBox">
+            <div class="userInfoBox">
+              <table><tr><td id="userInfoBoxLoginId">[登录名]</td></tr></table>
+            </div>
+            <!--userInfoBox-->
+            <div class="updateBox"><div><a href="#" onclick="showUpdateMyInfoFrame();">修改我的资料</a> | 
+            							<a href="#" onclick="showChangePasswordFrame();">修改密码</a></div></div>
+            <!--end updateBox-->
+          </div>
+          <!--end loginInfoBox-->
+        </div>
+        <!-- end passportWelcomeBox -->
+        <div class="deco">欢迎 </div>
+        <div class="passportLinkBox">
+          <ul>
+            <li><img src="images/goto1.gif" alt="去" /></li>
+            <li><a target="_blank" href="http://www.calis.edu.cn">CALIS主页</a></li>
+            <li>|</li>
+            <li><a target="_blank" href="http://www.google.com">Google</a></li>
+          </ul>
+        </div>
+        <!--end passportLinkBox-->
+      </div>
+      <!--end passportCardMain-->
+    </div>
+    <!--end passportCardDialog-->
+  </div>
+  <!--end passportCardDropDownButton-->
+  <div id="spliter" dojoType="dijit.form.Button" label="|"></div>
+  <!-- end spliter -->
+  <div id="userInfoManageMenu" class="userInfoManageMenu" dojoType="dijit.form.DropDownButton" label="个人信息管理">
+    <div dojoType="dijit.Menu" style="visibility: hidden;">
+      <li style="text-align: left;" dojoType="dijit.MenuItem" onclick="window.location.href='showUserInfo.html'">查看我的资料</li>
+      <li style="text-align: left;" dojoType="dijit.MenuItem" onclick="showUpdateMyInfoFrame();">修改我的资料</li>
+      <li style="text-align: left;" dojoType="dijit.MenuItem" onclick="showChangePasswordFrame()">修改我的密码</li>
+      <li style="text-align: left;" dojoType="dijit.MenuItem" onclick="showMyRoleFrame();">查看我的角色</li>
+      <li style="text-align: left;" dojoType="dijit.MenuItem" onclick="showMyAddId();">我的附加标识</li>
+    </div>
+  </div>
+  <!--end userInfoManage-->
+    <div id="barLogout" class="barLogout" dojoType="dijit.form.Button" onclick="logout();" label="退出"></div>
+</div>
+<!--end showUserInfoToolBar-->
+<div id="mainBox" class="mainBox">
+<form action="" onsubmit="return false;" method="post">
+  <table id="basicInfoTable" width="100%">
+    <tr>
+      <td  colspan="2" align="left" bgcolor="#E8F3FD"><label>基本信息</label></td>
+    </tr>
+    <tr>
+      <th ><label>姓名</label></th>
+      <td id="name"></td>
+    </tr>
+    <tr>
+      <th ><label>性别</label></th>
+      <td id="sex"></td>
+    </tr>
+    <tr>
+      <th ><label>生日</label></th>
+      <td id="birthday"></td>
+    </tr>
+    <tr>
+      <th ><label>职务</label></th>
+      <td id="position"></td>
+    </tr>
+    <tr>
+      <th ><label>单位</label></th>
+      <td id="institute"></td>
+    </tr>
+    <tr>
+      <td  colspan="2" align="left" bgcolor="#E8F3FD"><label>登录信息</label></td>
+    </tr>
+    <tr>
+      <th ><label>登录名</label></th>
+      <td id="loginId"></td>
+    </tr>
+    <tr>
+      <th ><label>状态</label></th>
+      <td id="status"></td>
+    </tr>
+    <tr>
+      <th ><label>生效日期</label></th>
+      <td id="validDate"></td>
+    </tr>
+    <tr>
+      <th ><label>失效日期</label></th>
+      <td id="invalidDate"></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="left" bgcolor="#E8F3FD"><label>联系信息</label>
+      </td>
+    </tr>
+    <tr>
+      <th ><label>电子邮箱</label></th>
+      <td id="email"></td>
+    </tr>
+    <tr>
+      <th ><label>电话(手机)</label></th>
+      <td id="phone"></td>
+    </tr>
+    <tr>
+      <th ><label>即时消息类型</label></th>
+      <td id="msgType"></td>
+    </tr>
+    <tr>
+      <th ><label>即时消息账号</label></th>
+      <td id="msgCode"></td>
+    </tr>
+    <tr>
+      <th ><label>传真</label></th>
+      <td id="fax"></td>
+    </tr>
+    <tr>
+      <th ><label>邮政编码</label></th>
+      <td id="postalCode"></td>
+    </tr>
+    <tr>
+      <th ><label>家庭住址</label></th>
+      <td id="homeAddress"></td>
+    </tr>
+    <tr>
+      <th ><label>办公地点</label></th>
+      <td id="officeAddr"></td>
+    </tr>
+    <tr>
+      <th ><label>通讯地址</label></th>
+      <td id="mailAddr"></td>
+    </tr>
+    <tr>
+      <td  colspan="2" align="left" bgcolor="#E8F3FD"><label>有效证件信息</label>
+      </td>
+    </tr>
+    <tr>
+      <th ><label>有效证件号码</label></th>
+      <td id="addId"></td>
+    </tr>
+  </table>
+  <!--end basicInfoTable-->
+</div>
+  <!--end mainbox-->
+<div id="footer" style="color: #666666; text-align: center; background: #E7EFF6; height: 48px; font-size:12px; padding-top:24px;" > 
+	中国高等教育文献保障系统 管理中心(CALIS)　2005-2009版权所有 2009年7月更新
+</div>
+<!--end footer-->
+</body>
+</html>

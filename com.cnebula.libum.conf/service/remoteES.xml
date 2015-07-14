@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CALIS_Remote_ES>
+	<bundle name="" version=""> 
+	   <serviceList>
+		<easyService name="easylog.ZlogImp" remote="true">
+			<esRefList>
+				<esRef name=""  local="false" remoteBaseURL="rmi://localhost:2099/"/>
+			</esRefList>
+		</easyService>
+	   </serviceList>
+	   <clientList>
+		<esClient name="easylog.ZlogImp">
+			<esRefList>
+				<esRef name=""  local="false" remoteBaseURL="rmi://localhost:2099/"/>
+			</esRefList>
+		</esClient>
+           </clientList>
+	</bundle>
+ </CALIS_Remote_ES>

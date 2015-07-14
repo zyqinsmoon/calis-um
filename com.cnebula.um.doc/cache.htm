@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>cache</title>
+<style type="text/css"><!--
+/* @group RESET */
+/* --------------------------------------------------------------
+
+  Reset.css
+  * Resets default browser CSS styles.
+
+  Created by Erik Meyer:
+  * meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
+-------------------------------------------------------------- */
+
+* html {
+  overflow-y: auto;
+}
+html, body {
+    height: 100%;
+}
+--></style>
+<link type="text/css" rel="stylesheet" href="_cssAndJsDir_/zyxwiki.css"/>
+<link type="text/css" rel="stylesheet" href="_cssAndJsDir_/shThemeDefault.css"/>
+<link type="text/css" rel="stylesheet" href="_cssAndJsDir_/shCore.css"/>
+<script type="text/javascript" src="_cssAndJsDir_/shCore.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shCore.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushCpp.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushCSharp.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushCss.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushGroovy.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushJavaFX.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushJScript.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushPerl.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushPhp.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushPlain.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushPowerShell.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushPython.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushRuby.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushScala.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushSql.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushVb.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushXml.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushJava.js"></script>
+<script type="text/javascript">
+SyntaxHighlighter.config.clipboardSwf = '_cssAndJsDir_/clipboard.swf'
+SyntaxHighlighter.all();
+</script>
+  </head>
+  <body>
+
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+<h2><span id="CACHE_安装、配置与示例">CACHE 安装、配置与示例 </span></h2>
+
+<div class="xwikiToc"><ul>
+<li class="toc_level_2"><a href="#CACHE_安装、配置与示例"><span class="toctext">CACHE 安装、配置与示例</span></a></li>
+<li class="toc_level_3"><a href="#1_安装"><span class="toctext">1 安装</span></a></li>
+<li class="toc_level_3"><a href="#2_配置"><span class="toctext">2 配置</span></a></li>
+<li class="toc_level_3"><a href="#3_示例"><span class="toctext">3 示例</span></a></li>
+</ul>
+</div>
+
+<h3><span id="1_安装">1 安装 </span></h3>
+<ol><li>从cvs上下载com.cnebula.ehcache.provider,这个bundle为ehcache的实现版本</li>
+<li>ICache和ICacheProvider的接口声明如下：<br/>
+<div class="code"><pre class="brush:java">
+
+public interface ICacheProvider {
+
+	public ICache addCache(String name, Map properties) throws CacheException;
+
+	public ICache getCache(String name);
+
+}
+</pre></div>
+
+<div class="code"><pre class="brush:java">
+
+public interface ICache{
+
+	public void putElement(Object k, Object v) ; 
+
+	public Object getElement(Object k);
+
+	public long getSize();
+
+}
+</pre></div>
+</li></ol>
+<h3><span id="2_配置">2 配置</span></h3>
+<p>配置有两种方式：静态配置和动态配置。<br/></p>
+<ol><li>静态配置:在conf下新建CacheConfig.xml文件，文件的模板如下：<br/>
+<div class="code"><pre class="brush:java">
+
+&lt;ehcache xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;../config/ehcache.xsd&quot;&gt;
+    &lt;diskStore path=&quot;java.io.tmpdir&quot;/&gt;
+    &lt;cache name=&quot;loginNameAndPassword&quot;
+        maxElementsInMemory=&quot;500000&quot;
+        eternal=&quot;true&quot; 
+        statistics=&quot;false&quot; 
+        overflowToDisk=&quot;true&quot; /&gt; 
+	&lt;cache name=&quot;userInfo&quot;
+        maxElementsInMemory=&quot;100000&quot;
+        eternal=&quot;false&quot;
+        statistics=&quot;false&quot; 
+        overflowToDisk=&quot;false&quot; /&gt;
+    &lt;defaultCache maxElementsInMemory=&quot;10000&quot; eternal=&quot;false&quot; timeToIdleSeconds=&quot;120&quot; timeToLiveSeconds=&quot;120&quot; overflowToDisk=&quot;true&quot; maxElementsOnDisk=&quot;10000000&quot; diskPersistent=&quot;false&quot; diskExpiryThreadIntervalSeconds=&quot;120&quot; memoryStoreEvictionPolicy=&quot;LRU&quot; /&gt;      
+&lt;/ehcache&gt;
+
+</pre></div>
+
+其中，共有两个cache,一个命名为：loginNameAndPassword,另一个命名为userInfo。
+详细的配置项和配置说明请参考:<a href="http://www.ehcache.org" rel="nofollow">http://www.ehcache.org</a> 。</li>
+<li>动态配置:使用程序动态添加一个cache(参考最后的示例)，配置项、默认值如下代码所示：<br/>
+<div class="code"><pre class="brush:java">
+
+public class EhcacheProvider implements ICacheProvider{
+	public static final String CONFIG_NAME=&quot;name&quot;;
+	public static final String CONFIG_MAXELEMENTS_IN_MEMORY=&quot;maxElementsInMemory&quot;;
+	public static final String CONFIG_MAXELEMENTS_ON_DISK=&quot;maxElementsOnDisk&quot;;
+	public static final String CONFIG_ETERNAL=&quot;eternal&quot;;
+	public static final String CONFIG_OVER_FLOW_TO_DISK=&quot;overflowToDisk&quot;;
+	public static final String CONFIG_TIME_TO_IDLE_SECONDS=&quot;timeToIdleSeconds&quot;;
+	public static final String CONFIG_TIME_TO_LIVE_SECONDS=&quot;timeToLiveSeconds&quot;;
+	public static final String CONFIG_DISK_PERSISTENT=&quot;diskPersistent&quot;;
+	public static final String CONFIG_DISK_EXPIRY_THREAD_INTERVAL_SECONDS=&quot;diskExpiryThreadIntervalSeconds&quot;;
+	public static final String CONFIG_DISK_SPOOL_BUFFER_SIZE_MB=&quot;diskSpoolBufferSizeMB&quot;;
+	public static final String CONFIG_DISK_ACCESS_STRIPE=&quot;diskAccessStripes&quot;;
+	public static final String CONFIG_MEMORYSTORE_EVICTION_POLICY=&quot;memoryStoreEvictionPolicy&quot;;
+	public static final String CONFIG_CLEAR_ON_FLUSH=&quot;clearOnFlush&quot;;
+
+
+	public static final Map&lt;String,String&gt; defaultConfig=new HashMap&lt;String, String&gt;();
+
+	static{
+		defaultConfig.put(CONFIG_MAXELEMENTS_IN_MEMORY, &quot;10000&quot;);
+		defaultConfig.put(CONFIG_MAXELEMENTS_ON_DISK, &quot;0&quot;);
+		defaultConfig.put(CONFIG_ETERNAL, &quot;false&quot;);
+		defaultConfig.put(CONFIG_OVER_FLOW_TO_DISK, &quot;false&quot;);
+		defaultConfig.put(CONFIG_TIME_TO_IDLE_SECONDS, &quot;0&quot;);
+		defaultConfig.put(CONFIG_TIME_TO_LIVE_SECONDS, &quot;0&quot;);
+		defaultConfig.put(CONFIG_DISK_PERSISTENT, &quot;false&quot;);
+		defaultConfig.put(CONFIG_DISK_EXPIRY_THREAD_INTERVAL_SECONDS, &quot;120&quot;);
+		defaultConfig.put(CONFIG_DISK_SPOOL_BUFFER_SIZE_MB, &quot;30&quot;);
+		defaultConfig.put(CONFIG_DISK_ACCESS_STRIPE, &quot;1&quot;);
+		defaultConfig.put(CONFIG_MEMORYSTORE_EVICTION_POLICY, &quot;LRU&quot;);
+		defaultConfig.put(CONFIG_CLEAR_ON_FLUSH, &quot;true&quot;);
+
+	}
+	}
+	</pre></div>
+</li></ol>
+<h3><span id="3_示例">3 示例</span></h3>
+<p>在easyService下的使用示例如下：
+<div class="code"><pre class="brush:java">
+
+@EasyService
+public class TestES {
+
+	@ESRef
+	protected ICacheProvider cacheProvider;
+
+	public static final String CACHE_NAME=&quot;test&quot;;
+	public static final String TEST_KEY=&quot;test_key&quot;;
+	public static final String TEST_OBJECT=&quot;test_object&quot;;
+
+	protected void activate(ComponentContext ctx) {
+		Map&lt;String,String&gt; cacheConfig=new HashMap&lt;String, String&gt;();
+		cacheConfig.put(EhcacheProvider.CONFIG_MAXELEMENTS_IN_MEMORY, &quot;100&quot;);
+		ICache userInfoCache=cacheProvider.addCache(CACHE_NAME, cacheConfig);
+		if(userInfoCache!=null){
+			userInfoCache.putElement(TEST_KEY, TEST_OBJECT);
+			System.err.println(userInfoCache.getSize());
+			System.err.println(userInfoCache.getElement(TEST_KEY));
+		}
+	}
+}
+</pre></div>
+</p>
+</div>
+</div>
+  </body>
+</html>

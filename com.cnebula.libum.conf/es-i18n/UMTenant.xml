@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<i18nMultiNamespace>
+	
+	<singleNamespace
+		namespace="com.cnebula.common.ejb.manage.saas.Tenant.status">
+		<item key="1" defaultLang="zh_CN">
+			<locale value="normal" lang="en_US" />
+			<locale value="正常(1)" lang="zh_CN" />
+		</item>
+		<item key="2" defaultLang="zh_CN">
+			<locale value="stop" lang="en_US" />
+			<locale value="停用(2)" lang="zh_CN" />
+		</item>
+		<item key="4" defaultLang="zh_CN">
+			<locale value="Wait For Open" lang="en_US" />
+			<locale value="待开通(4)" lang="zh_CN" />
+		</item>
+		</singleNamespace>
+</i18nMultiNamespace>

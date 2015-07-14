@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>登录</title>
+<style type="text/css">
+@import "js/dojo/dojox/highlight/resources/highlight.css";
+@import "js/dojo/dojox/highlight/resources/pygments/default.css";
+@import "js/dojo/dijit/themes/soria/soria.css";
+</style>
+<style type="text/css">
+.dijitDialogUnderlay {
+	background: #666666;
+	opacity: 0.8;
+}
+</style>
+<link rel=stylesheet href="css/index.css" type="text/css" />
+<script type="text/javascript"
+        djConfig="parseOnLoad: true, isDebug: false"
+        src="js/dojo/dojo/dojo.js">
+</script>
+<script type="text/javascript" src="js/easy/service.js"></script>
+<script type="text/javascript" src="/easyservice-util/EasyServiceClientFullZ.js"></script>
+</head>
+<body class="soria">
+<table align="center" class="loginForm">
+  <tr>
+    <td align="center"><form action="" onsubmit="return false" method="post">
+        <table id="loginTable"  class="loginTable">
+          <tr>
+            <td id="loginHeaderImageTD" height="70" align="center" valign="top"  colspan="2" style="background: url('images/uas_s.jpg') left top">
+            	<script>
+ 					 document.getElementById("loginHeaderImageTD").style.background = "url('"+loginHeaderImage+"') left top";
+				</script>
+            	<div style="color: black; top: 0; text-align:left;">CALIS通行证</div>
+            </td>
+          </tr>
+          `
+          <tr>
+            <td height="10px" colspan="2"></td>
+          </tr>
+          <tr>
+            <td align="right" width="20%">帐户：</td>
+            <td><input id="loginId" maxlength="25"
+      	  dojoType="dijit.form.ValidationTextBox"
+          required="true" trim="true"
+          promptMessage="必填"/></td>
+          </tr>
+          <tr>
+          	<td></td>
+            <td id="loginIdError"></td>
+          </tr>
+          <tr>
+            <td align="right" width="20%">密码：</td>
+            <td><input id="password" maxlength="25" type="password"
+      	  dojoType="dijit.form.ValidationTextBox"
+          required="true"
+          promptMessage="必填"/></td>
+          </tr>
+          <tr>
+          	<td></td>
+            <td id="passwordError"></td>
+          </tr>
+          <tr>
+            <td><a  href="" onclick="showRestPasswordDialog();return false;"> 忘记密码</a> </td>
+            <td><input dojoType="dijit.form.Button" iconClass="plusIcon" style="float:left; padding-left:20%;"
+      	   	      onclick="return login();" label="登录"/>
+              <input dojoType="dijit.form.Button" iconClass="plusIcon" style="float:right; padding-right:20%;" 
+      			  onclick="window.location = userRegisterURL+'?userLoginURL='+encodeURIComponent(window.location.href)+'&headerImage='+encodeURIComponent(headerImage);" label="注册"/>
+            </td>
+          </tr>
+        </table>
+      </form>
+      </td>
+  </tr>
+</table>
+<div id="ResetPasswordDialog" dojoType="dijit.Dialog" closeNode="hider" title="重置密码" style="position:relative; width: 380px; height: 200px;">
+	<div id="resetPasswordDV" style="height: 180px; visibility: visible;">
+	  <form id="resetPassword" action="" method="post" onsubmit="return false;" style="margin-top: 20px;">
+	    <table>
+	      <tr>
+	        <td align="right" width="30%"><label>登录名：</label></td>
+	        <td><input id="resetLoginId"
+	      	  dojoType="dijit.form.ValidationTextBox"
+	          required="true" trim="true"
+	          promptMessage="必填"/></td>
+	      </tr>
+	      <tr>
+	      	<td></td>
+	        <td id="resetLoginIdError"></td>
+	      </tr>
+	      <tr>
+	        <td align="right" width="30%"><label>电子邮件: </label></td>
+	        <td><input id="resetEmail"
+	      	  dojoType="dijit.form.ValidationTextBox"
+	          required="true" trim="true"
+	          regExp="(\w+@\w+\.\w+)(\.{0,1}\w*)(\.{0,1}\w*)" 
+	          invalidMessage="请务必输入合法的email地址" 
+	          promptMessage="必填"/></td>
+	      </tr>
+	      <tr>
+	      	<td></td>
+	        <td id="resetErrobox"></td>
+	      </tr>
+	      <tr>
+	      	<td colspan="1" width="30%"></td>
+	        <td align="center"><input dojoType="dijit.form.Button" label="提交" onclick="resetPassword();"/>
+	        				   <input style="padding-left: 50px;" dojoType="dijit.form.Button" label="取消" onclick="closeResetPasswordDialog();"/>
+	    	</td>
+	      </tr>
+	    </table>
+	  </form>
+	</div>
+  <div id="jsProgressDV" style="height: 180px; position: absolute; top:40px; left:0; visibility: hidden">
+  	<div style="margin-top: 20px">
+  		<span style="margin-left: 50px;">正在发送邮件</span>
+		<img src="images/loading.gif" alt="" />
+	</div>
+  </div>
+  <div id="resetPasswordResultDIV" style="height: 180px; position: absolute; top:40px; left:0; visibility: hidden">
+  	<dir id="resetPasswordResultMessageBox"></dir><br/>
+  	<input style="padding-left: 150px;" dojoType="dijit.form.Button" label="确定" onclick="closeResetPasswordDialog();"/>
+  </div>
+</body>
+</html>

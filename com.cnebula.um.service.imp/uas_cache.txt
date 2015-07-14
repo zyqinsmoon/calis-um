@@ -1,0 +1,8 @@
+
+select 
+u.birthday, c.code , u.name, o.name,o.code,u.institute,u.education, ad.code, u.validDate, u.invalidDate,u.status, u.email,
+u.mailAddr,u.sex,u.phone,u.userType,u.postalCode
+
+from UM_Principle u, UM_Card c, UM_Organization o, UM_AdditionalId ad 
+
+where c.principle_id(+) = u.id   and o.id(+) = u.ORGANIZATION_id and ad.owner_id(+)=u.id and ad.type=2

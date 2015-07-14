@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+@import "js/dojo/dojox/highlight/resources/highlight.css";
+
+@import "js/dojo/dojox/highlight/resources/pygments/default.css";
+
+@import "js/dojo/dijit/themes/soria/soria.css";
+
+@import "js//dojo/dojo/resources/dojo.css";
+</style>
+<link rel=stylesheet href="css/userForm.css" type="text/css" />
+<script type="text/javascript"
+	djConfig="parseOnLoad: true, isDebug: false" src="js/dojo/dojo/dojo.js">
+</script>
+<script type="text/javascript"
+	src="/easyservice-util/EasyServiceClientFullZ.js"></script>
+<script type="text/javascript" src="js/easy/service.js"></script>
+<script type="text/javascript">
+dojo.addOnLoad(function(){   
+	showMyInfo();
+});
+</script>
+</head>
+<body class="soria">
+<div class="userForm">
+<form action="" onsubmit="return false;" method="post">
+  <table id="basicInfoTable" width="100%">
+    <tr>
+      <td  colspan="2" align="left" bgcolor="#E8F3FD"><label>基本信息</label></td>
+    </tr>
+    <tr>
+      <th ><label>姓名</label></th>
+      <td id="name"></td>
+    </tr>
+    <tr>
+      <th ><label>性别</label></th>
+      <td id="sex"></td>
+    </tr>
+    <tr>
+      <th ><label>生日</label></th>
+      <td id="birthday"></td>
+    </tr>
+    <tr>
+      <th ><label>职务</label></th>
+      <td id="position"></td>
+    </tr>
+    <tr>
+      <th ><label>单位</label></th>
+      <td id="institute"></td>
+    </tr>
+    <tr>
+      <td  colspan="2" align="left" bgcolor="#E8F3FD"><label>登录信息</label></td>
+    </tr>
+    <tr>
+      <th ><label>登录名</label></th>
+      <td id="loginId"></td>
+    </tr>
+    <tr>
+      <th ><label>状态</label></th>
+      <td id="status"></td>
+    </tr>
+    <tr>
+      <th ><label>生效日期</label></th>
+      <td id="validDate"></td>
+    </tr>
+    <tr>
+      <th ><label>失效日期</label></th>
+      <td id="invalidDate"></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="left" bgcolor="#E8F3FD"><label>联系信息</label>
+      </td>
+    </tr>
+    <tr>
+      <th ><label>电子邮箱</label></th>
+      <td id="email"></td>
+    </tr>
+    <tr>
+      <th ><label>电话(手机)</label></th>
+      <td id="phone"></td>
+    </tr>
+    <tr>
+      <th ><label>即时消息类型</label></th>
+      <td id="msgType"></td>
+    </tr>
+    <tr>
+      <th ><label>即时消息账号</label></th>
+      <td id="msgCode"></td>
+    </tr>
+    <tr>
+      <th ><label>传真</label></th>
+      <td id="fax"></td>
+    </tr>
+    <tr>
+      <th ><label>邮政编码</label></th>
+      <td id="postalCode"></td>
+    </tr>
+    <tr>
+      <th ><label>家庭住址</label></th>
+      <td id="homeAddress"></td>
+    </tr>
+    <tr>
+      <th ><label>办公地点</label></th>
+      <td id="officeAddr"></td>
+    </tr>
+    <tr>
+      <th ><label>通讯地址</label></th>
+      <td id="mailAddr"></td>
+    </tr>
+    <tr>
+      <td  colspan="2" align="left" bgcolor="#E8F3FD"><label>有效证件信息</label>
+      </td>
+    </tr>
+    <tr>
+      <th ><label>有效证件号码</label></th>
+      <td id="addId"></td>
+    </tr>
+  </table>
+  <!--end basicInfoTable-->
+</form>
+</div>
+</body>
+</html>

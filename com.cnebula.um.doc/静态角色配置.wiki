@@ -1,0 +1,21 @@
+=静态角色配置=
+
+==使用说明==
+在server.xml中，添加名为“StaticRolesConfig”的配置点。
+如下：
+{{code}}
+	<cfg confPoint="StaticRolesConfig">
+		<StaticRolesConfig>
+			<Role name="静态权限配置" id="f4bb99f3-866d-4fff-b007-014508bcd39c" type="1" version="0" enabled="true" blackRole="false" category="1" description="静态角色配置">
+				<uMUserRules>
+					<UserRule id="081a3f3b-9489-4138-902c-907ec1438e04" type="0" version="0" operations="view" enabled="true" expression="true" entityLimitType="com.cnebula.um.ejb.entity.usr.UMPrincipal" authable="true">
+					</UserRule>
+				</uMUserRules>
+				<uMPermissionRules>
+					<PermissionRule id="14b0c6a7-b0e1-4a64-8842-9df87f021a15" type="0" version="0" operations="update" enabled="true" expression="true" entityLimitType="com.cnebula.um.ejb.entity.perm.PermissionRule" authable="true">
+					</PermissionRule>
+				</uMPermissionRules>
+			</Role>
+		</StaticRolesConfig>
+	</cfg>
+{{/code}}

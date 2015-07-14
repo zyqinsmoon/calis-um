@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+.loginForm{
+	width="100%";
+	height="100%" ;
+	border="0";
+	margin-top: 10%;
+}
+.loginTable{
+	width:400px;
+	height:200px;
+	text-align:center;
+	overflow:hidden;
+	font-size:12px;
+	border: 1px solid #CAD9EA;
+}
+.loginTable td{
+	border:none;
+}
+#loginIdError,#passwordError,#resetLoginIdError,#resetErrobox{
+	height:24px;
+	color:#FF0000;
+}
+#ResetPasswordDialog,#successDia{
+	font-size:14px;
+}
+.dijitReset .dijitInputField{
+	height: 20px;
+}
+.dijitReset .dijitValidationIcon{
+	height: 20px;
+}

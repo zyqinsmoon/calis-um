@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<i18nMultiNamespace>
+	<singleNamespace namespace="com.cnebula.um.entity.TrueFalse">
+		<item key="true" defaultLang="zh_CN">
+			<locale value="TRUE" lang="en_US" />
+			<locale value="是" lang="zh_CN" />
+		</item>
+		<item key="false" defaultLang="zh_CN">
+			<locale value="否" lang="zh_CN" />
+		</item>
+	</singleNamespace>
+	<singleNamespace
+		namespace="com.cnebula.um.ejb.entity.usr.UMPrincipalStatus">
+		<item key="0" defaultLang="zh_CN">
+			<locale value="Wait for Verfying(0)" lang="en_US" />
+			<locale value="待审核(0)" lang="zh_CN" />
+		</item>
+		<item key="1" defaultLang="zh_CN">
+			<locale value="Normal(1)" lang="en_US" />
+			<locale value="普通(1)" lang="zh_CN" />
+		</item>
+		<item key="2" defaultLang="zh_CN">
+			<locale value="Legal(2)" lang="en_US" />
+			<locale value="合法(2)" lang="zh_CN" />
+		</item>
+		<item key="3" defaultLang="zh_CN">
+			<locale value="None(3)" lang="en_US" />
+			<locale value="注销(3)" lang="zh_CN" />
+		</item>
+		<item key="4" defaultLang="zh_CN">
+			<locale value="Stopped(4)" lang="en_US" />
+			<locale value="停用(4)" lang="zh_CN" />
+		</item>
+		<item key="5" defaultLang="zh_CN">
+			<locale value="Invalid(5)" lang="en_US" />
+			<locale value="无效(5)" lang="zh_CN" />
+		</item>
+	</singleNamespace>
+
+	<singleNamespace
+		namespace="com.cnebula.um.ejb.entity.usr.UMPrincipalUserTypes">
+		<item key="1" defaultLang="zh_CN">
+			<locale value="Undergraduate(1)" lang="en_US" />
+			<locale value="本科生(1)" lang="zh_CN" />
+		</item>
+		<item key="2" defaultLang="zh_CN">
+			<locale value="Master(2)" lang="en_US" />
+			<locale value="研究生(2)" lang="zh_CN" />
+		</item>
+		<item key="3" defaultLang="zh_CN">
+			<locale value="Doctor(3)" lang="en_US" />
+			<locale value="博士(3)" lang="zh_CN" />
+		</item>
+		<item key="4" defaultLang="zh_CN">
+			<locale value="Teacher(4)" lang="en_US" />
+			<locale value="教师(4)" lang="zh_CN" />
+		</item>
+		<item key="5" defaultLang="zh_CN">
+			<locale value="Student Abroad(5)" lang="en_US" />
+			<locale value="留学生(5)" lang="zh_CN" />
+		</item>
+		<item key="6" defaultLang="zh_CN">
+			<locale value="Adult Education(6)" lang="en_US" />
+			<locale value="成人教育(6)" lang="zh_CN" />
+		</item>
+		<item key="7" defaultLang="zh_CN">
+			<locale value="External reader(7)" lang="en_US" />
+			<locale value="校外读者(7)" lang="zh_CN" />
+		</item>
+		<item key="8" defaultLang="zh_CN">
+			<locale value="Others(8)" lang="en_US" />
+			<locale value="其它(8)" lang="zh_CN" />
+		</item>
+	</singleNamespace>
+
+	<singleNamespace
+		namespace="com.cnebula.um.ejb.entity.usr.UMPrincipalUserGroup">
+		<item key="0" defaultLang="zh_CN">
+			<locale value="User(0)" lang="en_US" />
+			<locale value="用户(0)" lang="zh_CN" />
+		</item>
+		<item key="1" defaultLang="zh_CN">
+			<locale value="CALIS Center Root Administrator(1)" lang="en_US" />
+			<locale value="CALIS中心超级管理员(1)" lang="zh_CN" />
+		</item>
+		<item key="2" defaultLang="zh_CN">
+			<locale value="CALIS Center Business Administrator(2)" lang="en_US" />
+			<locale value="CALIS中心业务管理员(2)" lang="zh_CN" />
+		</item>
+		<item key="3" defaultLang="zh_CN">
+			<locale value="SaaS Center Root Administrator(3)" lang="en_US" />
+			<locale value="CALIS共享域中心顶级管理员(3)" lang="zh_CN" />
+		</item>
+		<item key="4" defaultLang="zh_CN">
+			<locale value="SaaS Center Business Administrator(4)" lang="en_US" />
+			<locale value="CALIS共享域中心业务管理员(4)" lang="zh_CN" />
+		</item>
+		<item key="5" defaultLang="zh_CN">
+			<locale value=" Member Library Root Administrator(5)" lang="en_US" />
+			<locale value="CALIS普通成员馆顶级管理员(5)" lang="zh_CN" />
+		</item>
+		<item key="6" defaultLang="zh_CN">
+			<locale value=" Member Library Business Administrator(6)" lang="en_US" />
+			<locale value="CALIS普通成员馆业务管理员(6)" lang="zh_CN" />
+		</item>
+	</singleNamespace>
+
+	<singleNamespace
+		namespace="com.cnebula.um.ejb.entity.usr.UMPrincipalEducation">
+		<item key="1" defaultLang="zh_CN">
+			<locale value="Senior High School(1)" lang="en_US" />
+			<locale value="高中(1)" lang="zh_CN" />
+		</item>
+		<item key="2" defaultLang="zh_CN">
+			<locale value="Technical Secondary School(2)" lang="en_US" />
+			<locale value="中专(2)" lang="zh_CN" />
+		</item>
+		<item key="3" defaultLang="zh_CN">
+			<locale value="Junior College(3)" lang="en_US" />
+			<locale value="大专(3)" lang="zh_CN" />
+		</item>
+		<item key="4" defaultLang="zh_CN">
+			<locale value="Undergraduate(4)" lang="en_US" />
+			<locale value="本科(4)" lang="zh_CN" />
+		</item>
+		<item key="5" defaultLang="zh_CN">
+			<locale value="Master(5)" lang="en_US" />
+			<locale value="硕士(5)" lang="zh_CN" />
+		</item>
+		<item key="6" defaultLang="zh_CN">
+			<locale value="Doctor(6)" lang="en_US" />
+			<locale value="博士(6)" lang="zh_CN" />
+		</item>
+		<item key="7" defaultLang="zh_CN">
+			<locale value="Postdoctoral(7)" lang="en_US" />
+			<locale value="博士后(7)" lang="zh_CN" />
+		</item>
+	</singleNamespace>
+
+	<singleNamespace namespace="com.cnebula.um.ejb.entity.usr.cardType">
+		<item key="11" defaultLang="zh_CN">
+			<locale value="Library Card(1)" lang="en_US" />
+			<locale value="图书证号(1)" lang="zh_CN" />
+		</item>
+		<item key="12" defaultLang="zh_CN">
+			<locale value="Campus Card(2)" lang="en_US" />
+			<locale value="校园卡号(2)" lang="zh_CN" />
+		</item>
+	</singleNamespace>
+
+	<singleNamespace
+		namespace="com.cnebula.um.ejb.entity.usr.cardStatus">
+		<item key="0" defaultLang="zh_CN">
+			<locale value="None(0)" lang="en_US" />
+			<locale value="注销(0)" lang="zh_CN" />
+		</item>
+		<item key="1" defaultLang="zh_CN">
+			<locale value="Stopped(1)" lang="en_US" />
+			<locale value="停用(1)" lang="zh_CN" />
+		</item>
+		<item key="2" defaultLang="zh_CN">
+			<locale value="Active(2)" lang="en_US" />
+			<locale value="正常(2)" lang="zh_CN" />
+		</item>
+		<item key="3" defaultLang="zh_CN">
+			<locale value="Reported the Loss(3)" lang="en_US" />
+			<locale value="已挂失(3)" lang="zh_CN" />
+		</item>
+	</singleNamespace>
+
+	<singleNamespace
+		namespace="com.cnebula.um.ejb.entity.usr.idCardType">
+		<item key="1" defaultLang="zh_CN">
+			<locale value="ID Card(1)" lang="en_US" />
+			<locale value="身份证号(1)" lang="zh_CN" />
+		</item>
+	
+		<item key="2" defaultLang="zh_CN">
+			<locale value="Officer Card(2)" lang="en_US" />
+			<locale value="士官证号(2)" lang="zh_CN" />
+		</item>
+
+		<item key="3" defaultLang="zh_CN">
+			<locale value="Passport(3)" lang="en_US" />
+			<locale value="护照号(3)" lang="zh_CN" />
+		</item>
+		<item key="4" defaultLang="zh_CN">
+			<locale value="Employee's Card(4)" lang="en_US" />
+			<locale value="工作证号(4)" lang="zh_CN" />
+		</item>
+		
+		<item key="5" defaultLang="zh_CN">
+			<locale value="Email(5)" lang="en_US" />
+			<locale value="邮箱(5)" lang="zh_CN" />
+		</item>
+		<item key="6" defaultLang="zh_CN">
+			<locale value="Other ID(6)" lang="en_US" />
+			<locale value="其他号码(6)" lang="zh_CN" />
+		</item>
+	</singleNamespace>
+
+	<singleNamespace
+		namespace="com.cnebula.um.ejb.entity.usr.idCardLoginType">
+		<item key="0" defaultLang="zh_CN">
+			<locale value="Login Desabled(0)" lang="en_US" />
+			<locale value="不可登录(0)" lang="zh_CN" />
+		</item>
+		<item key="1" defaultLang="zh_CN">
+			<locale value="Login by ID(1)" lang="en_US" />
+			<locale value="可仅凭条码登录(1)" lang="zh_CN" />
+		</item>
+		<item key="2" defaultLang="zh_CN">
+			<locale value="Login by ID and Password(2)" lang="en_US" />
+			<locale value="凭条码和密码登录(2)" lang="zh_CN" />
+		</item>
+	</singleNamespace>
+
+	<singleNamespace
+		namespace="com.cnebula.um.ejb.entity.usr.idCardUpdateType">
+		<item key="0" defaultLang="zh_CN">
+			<locale value="Hidden(0)" lang="en_US" />
+			<locale value="不可见(0)" lang="zh_CN" />
+		</item>
+		<item key="1" defaultLang="zh_CN">
+			<locale value="Read Only(1)" lang="en_US" />
+			<locale value="只读(1)" lang="zh_CN" />
+		</item>
+		<item key="2" defaultLang="zh_CN">
+			<locale value="Only Password Updatable(2)" lang="en_US" />
+			<locale value="仅密码可更改(2)" lang="zh_CN" />
+		</item>
+		<item key="3" defaultLang="zh_CN">
+			<locale value="Only Id Updatable(3)" lang="en_US" />
+			<locale value="仅条码可更改(3)" lang="zh_CN" />
+		</item>
+		<item key="4" defaultLang="zh_CN">
+			<locale value="Updatable(4)" lang="en_US" />
+			<locale value="可更改(4)" lang="zh_CN" />
+		</item>
+	</singleNamespace>
+
+	<singleNamespace
+		namespace="com.cnebula.um.ejb.entity.usr.idCardStatus">
+		<item key="0" defaultLang="zh_CN">
+			<locale value="None(0)" lang="en_US" />
+			<locale value="注销(0)" lang="zh_CN" />
+		</item>
+		<item key="1" defaultLang="zh_CN">
+			<locale value="Stopped(1)" lang="en_US" />
+			<locale value="停用(1)" lang="zh_CN" />
+		</item>
+		<item key="2" defaultLang="zh_CN">
+			<locale value="Active(2)" lang="en_US" />
+			<locale value="正常(2)" lang="zh_CN" />
+		</item>
+		<item key="3" defaultLang="zh_CN">
+			<locale value="Reported the Loss(3)" lang="en_US" />
+			<locale value="已挂失(3)" lang="zh_CN" />
+		</item>
+	</singleNamespace>
+
+
+<!-- 用户状态管理各种图片以及国际化-->
+	<singleNamespace namespace="com.cnebula.perm.Operation.Names">
+		<item key="user_not_verify_to_legal" defaultLang="zh_CN">
+			<locale value="verify" lang="en_US" />
+			<locale value="审核通过" lang="zh_CN" />
+		</item>
+		<item key="user_not_verify_to_legal/image" defaultLang="zh_CN">
+			<locale value="/UAS/user_not_verify_to_legal.png" lang="zh_CN" />
+		</item>
+	</singleNamespace>
+
+
+</i18nMultiNamespace>

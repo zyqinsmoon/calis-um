@@ -1,0 +1,51 @@
+=同步任务配置=
+{{img/calis.png}}\\
+
+**中国高等教育文献保障系统（CALIS）管理中心\\**
+**Administrative Center for China Academic Library & Information System\\**
+**版本：V3.0**
+----
+#toc
+====服务端配置====
+服务端配置共分为以下几个步骤，请按步骤依次进行设置：
+# 找到服务端配置文件夹下的server.xml。
+# 找到同步任务全局配置点<cfg confPoint="SynTaskConfig">\\
+需要配置的几个配置项说明：\\
+		enable:全局同步开关，取值为true 或 false。true表示启用,false表示关闭，如关闭，则即子任务启用也会不执行。\\
+			maxRecordPerCommit: 每次批量提交数据数目。取值为1到10000之间。\\
+			dir:各个馆同步数据存放的根路径，各个馆在下面创建根据由自己馆代码为名的文件夹，并在该文件夹内				创建相应的目录以存放要同步的数据。 \\
+	maxThreads:同步任务线程数。该值太大则会大量占用系统资源，从而导致服务器运行缓慢，如设置太小则会影响导入的速度。建议取值为：该中心成员馆的数量\\
+	#配置basic为false,设置为中心版
+#配置dir项
+	# 重启服务端
+	
+	例如：\\
+	{{code}}
+		<cfg confPoint="SynTaskConfig"> 
+		<SynTaskConfig basic="false" enable="true" maxRecordPerCommit = "1000" dir="#{syn_task_data_dir}" maxThreads="10">
+			<Sources>
+				<Source enable="true" description="获取所有满足规则的文件">com.cnebula.um.task.syn.sources.UMSource</Source>
+			</Sources>
+			<Conveters>
+				<Conveter enable="true" description="空列(NULL，null,Null,NuLL)转换为null">com.cnebula.um.task.syn.conveters.NULL2null</Conveter>
+				<Conveter enable="true" description="true 或则 false的值转换为有意义的状态字">com.cnebula.um.task.syn.conveters.TrueORFalseToStatus</Conveter>
+				<Conveter enable="true" description="加入一些列的默认值，如email的附加ID的类型为5">com.cnebula.um.task.syn.conveters.AddColumnDefaultValues</Conveter>
+				<Conveter enable="true" description="把附加id类型和用户id转换为附加ID">com.cnebula.um.task.syn.conveters.AddIDFromIDAndAidType</Conveter>
+				<Conveter enable="true" description="根据指定的密码策略来生成密码，通常用于加密密码,需要把密码策略放入map">com.cnebula.um.task.syn.conveters.PasswordFromStrategy</Conveter>
+				<Conveter enable="true" description="把与时间相关的字段转换为db形式，转换的有timestamp,birthday,validdate,invaliddate,需要把文件名（fname）放入map">com.cnebula.um.task.syn.conveters.TimesToDbType</Conveter>
+				<Conveter enable="true" description="加上用户所属机构的关联，关联规则：get o.id where o.code=tenantCode">com.cnebula.um.task.syn.conveters.OrgIdFromTenant</Conveter>
+			</Conveters>
+			<Filters>
+				<Filter enable="false" description="生日大于当前日期">com.sssssssss</Filter>
+			</Filters>
+			<Validators>
+			<Validator enable="true" description="判断不能为空的字段">com.cnebula.um.task.syn.validators.CanNotNullValidator</Validator>
+				<Validator enable="true" description="判断在ejb中，属性合法性">com.cnebula.um.task.syn.validators.PropertyEjbValidator</Validator>
+				<Validator enable="true" description="时间戳大于当前时间">com.cnebula.um.task.syn.validators.DateValidator</Validator>
+			</Validators>
+			<DBTargets>
+				<DBTarget enable="true" description="导入到um库中">com.cnebula.um.task.syn.targets.UMTarget</DBTarget>
+			</DBTargets>
+		</SynTaskConfig>
+	</cfg>
+	{{/code}}

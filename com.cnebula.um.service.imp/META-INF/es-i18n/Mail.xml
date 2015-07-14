@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<i18nMultiNamespace>
+	<singleNamespace namespace="com.cnebula.um.service.userActiveMail">
+	   <item key="$Mail.title" defaultLang="zh_CN">
+	      <locale value="From CALIS" lang="en_US" />
+	      <locale value="来自CALIS" lang="zh_CN" />	   		
+	   </item>	
+	   <item key="$Mail.head" defaultLang="zh_CN" >
+	      <locale value="Dear {0}:&lt;br&gt;" lang="en_US" />
+	      <locale value="尊敬的{0}:&lt;br&gt;" lang="zh_CN" />
+	   </item>   	   	  
+	   <item key="$Mail.subject" defaultLang="zh_CN" >
+	      <locale value="　　Congratulation,you have registered successfully!&lt;br&gt;" lang="en_US" />
+	      <locale value="　　恭喜您已经注册成功!&lt;br&gt;" lang="zh_CN" />
+	   </item>   	
+	   <item key="$Mail.alert" defaultLang="zh_CN" >
+	      <locale value="Before you click the activation link,you may subject to certain restrictions" lang="en_US" />
+	      <locale value="在点击激活链接前，您注册的账号会受到某些限制。" lang="zh_CN" />
+	   </item>
+	   <item key="$Mail.linkName" defaultLang="zh_CN" >
+	      <locale value="&lt;a herf=&quot;{0}&quot;&gt;Click here to active you account&lt;/a&gt;" lang="en_US" />
+	      <locale value="&lt;a herf=&quot;{0}&quot;&gt;请点击此链接进行激活&lt;/a&gt;" lang="zh_CN" />
+	   </item>
+	   <item key="$Mail.tip" defaultLang="zh_CN" >
+	      <locale value="&lt;br&gt;if the activation link can not be opend ,try to copy the following url into your browser's address field and open it.&lt;br&gt;{0}" lang="en_US" />
+	      <locale value="&lt;br&gt;如果激活链接无法正常打开,请将下面url地址拷贝到浏览器地址栏中并打开。&lt;br&gt;{0}" lang="zh_CN" />
+	   </item>
+	   <item key="$Mail.footer" defaultLang="zh_CN">
+	      <locale value="&lt;br&gt;&lt;br&gt;administrator&lt;br&gt;{0}" lang="en_US"/>
+	      <locale value="&lt;br&gt;&lt;br&gt;管理员&lt;br&gt;{0}" lang="zh_CN"/>
+	   </item>
+    </singleNamespace>
+	<singleNamespace namespace="com.cnebula.um.service.newPasswordActiveMail">
+	   <item key="$Mail.title" defaultLang="zh_CN">
+	      <locale value="From CALIS" lang="en_US" />
+	      <locale value="来自CALIS" lang="zh_CN" />	   		
+	   </item>
+	   <item key="$Mail.head" defaultLang="zh_CN" >
+	      <locale value="Dear {0}:&lt;br&gt;" lang="en_US" />
+	      <locale value="尊敬的{0}:&lt;br&gt;" lang="zh_CN" />
+	   </item>   	   	  
+	   <item key="$Mail.subject" defaultLang="zh_CN" >
+	      <locale value="　　Congratulation,your password have been reseted successfully! New Password:{0}&lt;br&gt;" lang="en_US" />
+	      <locale value="　　您的密码已经被重置! 新密码:{0}&lt;br&gt;" lang="zh_CN" />
+	   </item>   	
+	   <item key="$Mail.alert" defaultLang="zh_CN" >
+	      <locale value="Before you click the activation link,you can't sign-on by the password we give you." lang="en_US" />
+	      <locale value="在点击激活链接前，您不可以使用新密码登录。" lang="zh_CN" />
+	   </item>
+	   <item key="$Mail.linkName" defaultLang="zh_CN" >
+	      <locale value="&lt;a herf=&quot;{0}&quot;&gt;Click here to active you account&lt;/a&gt;" lang="en_US" />
+	      <locale value="&lt;a herf=&quot;{0}&quot;&gt;请点击此链接进行激活&lt;/a&gt;" lang="zh_CN" />
+	   </item>
+	   <item key="$Mail.tip" defaultLang="zh_CN" >
+	      <locale value="&lt;br&gt;if the activation link can not be opend ,try to copy the following url into your browser's address field and open it.&lt;br&gt;{0}" lang="en_US" />
+	      <locale value="&lt;br&gt;如果激活链接无法正常打开,请将下面url地址拷贝到浏览器地址栏中并打开。&lt;br&gt;{0}" lang="zh_CN" />
+	   </item>
+	   <item key="$Mail.footer" defaultLang="zh_CN">
+	      <locale value="&lt;br&gt;&lt;br&gt;administrator&lt;br&gt;{0}" lang="en_US"/>
+	      <locale value="&lt;br&gt;&lt;br&gt;管理员&lt;br&gt;{0}" lang="zh_CN"/>
+	   </item>
+    </singleNamespace>    
+</i18nMultiNamespace>

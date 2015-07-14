@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 		简单权限配置-->
+<!--roles：正常角色列表，应为所有member中正常角色的并集-->
+<!--userRules：正常用户规则列表，应为所有member中正常用户的并集-->
+<!--blackRoles：反向角色（黑名单角色），应为所有member中反向角色的并集-->
+<!--blackUserRules：反向用户组（黑名单用户组），应为所有member中反向用户组的并集-->
+
+		<SimplePermissionConfig>
+			<defaultGroupElemnts>
+<!--登录，用户管理，匿名 -->
+<!--正常、成员馆管理员,学生,老师-->
+<!--只能登陆	,停用所有功能-->
+<!--停用、过期 -->
+				<roles>
+					 <templateRole id="zj-ums-rl-000000"></templateRole>
+					 <templateRole id="zj-ums-rl-000001"></templateRole>
+					 <templateRole id="zj-ums-rl-000003"></templateRole>
+				 </roles>
+				 
+				 <userRules>
+					 <templateUserRule id="zj-ums-ur-000002"></templateUserRule>
+					 <templateUserRule id="$memberadmin_rule_u"></templateUserRule>
+					 <templateUserRule id="zj-ums-ur-000004"></templateUserRule>
+					 <templateUserRule id="zj-ums-ur-000005"></templateUserRule>
+				 </userRules>
+				 
+				 <blackRoles>
+					<templateRole id="zj-ums-rl-000002"></templateRole>
+					<templateRole id="zj-ums-rl-00004q"></templateRole>
+				</blackRoles>
+				
+				<blackUserRules>
+					<templateUserRule id="zj-ums-ur-000001"></templateUserRule>
+					<templateUserRule id="zj-ums-ur-000003"></templateUserRule>
+             	</blackUserRules>
+             	
+			</defaultGroupElemnts>
+			<members>
+
+<!--userType:用户类型：2为成员馆管理员	-->
+<!--userRuleIDList:正常用户规则-->
+<!--roleIDList:正常角色规则-->
+<!--blackRoles:反向角色规则-->
+<!--blackUserRules：反向用户规则-->
+
+				<member userType="2">
+						<userRules>
+							 <templateUserRule id="zj-ums-ur-000002"></templateUserRule>
+							 <templateUserRule id="$memberadmin_rule_u"></templateUserRule>
+							 <templateUserRule id="zj-ums-ur-000004"></templateUserRule>
+							 <templateUserRule id="zj-ums-ur-000005"></templateUserRule>
+						</userRules>
+						<roles>
+							 <templateRole id="zj-ums-rl-000000"></templateRole>
+							 <templateRole id="zj-ums-rl-000001"></templateRole>
+							 <templateRole id="zj-ums-rl-000003"></templateRole>
+					    </roles>
+						<blackUserRules>
+							<templateUserRule id="zj-ums-ur-000001"></templateUserRule>
+							<templateUserRule id="zj-ums-ur-000003"></templateUserRule>
+             			</blackUserRules>
+						<blackRoles>
+							<templateRole id="zj-ums-rl-000002"></templateRole>
+							<templateRole id="zj-ums-rl-00004q"></templateRole>
+						</blackRoles>
+				</member>
+				<member userType="3">
+						<userRules>
+							 <templateUserRule id="zj-ums-ur-000002"></templateUserRule>
+							 <templateUserRule id="$memberadmin_rule_u"></templateUserRule>
+							 <templateUserRule id="zj-ums-ur-000004"></templateUserRule>
+							 <templateUserRule id="zj-ums-ur-000005"></templateUserRule>
+						</userRules>
+						<roles>
+							 <templateRole id="zj-ums-rl-000000"></templateRole>
+							 <templateRole id="zj-ums-rl-000001"></templateRole>
+							 <templateRole id="zj-ums-rl-000003"></templateRole>
+					    </roles>
+						<blackUserRules>
+							<templateUserRule id="zj-ums-ur-000001"></templateUserRule>
+							<templateUserRule id="zj-ums-ur-000003"></templateUserRule>
+             			</blackUserRules>
+						<blackRoles>
+							<templateRole id="zj-ums-rl-000002"></templateRole>
+							<templateRole id="zj-ums-rl-00004q"></templateRole>
+						</blackRoles>
+				</member>
+			</members>
+		</SimplePermissionConfig>

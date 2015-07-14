@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+@import "js/dojo/dojox/highlight/resources/highlight.css";
+
+@import "js/dojo/dojox/highlight/resources/pygments/default.css";
+
+@import "js/dojo/dijit/themes/soria/soria.css";
+
+@import "js//dojo/dojo/resources/dojo.css";
+</style>
+<link rel=stylesheet href="css/userForm.css" type="text/css" />
+<script type="text/javascript"
+	djConfig="parseOnLoad: true, isDebug: false" src="js/dojo/dojo/dojo.js">
+</script>
+<script type="text/javascript"
+	src="/easyservice-util/EasyServiceClientFullZ.js"></script>
+<script type="text/javascript" src="js/easy/service.js"></script>
+<script type="text/javascript">
+dojo.addOnLoad(feedMyAddId);
+</script>
+</head>
+<body class="soria">
+<div class="userForm">
+<form action="" onsubmit="return false;" method="post">
+  <table id="basicInfoTable" width="100%">
+    <tr>
+      <td  colspan="2" align="left" bgcolor="#E8F3FD"><label>基本信息</label></td>
+    </tr>
+    <tr>
+      <th ><label>有效证件代码</label></th>
+      <td id="type"></td>
+    </tr>    
+    <tr>
+      <th ><label>有效证件号码</label></th>
+      <td id="code"></td>
+    </tr>
+
+    <tr>
+      <th ><label>状态</label></th>
+      <td id="status"></td>
+    </tr>
+    <tr>
+      <th ><label>登录类型</label></th>
+      <td id="loginType"></td>
+    </tr>
+    <tr>
+      <th ><label>更新类型</label></th>
+      <td id="updateType"></td>
+    </tr>
+    <tr>
+      <th ><label>从何时开始有效</label></th>
+      <td id="validDate"></td>
+    </tr>    
+  </table>
+  <!--end basicInfoTable-->
+</form>
+</div>
+</body>
+</html>

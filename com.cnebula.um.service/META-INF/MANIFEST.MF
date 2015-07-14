@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: CNebula UM Service Plug-in
+Bundle-SymbolicName: com.cnebula.um.service
+Bundle-Version: 1.0.0
+Bundle-Vendor: CNEBULA
+E-C-T: com.cnebula.um.service.IConfigAssistService
+Import-Package: com.cnebula.aas.util,
+ com.cnebula.common.annotations.ejb.ui,
+ com.cnebula.common.annotations.es,
+ com.cnebula.common.annotations.xml,
+ com.cnebula.common.ejb.manage,
+ com.cnebula.common.i18n,
+ com.cnebula.common.log,
+ com.cnebula.common.saas,
+ com.cnebula.common.servlet.impl,
+ com.cnebula.um.ejb.entity.perm,
+ com.cnebula.um.ejb.entity.usr,
+ javax.servlet,
+ javax.servlet.http,
+ org.osgi.service.http
+Export-Package: com.cnebula.um.client.update,
+ com.cnebula.um.service
+Require-Bundle: org.eclipse.osgi

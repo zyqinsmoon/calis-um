@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>I Pv6界面改造说明</title>
+<style type="text/css"><!--
+/* @group RESET */
+/* --------------------------------------------------------------
+
+  Reset.css
+  * Resets default browser CSS styles.
+
+  Created by Erik Meyer:
+  * meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
+-------------------------------------------------------------- */
+
+* html {
+  overflow-y: auto;
+}
+html, body {
+    height: 100%;
+}
+--></style>
+<link type="text/css" rel="stylesheet" href="_cssAndJsDir_/zyxwiki.css"/>
+<link type="text/css" rel="stylesheet" href="_cssAndJsDir_/shThemeDefault.css"/>
+<link type="text/css" rel="stylesheet" href="_cssAndJsDir_/shCore.css"/>
+<script type="text/javascript" src="_cssAndJsDir_/shCore.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shCore.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushCpp.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushCSharp.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushCss.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushGroovy.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushJavaFX.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushJScript.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushPerl.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushPhp.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushPlain.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushPowerShell.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushPython.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushRuby.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushScala.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushSql.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushVb.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushXml.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushJava.js"></script>
+<script type="text/javascript">
+SyntaxHighlighter.config.clipboardSwf = '_cssAndJsDir_/clipboard.swf'
+SyntaxHighlighter.all();
+</script>
+  </head>
+  <body>
+
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+<h1><span id="IPv6界面改造">IPv6界面改造</span></h1>
+<h2><span id="1._改造点">1. 改造点</span></h2>
+<ol><li>ipv6可以使用压缩形式表示，本系统只能输入完整形式，不可使用压缩形式。</li>
+<li>需要同时支持IPv6和IPv4，让用户选择是输入ipv4还是IPv6，默认为ipv4。</li>
+<li>当用户默认输入的时候，使用ipv4正则表达式校验校验，当用户选择ipv6的时候，使用ipv6正则表达式校验。</li></ol>
+<h2><span id="2_改造方法">2 改造方法</span></h2>
+<p>修改IPSegment对应的EntityPlugin，在EntityPlugin中判断用户是如入哪种ip，然后分别设置对应的校验信息。
+：</p>
+<h3><span id="2.1IPv4校验方法">2.1IPv4校验方法</span></h3>
+<ol><li>IPv4的校验采用正则表达式校验<br/>
+例如：192.168.2.200<br/>
+正则表达式：((25[0-5]|2[0-4]\\d|1\\d{2}|0?[1-9]\\d|0?0?\\d)\\.){3}(25[0-5]|2[0-4]\\d|1\\d{2}|0?[1-9]\\d|0?0?\\d)</li></ol>
+<h3><span id="2.2IPv6校验方法">2.2IPv6校验方法</span></h3>
+<ol><li>IPv6的校验采用正则表达式校验<br/>
+例如：FFED:0:0:0:0:BA98:3210:4562<br/></li></ol>
+<p>正则表达式：^([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}</p>
+<h2><span id="3_改造后的界面">3 改造后的界面</span></h2>
+<p><img src="img/ipv6.jpg" alt="" title="" /><br/></p>
+</div>
+</div>
+  </body>
+</html>

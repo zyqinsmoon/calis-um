@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<i18nMultiNamespace>
+	
+	<!-- 扩展字段作为用户属性 -->
+	<singleNamespace
+		namespace="com.cnebula.um.ejb.entity.usr.UMPrincipal.depext_0">
+		<item key="1" defaultLang="zh_CN">
+			<locale value="lib manager(1)" lang="en_US" />
+			<locale value="馆员(1)" lang="zh_CN" />
+		</item>
+		<item key="0" defaultLang="zh_CN">
+			<locale value="reader(0)" lang="en_US" />
+			<locale value="读者(0)" lang="zh_CN" />
+		</item>
+	</singleNamespace>
+	
+</i18nMultiNamespace>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CALIS_Server>
+	<!-- 数据源 -->
+	<cfg confPoint="com.cnebula.common.ejb.IDataSourceService">
+		<DataSourceServiceCfg version="1.0">
+			<dataSources>
+				<!-- 本系统基本数据库配置 -->
+				<dataSource type="h2" url="jdbc:h2:~/h2dbs/um;CACHE_SIZE=40960"
+					user="sa" password="" maxConnections="20"
+					minConnections="5" maxPrepareStmtCacheSize="0"
+					jndiName="java:comp/env/jdbc/calisumDS" 
+					dirverClassLibPath="jdbcDrivers/default">
+					<extensions>
+						<property name="toplink.logging.level" value="INFO" />
+					</extensions>
+				</dataSource>
+			</dataSources>
+		</DataSourceServiceCfg>
+	</cfg>
+	<!-- EntityUIInfo导出 -->
+	<cfg confPoint="com.cnebula.common.ejb.relation.EntityInfoPoolService">
+		<EntityInfoPoolService>
+			<exportUIInfoUnitList>
+				<!-- 
+				<unit>calisum</unit>
+				-->
+			</exportUIInfoUnitList>
+		</EntityInfoPoolService>
+	</cfg>
+	<cfg confPoint="SAASConfig" include="saas.config.xml">
+	</cfg>
+	<!-- WEB服务 -->
+	<cfg confPoint="httpServer">
+		<HttpServer port="#{port}" minThread="5" maxThread = "10" sessionMaxTimeout="1800"  />
+	</cfg>
+	<!-- CALIS 用户管理配置 -->
+	<cfg confPoint="calisUM">
+		<!--onlyUseMainPassword是否仅仅使用用户密码属性进行登录，为true时，如果支持附加标识登录或Card登录时，
+		          登录名可用附加ID名或Card号，但密码仍然使用用户密码属性， 否则将使用附加Id自己的密码。
+		  supportCardLogin 是否支持图书卡登录。
+		  supportAdditionalIdLogin 是否支持附加标识登录。
+		  supportIPLogin 是否支持IP用户登录。IP用户登录后，将按照其对应的机构进行授权。
+		  enableSAAS 是否使用SAAS版UM，默认为false。
+		-->
+		<umConfig onlyUseMainPassword="true" supportCardLogin="true" supportAdditionalIdLogin="true" supportIPLogin="true" cacheType="compact">
+			<!-- 和统一认证集成配置, 在是本文件作为统一认证独立部署配置文件时，（不包括读者管理系统）情况下，type必须为full
+				type为3,表明是紧密集成(full)模式，则忽略host和port的配置 
+				type为2 表明是共享应用层规则（share）模式，host和port必须为认证中心的地址和HTTP服务的端口
+				type为1 表明是松散简单认证集成(auth)模式，host和port必须为认证中心的地址和HTTP服务的端口
+				target 是认证服务筛选条件，比如 (id=UMValidLoginService)
+			-->
+			<uasIntegrateConfig host="localhost" port="80" type="3">
+			</uasIntegrateConfig>
+		</umConfig>
+	</cfg>
+	<cfg confPoint="jrmiRegister"> 
+		<jrmiRegister port="2199" />
+	</cfg>
+    <!-- 系统常规日志配置 -->
+	<cfg confPoint="com.cnebula.common.log.imp.LogImp" include="log.xml">
+	</cfg>
+	<!-- 系统远程服务日志配置 -->
+	<cfg confPoint="com.cnebula.common.remote.core.RemoteServiceLogConfig" include="remoteServiceLog.xml">
+	</cfg>
+<!-- 数据库初始化任务 -->
+<!--	<cfg confPoint="com.cnebula.um.setup.UMServerDBInit" include="setup/rootDBTask.xml">  -->
+<!--	</cfg>  -->
+	<!-- 模板数据库初始化任务 -->
+	<cfg confPoint="com.cnebula.um.setup.UMServerDBInit" include="setup/rootDBTemplateTask.xml">
+	</cfg>
+	<!-- 用户操作统计日志配置 -->
+	<cfg confPoint="statisticsConfig">
+		<!--
+			bufferSize 指日志缓冲区大小，
+			flushTime  指日志批量写入数据库的时间间隔，日志在缓冲区满了或者flushTime到了都会开始写入数据库
+			shutDownWaitTime 是指系统关闭时，最多等待日志操作的时间，以秒为单位
+			threadPriority 写日志线程的优先级别，越低表明日志线程比其他操作线程有机会占用cpu
+			shouldIntegrate 是否生成calis统一日志，生成calis统一日志将会耗费额外的文件写入时间
+			integrateLogDir calis统一日志生成的文件夹路径
+		  -->
+		<asynlog bufferSize = "3000" flushTime = "10" shutDownWaitTime = "60" threadPriority = "5" >
+			<integrate shouldIntegrate = "true" integrateLogDir= "../com.cnebula.libum.basic.deploy/log" logType = "OptnLog" actionId = "0126"/>
+		</asynlog>
+	</cfg>
+	
+	<cfg confPoint="calisbar" include="webSiteConfig.xml">
+	</cfg>
+	<!-- 邮件服务的配置 -->
+	<cfg confPoint="mailConfig">
+		<MailConfig mailHost="smtp.gmail.com" mailSender="calisms.test@gmail.com" mailPassword = "!!!!!!QQQQQQ"  />
+	</cfg>
+	
+	<cfg confPoint="UserManageConfig">
+		<UserManageConfig>
+			<!--
+				是否注册用户管理服务 
+			 -->
+			<enableUserManage>true</enableUserManage>
+			<!-- 
+				该系统的域名地址（不建议使用IP地址，如果该主机不在公网上，会造成用户无法访问激活链接）
+				 若没有配置，则会尝试使用本机的IP地址，和<cfg confPoint="httpServer">中的port组成访问
+				 链接。
+			 -->
+			<domain></domain>
+			<!--
+				注册方式配置 configType:(注册方式) 
+				"SimpleRegisterService"：代表不使用邮箱验证;
+				"ActiveByMailRegisterService"：代表使用邮箱验证；
+			-->
+			<registerType>SimpleRegisterService</registerType>
+			<!-- 
+				重置密码有效期
+			 	expiredDuration按小时计
+			-->
+			<restPasswordExpiredDuration>5</restPasswordExpiredDuration>
+			<!-- 
+				激活链接配置
+				  相对地址，如/easyservice/com.cnebula.um.manage.IUserManageService/activeNewUser?activeCode=
+			-->
+			<activeNewUserURI>/easyservice/com.cnebula.um.service.IUserManageService/activateNewUser?activeCode=</activeNewUserURI>
+			<activeResetPasswordURI>/easyservice/com.cnebula.um.service.IUserManageService/activateNewPassword?activeCode=</activeResetPasswordURI>
+			<services>
+				<service name="com.cnebula.um.service.imp.ISimpleRegisterService" targetId="(id=UMUserManage)"/>
+				<service name="com.cnebula.um.service.imp.IResetPasswordService" targetId="(id=UMUserManage)"/>
+				<service name="com.cnebula.um.service.imp.IActiveByMailRegisterService" targetId="(id=UMUserManage)"/>
+				<service name="com.cnebula.um.usermanage.util.IValidateService" targetId="(id=UMUserManage)"/>
+				<service name="com.cnebula.um.service.imp.IUpdateUserInfo" targetId="(id=UMUserManage)"/>
+			</services>
+		</UserManageConfig>
+	</cfg>
+	
+	<!-- 
+		卡和押金类型配对关系，主要应用于快捷创建用户卡的操作
+		其中cardType是卡类型，validRange是表示卡的有效年限，cashType是押金类型， cashValue是押金额度
+	-->
+	<cfg confPoint = "cardCashMap">
+		<cardCashMapConfig>
+				<cardCashMapEntry cardType="11"  validRange= "2"  cashType = "62"  cashValue="400.00" />
+				<cardCashMapEntry cardType="12"  validRange= "2"  cashType = "61"  cashValue="100.00"/>
+				<cardCashMapEntry cardType="13"  validRange= "2"  cashType = "21"  cashValue="20.00"/>
+				<cardCashMapEntry cardType="21"  validRange= "2"/>
+				<cardCashMapEntry cardType="31"  validRange= "2"/>
+				<cardCashMapEntry cardType="32"  validRange= "2"/>
+				<cardCashMapEntry cardType="41"  validRange= "2"/>
+				<cardCashMapEntry cardType="51"  validRange= "2"/>
+				<cardCashMapEntry cardType="61"  validRange= "2"/>
+				<cardCashMapEntry cardType="71"  validRange= "2"/>
+				<cardCashMapEntry cardType="81"  validRange= "2" cashType = "63"  cashValue="50.00"  />
+				<cardCashMapEntry cardType="default" validRange= "2" />
+		</cardCashMapConfig>
+	</cfg>
+	<cfg confPoint="ServiceStartGroup"> 
+		<serviceGroup name="uas-um" message="CALIS读者管理集成版3.2启动完毕。">
+			<services>
+				<String>um</String>
+				<!-- 
+				<String>alephIntegrate</String>
+				<String>eLibIntegrate</String>
+				 -->
+			</services>
+		</serviceGroup>
+	</cfg>
+	<!-- 客户端 -->
+	<cfg confPoint="updateContent"> 
+		<UpdateContentConfig dir = "../um_admin"  fileListXml="list.xml" 
+			localJRE = "ext/jre-6u12-windows-i586-p-s.exe"
+			remoteJRE = "http://jdl.sun.com/webapps/getjava/BrowserRedirect?locale=zh_CN&amp;host=java.com"
+	 		uiname = "CALIS读者管理智能客户端"/>
+	</cfg>
+	<!-- 同步任务 -->
+	<cfg confPoint="SynTaskConfig"> 
+		<SynTaskConfig basic="false" enable="true" maxRecordPerCommit = "100" dir="#{syn_task_data_dir}" maxThreads="100">
+			<Sources>
+				<Source enable="true" description="获取所有满足规则的文件">com.cnebula.um.task.syn.sources.UMSource</Source>
+			</Sources>
+			<Conveters>
+				<Conveter enable="true" description="空列(NULL，null,Null,NuLL)转换为null">com.cnebula.um.task.syn.conveters.NULL2null</Conveter>
+				<Conveter enable="true" description="true 或则 false的值转换为有意义的状态字">com.cnebula.um.task.syn.conveters.TrueORFalseToStatus</Conveter>
+				<Conveter enable="true" description="加入一些列的默认值，如email的附加ID的类型为5">com.cnebula.um.task.syn.conveters.AddColumnDefaultValues</Conveter>
+				<Conveter enable="true" description="把附加id类型和用户id转换为附加ID">com.cnebula.um.task.syn.conveters.AddIDFromIDAndAidType</Conveter>
+				<Conveter enable="true" description="根据指定的密码策略来生成密码，通常用于加密密码,需要把密码策略放入map">com.cnebula.um.task.syn.conveters.PasswordFromStrategy</Conveter>
+				<Conveter enable="true" description="把与时间相关的字段转换为db形式，转换的有timestamp,birthday,validdate,invaliddate,需要把文件名（fname）放入map">com.cnebula.um.task.syn.conveters.TimesToDbType</Conveter>
+				<Conveter enable="true" description="加上用户所属机构的关联，关联规则：get o.id where o.code=tenantCode">com.cnebula.um.task.syn.conveters.OrgIdFromTenant</Conveter>
+			</Conveters>
+			<Filters>
+				<Filter enable="true" description="过滤掉上次成功同步过的记录（通过时间戳对比实现）">com.cnebula.um.task.syn.filter.OlderRecordFilter</Filter>
+			</Filters>
+			<Validators>
+				<Validator enable="true" description="判断不能为空的字段">com.cnebula.um.task.syn.validators.CanNotNullValidator</Validator>
+				<Validator enable="true" description="判断在ejb中，属性合法性">com.cnebula.um.task.syn.validators.PropertyEjbValidator</Validator>
+				<Validator enable="false" description="时间戳大于当前时间">com.cnebula.um.task.syn.validators.DateValidator</Validator>
+			</Validators>
+			<DBTargets>
+				<DBTarget enable="true" description="导入到um库中">com.cnebula.um.task.syn.targets.UMTarget</DBTarget>
+				<DBTarget enable="true" description="导入到um的缓存中">com.cnebula.um.task.syn.targets.UMCacheTarget</DBTarget>
+			</DBTargets>
+		</SynTaskConfig>
+	</cfg>
+	<!-- 授权管理的配置 -->
+	<cfg confPoint="SimplePermissionConfig" include="simplePermission.xml">
+	</cfg>
+	
+<!--	<cfg confPoint="StaticRolesConfig">-->
+<!--		<StaticRolesConfig>-->
+<!--			<Role name="静态权限配置" id="f4bb99f3-866d-4fff-b007-014508bcd39c" type="1" version="0" enabled="true" blackRole="false" category="1" description="静态角色配置">-->
+<!--				<uMUserRules>-->
+<!--					<UserRule id="081a3f3b-9489-4138-902c-907ec1438e04" type="0" version="0" operations="view" enabled="true" expression="true" entityLimitType="com.cnebula.um.ejb.entity.usr.UMPrincipal" authable="true">-->
+<!--					</UserRule>-->
+<!--				</uMUserRules>-->
+<!--				<uMPermissionRules>-->
+<!--					<PermissionRule id="14b0c6a7-b0e1-4a64-8842-9df87f021a15" type="0" version="0" operations="update" enabled="true" expression="true" entityLimitType="com.cnebula.um.ejb.entity.perm.PermissionRule" authable="true">-->
+<!--					</PermissionRule>-->
+<!--				</uMPermissionRules>-->
+<!--			</Role>-->
+<!--		</StaticRolesConfig>-->
+<!--	</cfg>-->
+</CALIS_Server>

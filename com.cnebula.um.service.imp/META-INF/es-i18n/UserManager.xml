@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<i18nMultiNamespace>
+	<singleNamespace namespace="com.cnebula.um.service.userRegister">
+	   <item key="$EnableSAAS.error" defaultLang="zh_CN">
+			<locale value="Sorry, this is a SAAS version application,but there do not have any tenant customer.So you can't register an user." lang="en_US"></locale>	   
+			<locale value="十分抱歉，这是一个Saas版的应用系统，但是还没有一个租客，因此您不能注册。 " lang="zh_CN"></locale>	   
+	   </item>
+	   <item key="$TenantId.notExist" defaultLang="zh_CN">
+			<locale value="Sorry, database error! The tenantId {0} does't exist." lang="en_US"></locale>	   
+			<locale value="十分抱歉，数据库错误！ 没有tenantId为{0}的记录 " lang="zh_CN"></locale>	   
+	   </item>
+	   <item key="$CaptchaCode.correctCheck" defaultLang="zh_CN" >
+	      <locale value="The captcha code you entered was incorrect." lang="en_US" />
+	      <locale value="您输入的验证码有误。" lang="zh_CN" />
+	   </item>
+	   <item key="$LoginId.notNullCheck" defaultLang="zh_CN">
+	   	  <locale value="The LoginId should not be empty." lang="en_US"/>
+	   	  <locale value="用户名不可以为空。" lang="zh_CN"></locale>
+	   </item>
+	   <item key="$LoginId.uniqueCheck" defaultLang="zh_CN">
+	   	  <locale value="The login ID you entered is already in use, please select an alternative." lang="en_US"/>
+	   	  <locale value="您输入的用户名已经被使用。" lang="zh_CN"></locale>
+	   </item>
+	   <item key="$Email.notNullCheck" defaultLang="zh_CN">
+	   	  <locale value="The Email should not be empty." lang="en_US"/>
+	   	  <locale value="邮箱地址不可以为空。" lang="zh_CN"></locale>
+	   </item>
+	   <item key="$Email.uniqueCheck" defaultLang="zh_CN">
+	   	  <locale value="The email address you entered is already in use,please select an alternative." lang="en_US"/>
+	   	  <locale value="您输入的邮箱地址已经被使用。" lang="zh_CN"></locale>
+	   </item>
+	   <item key="$AdditionalId.notNullCheck" defaultLang="zh_CN">
+	   	  <locale value="The ID should not be empty." lang="en_US"/>
+	   	  <locale value="有效证件信息不可以为空。" lang="zh_CN"></locale>
+	   </item>
+	   <item key="$AdditionalId.uniqueCheck" defaultLang="zh_CN">
+	   	  <locale value="The ID you entered is already in use,please select an alternative." lang="en_US"/>
+	   	  <locale value="您输入的有效证件信息已经被使用。" lang="zh_CN"></locale>
+	   </item>
+	   <item key="$Card.notNullCheck" defaultLang="zh_CN">
+	   	  <locale value="The Card should not be empty." lang="en_US"/>
+	   	  <locale value="图书卡信息不可以为空。" lang="zh_CN"></locale>
+	   </item>
+	   <item key="$Card.uniqueCheck" defaultLang="zh_CN">
+	   	  <locale value="The Card you entered is already in use,please select an alternative." lang="en_US"/>
+	   	  <locale value="您输入的图书卡信息已经被使用。" lang="zh_CN"></locale>
+	   </item>
+	   <item key="$Password.notNullCheck" defaultLang="zh_CN">
+	   	  <locale value="The password should not be empty." lang="en_US"/>
+	   	  <locale value="密码不可以为空。" lang="zh_CN"></locale>
+	   </item>
+	   <item key="$ActiveMail.sendFailed" defaultLang="zh_CN">
+	   	  <locale value="The activation mail fail to send.Try it later." lang="en_US"/>
+	   	  <locale value="激活邮件发送失败，注册失败，请您稍后重试。" lang="zh_CN"></locale>
+	   </item>
+	   <item key="$Register.ErrorConfig" defaultLang="zh_CN">
+	   	  <locale value="The configuration of register type is wrong." lang="en_US"/>
+	   	  <locale value="注册方式配置有误，请您与系统管理员联系。" lang="zh_CN"/>
+	   </item>
+	   <item key="$WrongUserEntity" defaultLang="zh_CN">
+    		<locale value="Wrong user entity,please use NewUserBean." lang="en_US"/>
+    		<locale value="错误的实体类型，请使用NewUserBean。" lang="zh_CN"/>
+       </item>
+    </singleNamespace>
+    <singleNamespace namespace="com.cnebula.um.service.resetPassword">
+    	<item key="$ResetPassword.noSuchUser" defaultLang="zh_CN">
+    		<locale value="User {0} is not exist." lang="en_US"/>
+    		<locale value="用户{0}不存在。" lang="zh_CN"/>
+    	</item>
+    	<item key="$ResetPassword.emailAddrError" defaultLang="zh_CN">
+    		<locale value="The longin ID {0} is not matching the email address {1} you entered" lang="en_US"/>
+    		<locale value="用户名{0}与邮箱{1}不匹配。" lang="zh_CN"/>
+    	</item>
+    	<item key="$ResetPasswordMail.sendFailed" defaultLang="zh_CN">
+    		<locale value="Failed to send new password to your email address,try again. " lang="en_US"/>
+    		<locale value="向您注册的邮箱发送新密码失败，请您稍后重试。" lang="zh_CN"/>
+    	</item>	 	    	
+    </singleNamespace>
+    <singleNamespace namespace="com.cnebula.um.service.updateUserInfo">
+    	<item key="$ChangePassword.wrongOldPassword" defaultLang="zh_CN">
+    		<locale value="The old password you entered is not correct." lang="en_US"/>
+    		<locale value="您输入的旧密码不正确。" lang="zh_CN"/>
+    	</item> 
+    	<item key="$UpdateUserInfo.notLogin" defaultLang="zh_CN">
+    		<locale value="Sorry,you have not sign in yet." lang="en_US"/>
+    		<locale value="对不起，您还没有登录。" lang="zh_CN"/>
+    	</item>     	
+    	<item key="$ChangePassword.notLogin" defaultLang="zh_CN">
+    		<locale value="Sorry,you have not sign in yet." lang="en_US"/>
+    		<locale value="对不起，您还没有登录。" lang="zh_CN"/>
+    	</item>
+    </singleNamespace>
+</i18nMultiNamespace>

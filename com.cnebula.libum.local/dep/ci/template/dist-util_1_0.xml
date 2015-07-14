@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Distribution Utilities Macros">
+	 
+	<macrodef name="release.lib">
+		<attribute name="name"/>
+		<attribute name="version"/>
+		<attribute name="server" default = "${ftp.server}"/>
+		<attribute name="userid" default = "${ftp.userid}"/>
+		<attribute name="password" default = "${ftp.password}"/>
+		<attribute name="remote.dist.root" default = "${remote.dist.root}"/>
+		<attribute name="deploy.root" default = "${deploy.root}"/>
+		<attribute name="target.platform.root" default = "${target.platform.root}"/>
+		
+	    <sequential>
+	    	<ftp server="@{server}"
+		    	action="mkdir"
+		    	userid="@{userid}"
+		    	password="@{password}"
+		    	passive="yes"
+			    		verbose="yes"
+		    	remotedir="@{remote.dist.root}/library/@{name}/versions/@{version}/ref">
+	    	 </ftp>
+	    	<ftp server="@{server}"
+		    	action="put"
+		    	userid="@{userid}"
+		    	password="@{password}"
+		    	passive="yes"
+			    		verbose="yes"
+		    	remotedir="@{remote.dist.root}/library/@{name}/versions/@{version}">
+		    	<fileset dir="@{deploy.root}/bundle.jars">
+		    		<include name="**/*.jar"/>
+		    	</fileset>
+	    	 </ftp>
+	    	<ftp server="@{server}"
+		    	action="put"
+		    	userid="@{userid}"
+		    	password="@{password}"
+		    	passive="yes"
+			    		verbose="yes"
+		    	remotedir="@{remote.dist.root}/library/@{name}/versions/@{version}/ref">
+		    	<fileset dir="@{target.platform.root}/thirdparty">
+		    		<include name="**/*.jar"/>
+		    	</fileset>
+	    	 </ftp>
+	    </sequential>
+	</macrodef>
+
+	
+</project>

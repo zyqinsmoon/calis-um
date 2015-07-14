@@ -1,0 +1,197 @@
+ALEPH数据导入方案
+1.	提取UMPrincipal信息
+2.	提取Card信息
+3.	提取其他Additional ID信息
+4.	提取地址信息
+
+1：提取用户信息
+SQL:
+select r.z303_rec_key, r.z303_name, r.z303_birth_date, t.z308_status, t.z308_verification from z303 r, z308 t where t.z308_id = r.z303_rec_key and t.z308_rec_key like '00%'
+说明：主要是为了把用户的Status取到。
+
+2：提取卡信息（国图的z308表中没有Z308-Key-Data和Z308-Key-Type，有的话可以直接取这两个字段，否则使用substr如下）
+select r.z303_rec_key, substr(t.z308_rec_key,1,2), substr(t.z308_rec_key, 3, 12), t.z308_status from z303 r, z308 t where t.z308_id = r.z303_rec_key and t.z308_rec_key like '01%'
+以相同的方式提取其他Additional ID。
+说明：z308_rec_key的构成是 KeyType - KeyData - subLibrary，需要将KeyData提取出来。
+KeyType为2位，而KeyData的位数不知道，需要具体参考各系统，在上面的卡提取中，卡位数为12位。卡的KeyType为01。
+
+
+3:提取身份证信息
+t.z308_status, t.z308_verification , '2', '2', '2' from z303 r, z308 t where t.z308_id = r.z303_rec_key and t.z308_rec_key like '02%'
+
+说明：sql的最后三个字段分别为 type, loginType 和 updateType。
+
+3：提取地址信息（按照类型逐次提取）
+select r.z303_rec_key, t.z304_address, t.z304_email_address, t.z304_zip, t.z304_telephone from  z303 r, z304 t where t.z304_rec_key like r.z303_rec_key || '%' and t.z304_address_type = '1';
+说明：地址有具体类型，上面的例子中为1
+
+
+
+
+南图081011数据导入过程(updated 11-9)
+
+aleph用户的过期对应到读者管理的卡过期
+
+清空
+
+delete from um_principle t where t.creator <> 'administrator' and t.creator <> '$system'
+
+
+
+
+--导入用户
+insert into uas.um_principle(id,loginid, 
+password, 
+name, sex,
+birthday,
+mailaddr,postalcode,email,phone,status,otherpropertity1,otherpropertity2,otherpropertity3, usertype
+,createtime,lastmodifytime,validdate, invaliddate
+,lastmodifier,lifecyclestatus, creator
+)
+
+(select  
+
+trim(m.z303_rec_key),  trim(substr(p.z308_rec_key, 3, length(p.z308_rec_key)-7)),
+
+p.z308_verification,  trim(m.z303_name),  
+decode(trim(m.z303_title), 'Mr.', 'm',
+'Miss.', 'f',
+'m'
+),
+decode(m.z303_birth_date, 0, null, to_date(m.z303_birth_date||'', 'yyyymmdd')), 
+
+trim(a.z304_address), a.z304_zip, a.z304_email_address,   a.z304_telephone, 
+
+--m.z303_delinq_1, 
+2, --用户状态,启用
+
+m.z303_field_1,m.z303_field_2, m.z303_field_3, 
+
+decode(trim(s.z305_bor_type),                                                                                      
+'XS', 1	 ,                                                                                                         
+'JS', 2	 ,                                                                                                         
+'KY', 3	 ,                                                                                                         
+'GB', 4	 ,                                                                                                         
+'YW , 5	 ,                                                                                                         
+'JR', 6	 ,                                                                                                         
+'GT', 7	 ,                                                                                                         
+'ZG', 8	 ,                                                                                                         
+'ZY', 9	 ,                                                                                                         
+'GR', 10 ,                                                                                                         
+'NM', 11 ,                                                                                                         
+'WY', 12 ,                                                                                                         
+'SY', 13 ,                                                                                                         
+'DY', 14 ,                                                                                                         
+'QB', 15 ,                                                                                                         
+'WJ', 16 ,                                                                                                         
+'ETC', 50 ,                                                                                                                                                                                                                  
+0,) bt                                                                                                       
+,                                          
+
+
+
+
+decode(s.z305_open_date, 0, to_timestamp('20080101', 'yyyymmdd'), to_timestamp(s.z305_open_date||'', 'yyyymmdd')),
+ 
+
+  to_timestamp(s.z305_update_date||'','yyyymmdd'), 
+
+decode(s.z305_open_date, 0, to_timestamp('20080101', 'yyyymmdd'), to_timestamp(s.z305_open_date||'', 'yyyymmdd')), 
+
+
+to_timestamp('30080101', 'yyyymmdd'), 
+
+a.z304_cat_name, 4, a.z304_cat_name
+
+
+from z303 m, z304 a, z305 s, z308 p 
+where  a.z304_rec_key like m.z303_rec_key || '%' 
+and p.z308_id = m.z303_rec_key and p.z308_rec_key like '01%' 
+and s.z305_rec_key like m.z303_rec_key || '%' || 'NJL50' 
+)
+
+select count(*) from z305 t where t.z305_bor_type not in ('XS',
+'JS',
+'KY',
+'GB',
+'YW',
+'JR',
+'GT',
+'ZG',
+'ZY',
+'GR',
+'NM',
+'WY',
+'SY',
+'DY',
+'QB',
+'WJ',
+'ETC'
+)
+
+
+2)导入卡(先整理数据)
+update  z305 z set z.z305_expiry_date=20090301  where z.z305_expiry_date = 20090229
+
+
+
+insert into uas.um_card(id, code, type, status
+,createtime,lastmodifytime,validdate, invaliddate
+,lastmodifier,lifecyclestatus, creator
+,principle_id
+)
+
+(select  
+
+trim(m.z303_rec_key),  trim(substr(p.z308_rec_key, 3, length(p.z308_rec_key)-7)),  to_number(s.z305_bor_status),
+
+decode(m.z303_delinq_1, 0, 2, 
+1, 0, 
+5, 1,
+2, 3,
+4, 1
+),
+
+decode(s.z305_open_date, 0, to_timestamp('20080101', 'yyyymmdd'), to_timestamp(s.z305_open_date||'', 'yyyymmdd')),
+ 
+
+  to_timestamp(s.z305_update_date||'','yyyymmdd'), 
+
+decode(s.z305_open_date, 0, to_date('20080101', 'yyyymmdd'), 
+to_date(s.z305_open_date||'', 'yyyymmdd')), 
+
+
+to_date(z305_expiry_date||'', 'yyyymmdd'), 
+
+
+a.z304_cat_name, 4, a.z304_cat_name,
+
+trim(m.z303_rec_key)
+
+from z303 m, z304 a, z305 s, z308 p 
+where  a.z304_rec_key like m.z303_rec_key || '%' 
+and p.z308_id = m.z303_rec_key and p.z308_rec_key like '01%' 
+and s.z305_rec_key like m.z303_rec_key || '%' || 'NJL50' 
+and not (s.z305_bor_status is null or s.z305_bor_status = 'YW')
+and m.z303_delinq_1<> 50
+)
+
+3. 导入身份证
+
+insert into uas.um_additionalid(id, code, logintype, type, validdate, invaliddate, password, status, updatetype,owner_id)
+(
+
+select trim(p.z308_rec_key), trim(substr(p.z308_rec_key, 3, length(p.z308_rec_key)-7)),
+2, 2, to_date('20070101', 'yyyymmdd'), to_date('30080101', 'yyyymmdd'), null, 2,  1,
+trim(p.z308_id)
+
+from z303 m, z304 a, z305 s, z308 p 
+where  a.z304_rec_key like m.z303_rec_key || '%' 
+and p.z308_id = m.z303_rec_key 
+and s.z305_rec_key like m.z303_rec_key || '%' || 'NJL50'
+and 
+  p.z308_rec_key like '02%'
+
+
+)
+

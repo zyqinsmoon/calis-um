@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<i18nMultiNamespace>
+	<singleNamespace namespace="com.cnebula.common.ejb.manage.EntityCRUDException">
+	   <item key="can not delete *:*, *:* is dependent on it, errorType=-4"  defaultLang="zh_CN"  varCount="2" varI18n="true">
+	      <locale value="can not delete {0}: {1}, {2}:{3} is dependent on it" lang="en_US" />
+	      <locale value="无法删除{0}: {1}， 因为它被{2}:{3}所引用依赖" lang="zh_CN" />
+	   </item>
+	   <item key="[wrap for class javax.persistence.OptimisticLockException]*"  defaultLang="zh_CN"  varCount="1" varI18n="true">
+	      <locale value="The Object you want to commit has already changed by anthoer user." lang="en_US" />
+	      <locale value="您提交修改的对象版本比数据库中的要低，可能是该对象刚刚被其他用户修改了，请重新打开该对象进行修改。" lang="zh_CN" />
+	   </item>
+	   <item key="remove object, errorType=-1"  defaultLang="zh_CN">
+	      <locale value="No permission to remove objects Or can not remove objects created by SYSTEM" lang="en_US" />
+	      <locale value="您无法删除这些对象，因为没有权限、操作不合规则或包含系统自建对象" lang="zh_CN" />
+	   </item>
+	    <item key="cascade remove object, errorType=-2"  defaultLang="zh_CN">
+	      <locale value="No permission to remove objects Or can not remove objects created by SYSTEM" lang="en_US" />
+	      <locale value="您无法删除这些对象，因为没有权限、操作不合规则或包含系统自建对象" lang="zh_CN" />
+	   </item>
+	   
+	   <item key="update object, errorType=-1"  defaultLang="zh_CN">
+	      <locale value="No permission to update objects Or can not update objects created by SYSTEM" lang="en_US" />
+	      <locale value="您无法修改这些对象，因为没有权限、操作不合规则或包含系统自建对象" lang="zh_CN" />
+	   </item>
+	   <item key="persist object, errorType=-1"  defaultLang="zh_CN">
+	      <locale value="No permission to create objects" lang="en_US" />
+	      <locale value="您无法创建这些对象，因为没有权限、操作不合规则或包含系统自建对象" lang="zh_CN" />
+	   </item>
+	   <item key="stop object, errorType=-1"  defaultLang="zh_CN">
+	      <locale value="No permission to change these users" lang="en_US" />
+	      <locale value="您无法停用这些用户，因为没有权限、操作不合规则或包含系统自建对象" lang="zh_CN" />
+	   </item>
+	   <item key="activate object, errorType=-1"  defaultLang="zh_CN">
+	      <locale value="No permission to change these users" lang="en_US" />
+	      <locale value="您无法启用这些用户，因为没有权限、操作不合规则或包含系统自建对象" lang="zh_CN" />
+	   </item>
+	   <item key="[wrap for class com.cnebula.um.integrate.aleph.AlephException]: *"  defaultLang="zh_CN"  varCount="1" varI18n="true">
+	      <locale value="Integrate Error Message From ALEPH：{0}" lang="en_US" />
+	      <locale value="集成错误提示来自ALEPH：{0}" lang="zh_CN" />
+	   </item>
+    </singleNamespace>
+    <singleNamespace namespace="java.lang.IllegalArgumentException">
+	   <item key="* can not convert to class java.util.Date"  defaultLang="zh_CN"  varCount="2" varI18n="true">
+	      <locale value="can not convert {0} to Date" lang="en_US" />
+	      <locale value="无法将{0}转换成日期类型" lang="zh_CN" />
+	   </item>
+	   <item key="class java.util.Date can not support LIKE query"  defaultLang="zh_CN">
+	      <locale value="Date not support fuzzy search" lang="en_US" />
+	      <locale value="日期类型不支持模糊查询，请尝试使用大于、小于等范围查询" lang="zh_CN" />
+	   </item>
+	   <item key="long can not support LIKE query"  defaultLang="zh_CN">
+	      <locale value="Long type or IP address not support fuzzy search" lang="en_US" />
+	      <locale value="长整型和IP地址类型不支持模糊查询，请尝试使用大于、小于等范围查询" lang="zh_CN" />
+	   </item>
+    </singleNamespace>
+	<singleNamespace namespace="java.security.AccessControlException">
+	   <item key="access denied (com.cnebula.common.ejb.EntityPermission EntityPermission view)"  defaultLang="zh_CN">
+	      <locale value="You have no permission to view this object" lang="en_US" />
+	      <locale value="您没有权限查看此对象" lang="zh_CN" />
+	   </item>
+	   <item key="access denied (com.cnebula.common.ejb.EntityPermission EntityPermission delete)"  defaultLang="zh_CN">
+	      <locale value="You have no permission to delete this object" lang="en_US" />
+	      <locale value="您没有权限删除此对象" lang="zh_CN" />
+	   </item>
+	   <item key="access denied (com.cnebula.common.ejb.EntityPermission EntityPermission update)"  defaultLang="zh_CN">
+	      <locale value="You have no permission to update this object" lang="en_US" />
+	      <locale value="您没有权限更新此对象" lang="zh_CN" />
+	   </item>
+	   <item key="access denied (com.cnebula.common.remote.core.RemoteServiceAccessPermission * *)" varCount="1" varI18n="true" defaultLang="zh_CN">
+	      <locale value="You have no permission to access {0} {1}" lang="en_US" />
+	      <locale value="您没有权限访问{0}{1}" lang="zh_CN" />
+	   </item>
+	   <item key="access denied * view)" varCount="1" varI18n="true" defaultLang="zh_CN">
+	      <locale value="You have no permission to access this object or session is time out" lang="en_US" />
+	      <locale value="您没有权限访问该对象或者会话已经超时" lang="zh_CN" />
+	   </item>
+    </singleNamespace>
+</i18nMultiNamespace>

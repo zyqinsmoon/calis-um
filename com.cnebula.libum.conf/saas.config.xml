@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SAASConfig enableSAAS="false">
+	<class name="com.cnebula.common.ejb.manage.SingleIntegrateStatus" saasPersist="true" saasQuery="true"/>
+	<class name="com.cnebula.um.ejb.entity.env.IPSegment" saasPersist="true" saasQuery="true"/>
+	<class name="com.cnebula.um.ejb.entity.env.IPRange" saasPersist="true" saasQuery="true"/>
+	<class name="com.cnebula.um.ejb.entity.statistics.LogItem" saasPersist="true" saasQuery="true"/>
+	<class name="com.cnebula.um.ejb.entity.perm.Application" saasPersist="true" saasQuery="true"/>
+	<class name="com.cnebula.um.ejb.entity.perm.GeneralResource" saasPersist="true" saasQuery="true"/>
+	<class name="com.cnebula.um.ejb.entity.perm.Role" saasPersist="true" saasQuery="true"/>
+	<class name="com.cnebula.um.ejb.entity.perm.LegacyRole" saasPersist="true" saasQuery="true"/>
+	<class name="com.cnebula.um.ejb.entity.perm.UserRule" saasPersist="true" saasQuery="true"/>
+	<class name="com.cnebula.um.ejb.entity.perm.PermissionRule" saasPersist="true" saasQuery="true"/>
+	<class name="com.cnebula.um.ejb.entity.usr.Organization" saasPersist="true" saasQuery="true"/>
+	<class name="com.cnebula.um.ejb.entity.usr.UMPrincipal" saasPersist="true" saasQuery="true"/>
+	<class name="com.cnebula.um.ejb.entity.usr.AdditionalId" saasPersist="true" saasQuery="true"/>
+	<class name="com.cnebula.um.ejb.entity.usr.Contactor" saasPersist="true" saasQuery="true"/>
+	<class name="com.cnebula.um.ejb.entity.usr.AuthCenter" saasPersist="true" saasQuery="true"/>
+	<class name="com.cnebula.um.ejb.entity.usr.Card" saasPersist="true" saasQuery="true"/>
+	<class name="com.cnebula.um.ejb.entity.usr.Personality" saasPersist="true" saasQuery="true"/>
+	<class name="com.cnebula.um.ejb.entity.usr.Cash" saasPersist="true" saasQuery="true"/>
+	<class name="com.cnebula.um.ejb.entity.usr.HistoryCard" saasPersist="true" saasQuery="true"/>
+	<class name="com.cnebula.um.ejb.entity.usr.NewUserBean" saasPersist="true" saasQuery="true"/>
+	<class name="com.cnebula.um.ejb.entity.usr.ResetPasswordBean" saasPersist="true" saasQuery="true"/>
+	<class name="com.cnebula.um.ejb.entity.perm.Application" saasPersist="true" saasQuery="true"/>
+</SAASConfig>

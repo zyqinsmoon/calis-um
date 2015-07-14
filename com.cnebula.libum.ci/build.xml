@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Build Core" default="summary">
+	
+	<import file="build-util_1_0.xml"/>
+	
+	<property file="preset.properties"></property>
+	
+	<property file="${BUILD_PROPERTY_LOCATION}"></property>
+	
+	<property file="${local.root}/local-build.properties"></property>
+	
+	<property file="build-global.properties"></property>
+	
+	<property name="server.start.time" value="20"></property>
+	
+	<path id="oracle.driver.path">
+		<fileset dir="${target.platform.root}/drivers">
+	        <include name="**/*.jar" />
+	    </fileset>
+	</path>
+	
+	<target name="init">
+		<!--初始化代码测试覆盖工具-->
+		<init.cobertura/>
+		<init.deploy.root/>
+	</target>
+	
+	<target name="droptable" depends="init">
+		<sql onerror="continue" rdbms="oracle"
+		     userid="${db_user}"
+		     password="${db_password}"
+		     driver="${db_driver}"
+		     url="${db_url}"
+		     classpathref="oracle.driver.path"
+			 print="true">
+		   <transaction src="drop-tables.sql"/>
+		</sql> 
+	</target>
+	
+	<target name="build.app.bundles" depends="droptable">
+		<build.bundle bundle.name="com.cnebula.common.mail.service" version="1.0.0"/>
+    	<build.bundle bundle.name="com.cnebula.um.ejb" version="1.0.0"/>
+    	<build.bundle bundle.name="com.cnebula.um.service" version="1.0.0"/>
+    	<build.bundle bundle.name="com.cnebula.um.service.imp" version="1.0.0"/>
+		<build.bundle bundle.name="com.cnebula.um.client.ui" version="1.0.0"/>
+		<build.bundle bundle.name="com.cnebula.um.task.syn" version="1.0.0"/>
+		<build.bundle bundle.name="com.cnebula.um.simple.permission" version="1.0.0"/>
+		<build.bundle bundle.name="com.cnebula.um.simple.permission.imp" version="1.0.0"/>
+    </target>
+		
+	
+    <target name="build.unittest.bundles" depends="build.app.bundles">
+    	<!--构建一个普通单元测试组件-->
+    	<build.unittest.bundle bundle.name="com.cnebula.um.service.imp.unittest" version="1.0.0"/>
+     </target>
+
+    <target name="build.esunittest.bundles" depends="build.unittest.bundles"> 
+    	
+        <build.esunittest.bundle bundle.name="com.cnebula.um.service.imp.estest" version="1.0.0"/>
+     </target>	
+	
+	<target name="build.comtest.bundles" depends="build.esunittest.bundles">
+		<build.comtest.bundle bundle.name="com.cnebula.um.service.imp.comtest" version="1.0.0"/>
+	</target>
+		
+	<target name="cobertura.app.bundles" depends="build.comtest.bundles">
+		
+		<build.cobertura.bundle bundle.name="com.cnebula.um.ejb" version="1.0.0"/>
+		<merge.cobertura.bundles/>
+		<!--
+		<build.cobertura.bundle bundle.name="com.cnebula.um.service" version="1.0.0"/>
+		<build.cobertura.bundle bundle.name="com.cnebula.um.service.imp" version="1.0.0"/>
+		<build.cobertura.bundle bundle.name="com.cnebula.um.task.syn" version="1.0.0"/>
+		<build.cobertura.bundle bundle.name="com.cnebula.um.simple.permission" version="1.0.0"/>
+		<build.cobertura.bundle bundle.name="com.cnebula.um.simple.permission.imp" version="1.0.0"/>
+		-->
+		
+	</target>
+	
+    <target name="unit.test" depends="cobertura.app.bundles">
+    	<general.junit bundle.name="com.cnebula.um.service.imp.unittest" tested.bundle="com.cnebula.um.service.impl" fail.property="fail.unit.test"/>	
+    </target>
+			
+    <target name="deploy.runtime" depends="unit.test">
+    	<deploy.runtime/>
+    </target>
+    	
+    	
+	<target name="start.app.instance" depends="deploy.runtime">
+		<start.instance osgi.version="3.3.0.ES_1_0"/>
+	</target>
+
+		
+	<target name="check.instance" depends="start.app.instance">
+		<sleep seconds="${server.start.time}"/>
+	<!--	<es.check.status/>-->
+	</target>
+	
+	<!-- 定义Easice测试的Bundles-->
+	<property name="unit.test.bundles" value="com.cnebula.um.service.imp.estest"></property>
+	
+	<target name="es.unit.test" depends="check.instance">
+			<!--<sleep seconds="10"/>-->
+		    <!--进行Easy Service单元测试-->
+			<es.junit/> 
+	</target>
+
+	
+	<target name="com.test" depends="es.unit.test">
+		<es.comtest  bundle.name="com.cnebula.um.service.imp.comtest" fail.property="fail.com.test"/>
+	</target>
+		
+	<target name="close.instance" depends="com.test">
+		<es.close/>
+		<sleep milliseconds="10000"/>
+	</target>
+			
+	<target name="close.instance.simple" depends="">
+			<es.close/>
+	</target>
+		
+	<target name="test.report" depends="close.instance">
+		<es.comtest.report/>
+		<general.junit.report/>
+		<es.junit.report/>
+	</target>
+		
+	<target name="cobertura.report" depends="test.report">
+		<waitfor checkeveryunit="second" checkevery="5" maxwaitunit="second" maxwait="60">
+				 <available file="${deploy.root}/cobertura/cobertura.ser"></available>
+    	</waitfor>
+		<waitfor checkeveryunit="second" checkevery="5" maxwaitunit="second" maxwait="60">
+			 <available file="${deploy.root}/cobertura/com.cnebula.um.service.imp.ser"></available>
+		</waitfor>
+		<cobertura-merge datafile="${deploy.root}/cobertura/summary-cobertura.ser">
+    	    <fileset dir="${deploy.root}/cobertura">
+    	    	<include name="**/*.ser" />
+    	    </fileset>
+    	</cobertura-merge>
+    	<cobertura-report datafile="${deploy.root}/cobertura/summary-cobertura.ser" format="${cobertura.report.type}" destdir="${cobertura.report.root}" >
+    		<fileset dir="${workspace.root}/com.cnebula.um.service/src">
+    		    	<include name="**/*.java" />
+    		</fileset>
+    		<fileset dir="${workspace.root}/com.cnebula.um.service.imp/src">
+    		    	<include name="**/*.java" />
+    		</fileset>
+    		<fileset dir="${workspace.root}/com.cnebula.um.ejb/src">
+    		    	<include name="**/*.java" />
+    		</fileset>
+    		<!--
+    		<fileset dir="${workspace.root}/com.cnebula.um.task.syn/src">
+    		    		    	<include name="**/*.java" />
+    		 </fileset>
+    		 -->
+    	</cobertura-report>
+	</target>
+		
+	<target name="summary" depends="cobertura.report">
+		<fail message="Test Failed">
+			<condition>
+				<or>
+					<isset property="fail.unit.test" />
+					<isset property="fail.com.test" />
+				</or>
+			</condition>
+		</fail>
+	</target>
+	
+	
+</project>

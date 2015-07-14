@@ -1,0 +1,31 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: UM Client UI2 Plug-in
+Bundle-SymbolicName: com.cnebula.um.client.ui2
+Bundle-Version: 1.0.0
+Bundle-Activator: com.cnebula.um.client.ui2.Activator
+Bundle-Vendor: CNEBULA
+Eclipse-LazyStart: true
+E-C-T: com.cnebula.um.client.ui2.Activator
+Import-Package: com.cnebula.common.annotations.ejb.ext,
+ com.cnebula.common.annotations.ejb.ui,
+ com.cnebula.common.annotations.es,
+ com.cnebula.common.annotations.xml,
+ com.cnebula.common.conf,
+ com.cnebula.common.ejb.relation,
+ com.cnebula.common.es,
+ com.cnebula.common.i18n,
+ com.cnebula.common.log,
+ com.cnebula.common.security.auth,
+ com.cnebula.common.servlet.impl,
+ com.cnebula.osgi.es.fwk,
+ com.cnebula.osgi.es.util,
+ javax.servlet;version="2.5.0",
+ javax.servlet.http;version="2.5.0",
+ javax.servlet.resources;version="2.5.0",
+ org.osgi.framework;version="1.3.0",
+ org.osgi.service.component;version="1.0.0",
+ org.osgi.service.http;version="1.2.0"
+Require-Bundle: com.cnebula.common.ejb.manage,
+ com.cnebula.um.ejb
+

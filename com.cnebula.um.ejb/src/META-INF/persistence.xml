@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	version="1.0">
+	<persistence-unit name="calisum">
+		<jta-data-source>java:comp/env/jdbc/calisumDS</jta-data-source>
+		<class>com.cnebula.common.ejb.manage.saas.Tenant</class>
+		<class>com.cnebula.um.ejb.saas.UMTenant</class>
+		<class>com.cnebula.common.ejb.manage.EntityIdGenerator</class>
+		<class>com.cnebula.common.ejb.manage.spec.SpecDataItem</class>
+		<class>com.cnebula.common.ejb.manage.spec.I18nValue</class>
+		<class>com.cnebula.common.ejb.manage.spec.DataType</class>
+		<class>com.cnebula.common.ejb.manage.spec.SpecBaseInfo</class>
+		<class>com.cnebula.common.ejb.manage.perm.DelegateAuth</class>
+		<class>com.cnebula.common.ejb.manage.perm.ResourceType</class>
+		<class>com.cnebula.common.ejb.manage.perm.Operation</class>
+		<class>com.cnebula.common.ejb.manage.perm.OperationFieldContraint</class>
+		<class>com.cnebula.common.ejb.manage.IntegrateInfo</class>
+		<class>com.cnebula.common.ejb.manage.SingleIntegrateStatus</class>
+		<class>com.cnebula.um.ejb.entity.env.IPSegment</class>
+		<class>com.cnebula.um.ejb.entity.env.IPV6Segment</class>
+		<class>com.cnebula.um.ejb.entity.env.IPRange</class>
+		<class>com.cnebula.um.ejb.entity.statistics.LogItem</class>
+		<class>com.cnebula.um.ejb.entity.perm.Application</class>
+		<class>com.cnebula.um.ejb.entity.perm.GeneralResource</class>
+		<class>com.cnebula.um.ejb.entity.perm.Role</class>
+		<class>com.cnebula.um.ejb.entity.perm.LegacyRole</class>
+		<class>com.cnebula.um.ejb.entity.perm.UserRule</class>
+		<class>com.cnebula.um.ejb.entity.perm.PermissionRule</class>
+		<class>com.cnebula.um.ejb.entity.usr.Organization</class>
+		<class>com.cnebula.um.ejb.entity.usr.UMPrincipal</class>
+		<class>com.cnebula.um.ejb.entity.usr.AdditionalId</class>
+		<class>com.cnebula.um.ejb.entity.usr.Contactor</class>
+		<class>com.cnebula.um.ejb.entity.usr.AuthCenter</class>
+		<class>com.cnebula.um.ejb.entity.usr.Card</class>
+		<class>com.cnebula.um.ejb.entity.usr.Personality</class>
+		<class>com.cnebula.um.ejb.entity.usr.Cash</class>
+		<class>com.cnebula.um.ejb.entity.usr.HistoryCard</class>
+		<!-- 用户管理  -->
+		<class>com.cnebula.um.ejb.entity.usr.NewUserBean</class>
+		<class>com.cnebula.um.ejb.entity.usr.ResetPasswordBean</class>		
+		<class>com.cnebula.um.ejb.entity.syn.MultiSynTaskConfigInfo</class>
+		<class>com.cnebula.um.ejb.entity.syn.MultiSynTaskTxtConfigInfo</class>
+		<class>com.cnebula.um.ejb.entity.syn.MultiSynTaskLogInfo</class>
+		
+		<properties>
+			<property name="use.toplink.jta" value="true" />
+			<property name="toplink.logging.level" value="INFO" />
+			<property name="toplink.target-database" value="PostgreSQL" />
+			<property name="toplink.target-database" value="Oracle" />
+			<property name="toplink.target-database"
+				value="oracle.toplink.essentials.platform.database.H2Platform" />
+			<!-- start postgresSQL创建表 -->
+		    <!--  
+		    <property name="toplink.target-database" value="PostgreSQL" />
+			<property name="toplink.logging.level" value="FINE" />
+			<property name="toplink.ddl-generation"
+				value="create-tables" />
+			<property name="toplink.create-ddl-jdbc-file-name" value="workspace/com.cnebula.um.service/script/createAll-postgresql.sql"/>
+			<property name="toplink.ddl-generation.output-mode" value="both"/>
+			-->
+			<!-- start Oracle创建表 -->
+			 <!--
+			<property name="toplink.target-database" value="Oracle" />
+			<property name="toplink.logging.level" value="FINE" />
+			<property name="toplink.ddl-generation"
+				value="create-tables" />
+			<property name="toplink.create-ddl-jdbc-file-name" value="workspace/com.cnebula.um.service/script/createAll.sql"/>
+			<property name="toplink.ddl-generation.output-mode" value="both"/>
+			 -->
+			<!-- end 创建表 -->
+			<!-- start 先删除再创建表 -->
+			<!-- 
+			<property name="toplink.logging.level" value="FINE" />
+			<property name="toplink.ddl-generation"
+				value="drop-and-create-tables" />
+			<property name="toplink.ddl-generation.output-mode" value="database"/>
+			 -->
+			<!-- end 先删除再创建表 -->
+			<!-- 
+			<property name="toplink.create-ddl-jdbc-file-name" value="workspace/com.cnebula.um.service/script/create.sql"/>
+			<property name="toplink.drop-ddl-jdbc-file-name" value="workspace/com.cnebula.um.service/script/drop.sql"/>
+			<property name="toplink.ddl-generation.output-mode"
+				value="sql-script–generate" />
+			
+			<property name="toplink.logging.level" value="FINE" />
+			 -->
+		</properties>
+	</persistence-unit>
+</persistence>

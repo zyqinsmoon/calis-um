@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Core Lib Distribution" default="distribute">
+	
+	<import file="dist-util_1_0.xml"/>
+	
+	<property file="${BUILD_PROPERTY_LOCATION}"></property>
+	<property name="local.dist.root" value="/var/ftp/product_dist/"></property>
+	<property file="build-global.properties"></property>
+	<property file="preset.properties"></property>
+	
+	<target name="distribute">
+		<es.archive application.config.path="conf/server.xml"/>
+		<dist.build local.dist.root="/var/ftp/cnebula_dist" name="um"/>
+		<dist.last.integration local.dist.root="/var/ftp/cnebula_dist" name="um"/>
+		<mkdir dir="/var/ftp/cnebula_dist/library/um/build/${env.BUILD_NUMBER}/setup"/>
+		<copy todir="/var/ftp/cnebula_dist/library/um/build/${env.BUILD_NUMBER}/setup">
+    		<fileset dir="${es.config.path}/setup">
+	    	</fileset>
+    	</copy>
+		<mkdir dir="/var/ftp/cnebula_dist/library/um/versions/last-integration/setup"/>
+		<copy todir="/var/ftp/cnebula_dist/library/um/versions/last-integration/setup">
+    		<fileset dir="${es.config.path}/setup">
+	    	</fileset>
+    	</copy>
+		<dist.product name="libum.dist"/>
+	</target>
+	
+</project>

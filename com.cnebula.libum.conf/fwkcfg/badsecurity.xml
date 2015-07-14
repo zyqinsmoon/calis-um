@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SecurityConfig disabled="false">
+
+	<!-- Authentication 认证部分 -->
+	<authentication>
+		<loginConfig>
+				<config name="OSGISystemLogin">
+					<entrylist>
+						<entry
+							loginModuleName="com.cnebula.common.security.auth.EasyLoginModule"
+							controlFlag="required">
+							<option key="loginValidateService"
+								value="com.cnebula.common.security.auth.ILoginValidateService" />
+							<option key="loginValidateServiceTarget"
+								value="(id=KernelAccessControlProvider)" />
+						</entry>
+					</entrylist>
+				</config>
+				<config name="easyLogin">
+					<entrylist>
+						<entry
+							loginModuleName="com.cnebula.common.security.auth.EasyLoginModule"
+							controlFlag="required">
+							<option key="loginValidateService"
+								value="com.cnebula.common.security.auth.ILoginValidateService" />
+							<option key="loginValidateServiceTarget"
+								value="(id=ExampleValidLoginService)" />
+						</entry>
+					</entrylist>
+				</config>
+		</loginConfig>
+		<kernelUsers>
+			<user name="system" />
+			<user name="root" password="001" />
+			<user name="guest" password="002" />
+		</kernelUsers>
+	</authentication>
+
+
+
+	<!-- Authorization 授权部分 -->
+	<authorization>
+		<systemRole name="system" description="超级角色，拥有一切权限">
+			<userPolicy>
+				<rule name="systemUserFilter">
+					<expression><![CDATA[name="system"]]></expression>
+				</rule>
+			</userPolicy>
+			<permissionPolicy>
+				<rule name="systemUserPermissionFilter">
+					<expression>true</expression>
+				</rule>
+			</permissionPolicy>
+			<permissionRules>
+				<permissionRule expression="1=1"/>
+			</permissionRules>
+			<children>
+				<role  type="code" name="General Bundle" description="给一般代码赋予常规权限" ownerName="system">
+					<userPolicy>
+						<rule name="codebaseUserFilter">
+							<expression><![CDATA[code.location.protocol="file" & ( code.location.path ~= "*/workspace/*"]]></expression>
+						</rule>
+					</userPolicy>
+					<permissionPolicy>
+						<rule name="codebasePermissionFilter">
+							<expression>
+							<![CDATA[
+								type="file" | type="socket" | type="basic" | type="runtime" | type="OsgiPackage" | type="OsgiService" | type="OsgiAdmin" | type="OsgiBundle" | type="Property" | type="Reflect" | type~="java.*" |  type~="javax.*"
+							]]>
+							</expression>
+						</rule>
+					</permissionPolicy>
+
+				</role>
+				
+				<role type="code" name="com.cnebula.common.security.test" description="Security Test" ownerName="system">
+			    	<userPolicy>
+						<rule name="测试bundle的代码用户过滤">
+							<expression><![CDATA[code.location.protocol="file" & (code.location.path ~= "*/com.cnebula.common.security.test/*")]]></expression>
+						</rule>
+					</userPolicy>
+					<permissionPolicy>
+						<rule name="测试bundle的代码权限">
+							<expression>
+							<![CDATA[
+								name = "testPermission"
+							]]>
+							</expression>
+						</rule>
+					</permissionPolicy>
+				</role>
+
+				<role name="rootRole" description="root管理员的角色"
+					onwer="system">
+					<userPolicy>
+						<rule name="root用户过滤">
+							<expression><![CDATA[name="root")]]></expression>
+						</rule>
+					</userPolicy>
+					<permissionPolicy>
+						<rule name="systemUserPermissionFilter">
+							<expression>true</expression>
+						</rule>
+					</permissionPolicy>
+					<children>
+						<role type="applicationTop" name="UMTopRole"
+							description="给UM系统的顶层限制角色" ownerName="root">
+							<userPolicy>
+								<rule name="um用户过滤">
+									<expression><![CDATA[type="com.cnebula.um.auth.export.EntityPrincipal"]]></expression>
+								</rule>
+							</userPolicy>
+							<permissionPolicy>
+								<rule name="um权限过滤">
+									<expression>
+										<![CDATA[
+										true
+										]]>
+									</expression>
+								</rule>
+							</permissionPolicy>
+						</role>
+					</children>
+
+				</role>
+
+			</children>
+		</systemRole>
+	</authorization>
+	
+</SecurityConfig>

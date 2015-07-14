@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<title>Menu</title>
+<style type="text/css">
+@import "js/dojo/dojox/highlight/resources/highlight.css";
+@import "js/dojo/dojox/highlight/resources/pygments/default.css";
+@import "js/dojo/dijit/themes/soria/soria.css";
+</style>
+<link rel=stylesheet href="css/dropDownMenu.css" type="text/css">
+</link>
+<script type="text/javascript"
+        djConfig="parseOnLoad: true, isDebug: false"
+        src="js/dojo/dojo/dojo.js">
+</script>
+<script type="text/javascript" src="js/easy/service.js"></script>
+<script type="text/javascript" src="/easyservice-util/EasyServiceClientFullZ.js"></script>
+<script   language="JavaScript">   
+  document.onreadystatechange=   function()   {   
+          if(document.readyState=="complete")   
+                  alert('加载完毕');   
+  }   
+</script>
+</head>
+<body class="soria">
+<div id="dropDownButton" dojoType="dijit.form.DropDownButton" label="通行证">
+  <div id="dorpDownDialog" dojoType="dijit.TooltipDialog">
+    <div id="formContainer" style="background:transparent url(images/pic001.gif) no-repeat scroll center 3px;"> <span><b style="color:#FC7821;">CALIS通行证</b></span>
+      <form id="loginForm" action="">
+        <table align="center" border="1">
+          <tr>
+            <td><label>帐户：</label>
+              <input size="12" maxlength="15"/>
+            </td>
+          </tr>
+          <tr>
+            <td><label>密码：</label>
+              <input size="12" maxlength="15"/>
+            </td>
+          </tr>
+          <tr>
+            <td><input id="login" style="margin-left:37px" type="submit" 
+            	 dojoType="dijit.form.Button" onclick=""
+            	 label="登陆"/>
+              <input style="margin-right:37px" type="submit" 
+            	 dojoType="dijit.form.Button" onclick=""
+            	 label="注册"/>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- end loginForm -->
+    </div>
+    <!-- end formContainaer-->
+  </div>
+  <!-- end dorpDownDialog -->
+</div>
+<!-- end dropDownButton -->
+<div id="passportCardDropDownButton" dojoType="dijit.form.DropDownButton" label="我的通行证">
+  <div id="passportCardDialog" dojoType="dijit.TooltipDialog" style="height: 160px; width: 280px; text-align: left; visibility: hidden;">
+    <div class="passportCardTitle"> <span class="calisPassport">CALIS<font color="#FF3300">通行证</font></span> <span class="logout"><a href="">退出</a></span> </div>
+    <!--end passportCardTitle-->
+    <div class="passportCardMain" style="background:transparent url(images/pic001.gif);">
+      <div class="passportWelcomeBox">
+        <div class="loginIcoBox"> <a href="#"><img id="login_icoImg" alt="liyi" src="images/none.png"/></a> </div>
+        <!--end loginIcoBox-->
+        <div class="loginInfoBox">
+          <div class="userInfoBox">
+            <p>liyi[sandor],欢迎登陆!</p>
+          </div>
+          <!--userInfoBox-->
+          <div class="updateBox"> <a href="">修改我的资料</a> | <a href="">修改密码</a> </div>
+          <!--end updateBox-->
+        </div>
+        <!--end loginInfoBox-->
+      </div>
+      <!-- end passportWelcomeBox -->
+      <div class="deco">
+      	用户
+      </div>
+      <div class="passportLinkBox">
+        <ul>
+          <li><img src="images/goto1.gif" alt="去" /></li>
+          <li><a target="_blank" href="http://portal.jslib.org.cn">Portal</a></li>
+          <li>|</li>
+          <li><a target="_blank" href="http://www.google.com">Google</a></li>
+        </ul>
+      </div>
+      <!--end passportLinkBox-->
+    </div>
+    <!--end passportCardMain-->
+  </div>
+  <!--end passportCardDialog-->
+</div>
+<!--end passportCardDropDownButton-->
+</body>
+</html>

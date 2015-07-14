@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>静态角色配置</title>
+<style type="text/css"><!--
+/* @group RESET */
+/* --------------------------------------------------------------
+
+  Reset.css
+  * Resets default browser CSS styles.
+
+  Created by Erik Meyer:
+  * meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
+-------------------------------------------------------------- */
+
+* html {
+  overflow-y: auto;
+}
+html, body {
+    height: 100%;
+}
+--></style>
+<link type="text/css" rel="stylesheet" href="_cssAndJsDir_/zyxwiki.css"/>
+<link type="text/css" rel="stylesheet" href="_cssAndJsDir_/shThemeDefault.css"/>
+<link type="text/css" rel="stylesheet" href="_cssAndJsDir_/shCore.css"/>
+<script type="text/javascript" src="_cssAndJsDir_/shCore.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shCore.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushCpp.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushCSharp.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushCss.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushGroovy.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushJavaFX.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushJScript.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushPerl.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushPhp.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushPlain.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushPowerShell.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushPython.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushRuby.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushScala.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushSql.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushVb.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushXml.js"></script>
+<script type="text/javascript" src="_cssAndJsDir_/shBrushJava.js"></script>
+<script type="text/javascript">
+SyntaxHighlighter.config.clipboardSwf = '_cssAndJsDir_/clipboard.swf'
+SyntaxHighlighter.all();
+</script>
+  </head>
+  <body>
+
+<div id="xwikimaincontainer">
+<div id="xwikimaincontainerinner">
+<h1><span id="静态角色配置">静态角色配置</span></h1>
+<h2><span id="使用说明">使用说明</span></h2>
+<p>在server.xml中，添加名为“StaticRolesConfig”的配置点。
+如下：
+<div class="code"><pre class="brush:java">
+
+	&lt;cfg confPoint=&quot;StaticRolesConfig&quot;&gt;
+		&lt;StaticRolesConfig&gt;
+			&lt;Role name=&quot;静态权限配置&quot; id=&quot;f4bb99f3-866d-4fff-b007-014508bcd39c&quot; type=&quot;1&quot; version=&quot;0&quot; enabled=&quot;true&quot; blackRole=&quot;false&quot; category=&quot;1&quot; description=&quot;静态角色配置&quot;&gt;
+				&lt;uMUserRules&gt;
+					&lt;UserRule id=&quot;081a3f3b-9489-4138-902c-907ec1438e04&quot; type=&quot;0&quot; version=&quot;0&quot; operations=&quot;view&quot; enabled=&quot;true&quot; expression=&quot;true&quot; entityLimitType=&quot;com.cnebula.um.ejb.entity.usr.UMPrincipal&quot; authable=&quot;true&quot;&gt;
+					&lt;/UserRule&gt;
+				&lt;/uMUserRules&gt;
+				&lt;uMPermissionRules&gt;
+					&lt;PermissionRule id=&quot;14b0c6a7-b0e1-4a64-8842-9df87f021a15&quot; type=&quot;0&quot; version=&quot;0&quot; operations=&quot;update&quot; enabled=&quot;true&quot; expression=&quot;true&quot; entityLimitType=&quot;com.cnebula.um.ejb.entity.perm.PermissionRule&quot; authable=&quot;true&quot;&gt;
+					&lt;/PermissionRule&gt;
+				&lt;/uMPermissionRules&gt;
+			&lt;/Role&gt;
+		&lt;/StaticRolesConfig&gt;
+	&lt;/cfg&gt;
+</pre></div>
+</p>
+</div>
+</div>
+  </body>
+</html>

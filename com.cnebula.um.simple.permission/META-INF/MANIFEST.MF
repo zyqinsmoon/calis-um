@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: CNebula UM Simple Authorize Plug-in
+Bundle-SymbolicName: com.cnebula.um.simple.permission
+Bundle-Version: 1.0.0
+Bundle-Vendor: CNEBULA
+E-C-T: com.cnebula.um.simple.permission.Activator
+Import-Package: com.cnebula.aas.util,
+ com.cnebula.common.annotations.ejb.ui,
+ com.cnebula.common.annotations.es,
+ com.cnebula.common.annotations.xml,
+ com.cnebula.common.ejb.manage,
+ com.cnebula.common.i18n,
+ com.cnebula.common.log,
+ com.cnebula.um.ejb.entity.perm,
+ com.cnebula.um.ejb.entity.usr,
+ org.osgi.framework
+Export-Package: com.cnebula.um.simple.permission
+Require-Bundle: org.eclipse.osgi;bundle-version="3.3.0"

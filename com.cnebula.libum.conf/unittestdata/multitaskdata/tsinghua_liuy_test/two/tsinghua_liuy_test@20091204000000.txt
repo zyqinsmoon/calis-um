@@ -1,0 +1,12 @@
+﻿123456	1pkukahao12	152301199903202030	1	true	1ww@ss.com	true	13911112222	2020-01-01	zhangsan	m	所属学院	系	专业	1	地址在那里啊地址在哪里	010010	local_111111111	20091010101010	1980-01-01	4	111
+123456	1pkukahao12	152301199903202030	1	true	1ww@ss.com	true	13911112222	2020-01-01	zhangsan	m	所属学院	系	专业	1	地址在那里啊地址在哪里	010010	local_111111111	20091010101010	1980-01-01	4	ryy
+123456	null	152301199903202030	1	true	1ww@ss.com	true	13911112222	2020-01-01	zhangsan	m	所属学院	系	专业	1	地址在那里啊地址在哪里	010010	local_111111111	null	null	4	fh
+123456	1pasaas12	null	null	true	1ww@ss.com	true	13911112222	2020-01-01	zhangsan	m	所属学院	系	专业	1	地址在那里啊地址在哪里	010010	local_111111111	null	null	4	ddd
+123456	1pasaas12	23232323232323	null	true	1ww@ss.com	true	13911112222	2020-01-01	zhangsan	m	所属学院	系	专业	1	地址在那里啊地址在哪里	010010	local_111111111	null	null	4	hjws
+123456	1trhjhjh548	152301199903202030	1	true	1ww@ss.com	true	13911112222	2020-01-01	zhangsan	m	所属学院	系	专业	1	地址在那里啊地址在哪里	010010	local_111111111	null	null	4	dhsd
+123456	1trhjhjh548	111111111111111130	1	trueee	1ww@ss.com	true	13911112222	2020-01-01	zhangsan	m	所属学院	系	专业	1	地址在那里啊地址在哪里	010010	local_111111111	null	null	4	fn
+123456	1trhjhjh548	111111111111111130	1	true	null	true	13911112222	2020-01-01	zhangsan	m	所属学院	系	专业	1	地址在那里啊地址在哪里	010010	local_111111111	null	null	4	cddfdg
+123456	1tsssssssss	114444444441111130	1	true	null	true	null	null	zhangsan	m	所属学院	系	专业	1	地址在那里啊地址在哪里	010010	local_111111111	null	null	4	fhjj
+123456	1nnnnnnnnnn	156778897676545440	1	true	null	true	null	null	null	m	所属学院	系	专业	1	地址在那里啊地址在哪里	010010	local_111111111	null	null	4	xxx
+123456	1nnnnnnnnnn	156778897676545440	1	true	null	true	null	null	null	女	所属学院	系	专业	1	地址在那里啊地址在哪里	010010	local_111111111	null	null	4	hhjj
+123456	1nnnnnnnnnn	156778897676545440	1	true	null	true	null	null	lisi	m	所属学院	系	专业	null	地址在那里啊地址在哪里	010010	local_111111111	null	null	4	fdff

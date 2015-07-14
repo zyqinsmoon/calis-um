@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<i18nMultiNamespace>
+
+	<singleNamespace
+		namespace="com.cnebula.um.ejb.entity.usr.cardStatus">
+		<item key="0" defaultLang="zh_CN">
+			<locale value="None(0)" lang="en_US" />
+			<locale value="注销(0)" lang="zh_CN" />
+		</item>
+		<item key="1" defaultLang="zh_CN">
+			<locale value="Stopped(1)" lang="en_US" />
+			<locale value="停用(1)" lang="zh_CN" />
+		</item>
+		<item key="2" defaultLang="zh_CN">
+			<locale value="Active(2)" lang="en_US" />
+			<locale value="启用(2)" lang="zh_CN" />
+		</item>
+		<item key="3" defaultLang="zh_CN">
+			<locale value="Reported the Loss(3)" lang="en_US" />
+			<locale value="已挂失(3)" lang="zh_CN" />
+		</item>
+	</singleNamespace>
+	
+	<singleNamespace
+		namespace="com.cnebula.um.ejb.entity.usr.UMPrincipalBackground">
+		<item key="1" defaultLang="zh_CN">
+			<locale value="高中(1)" lang="en_US" />
+			<locale value="高中(1)" lang="zh_CN" />
+		</item>
+		<item key="2" defaultLang="zh_CN">
+			<locale value="中专(2)" lang="en_US" />
+			<locale value="中专(2)" lang="zh_CN" />
+		</item>
+		<item key="3" defaultLang="zh_CN">
+			<locale value="大专(3)" lang="en_US" />
+			<locale value="大专(3)" lang="zh_CN" />
+		</item>
+		<item key="4" defaultLang="zh_CN">
+			<locale value="本科(4)" lang="en_US" />
+			<locale value="本科(4)" lang="zh_CN" />
+		</item>
+		<item key="5" defaultLang="zh_CN">
+			<locale value="硕士(5)" lang="en_US" />
+			<locale value="硕士(5)" lang="zh_CN" />
+		</item>
+		<item key="6" defaultLang="zh_CN">
+			<locale value="博士(6)" lang="en_US" />
+			<locale value="博士(6)" lang="zh_CN" />
+		</item>
+		<item key="7" defaultLang="zh_CN">
+			<locale value="博士后(7)" lang="en_US" />
+			<locale value="博士后(7)" lang="zh_CN" />
+		</item>
+	</singleNamespace>
+	
+<!-- 
+9998 ##### ## Y 10.00                   换卡工本费
+0021 MELEC 13 Y 20.00                   电子图书借阅权限开通费用
+0061 NJL50 12 Y 100.00                  中文借阅证押金
+0062 NJL50 11 Y 400.00                  中外文借阅证押金
+0063 NJL50 81 Y 50.00                   少儿证押金
+0064 NJL50 21 N 0.00                    阅览证押金
+ -->	
+	<singleNamespace
+		namespace="com.cnebula.um.ejb.entity.usr.cashType">
+		
+		<item key="21" defaultLang="zh_CN">
+			<locale value="电子图书借阅权限开通费用(21)" lang="en_US" />
+			<locale value="电子图书借阅权限开通费用(21)" lang="zh_CN" />
+		</item>
+		<item key="61" defaultLang="zh_CN">
+			<locale value="中文借阅证押金(61)" lang="en_US" />
+			<locale value="中文借阅证押金(61)" lang="zh_CN" />
+		</item>
+		<item key="62" defaultLang="zh_CN">
+			<locale value="中外文借阅证押金(62)" lang="en_US" />
+			<locale value="中外文借阅证押金(62)" lang="zh_CN" />
+		</item>
+		<item key="63" defaultLang="zh_CN">
+			<locale value="少儿证押金(63)" lang="en_US" />
+			<locale value="少儿证押金(63)" lang="zh_CN" />
+		</item>
+		<item key="64" defaultLang="zh_CN">
+			<locale value="阅览证押金(64)" lang="en_US" />
+			<locale value="阅览证押金(64)" lang="zh_CN" />
+		</item>
+	</singleNamespace>
+	
+	<singleNamespace
+		namespace="com.cnebula.um.ejb.entity.usr.cashStatus">
+		<item key="1" defaultLang="zh_CN">
+			<locale value="Credit(1)" lang="en_US" />
+			<locale value="缴纳(1)" lang="zh_CN" />
+		</item>
+		<item key="2" defaultLang="zh_CN">
+			<locale value="Debit(2)" lang="en_US" />
+			<locale value="退还(2)" lang="zh_CN" />
+		</item>
+	</singleNamespace>
+
+
+	<singleNamespace
+		namespace="com.cnebula.um.ejb.entity.usr.UMPrincipalStatus">
+		<item key="0" defaultLang="zh_CN">
+			<locale value="None(0)" lang="en_US" />
+			<locale value="注销(0)" lang="zh_CN" />
+		</item>
+		<item key="1" defaultLang="zh_CN">
+			<locale value="Stopped(1)" lang="en_US" />
+			<locale value="停用(1)" lang="zh_CN" />
+		</item>
+		<item key="2" defaultLang="zh_CN">
+			<locale value="Active(2)" lang="en_US" />
+			<locale value="启用(2)" lang="zh_CN" />
+		</item>
+		<item key="3" defaultLang="zh_CN">
+			<locale value="Wait for Verfying(3)" lang="en_US" />
+			<locale value="待审核(3)" lang="zh_CN" />
+		</item>
+	</singleNamespace>
+		<!-- 
+BOR-TYPE             ##### L 学生                                               XS
+BOR-TYPE             ##### L 教师                                               JS 
+BOR-TYPE             ##### L 科研人员                                           KY                                        
+BOR-TYPE             ##### L 机关干部                                           GB
+BOR-TYPE             ##### L 医务人员                                           YW
+BOR-TYPE             ##### L 军人                                               JR 
+BOR-TYPE             ##### L 个体户                                             GT  
+BOR-TYPE             ##### L 馆内人员                                           ZG
+BOR-TYPE             ##### L 职员                                               ZY 
+BOR-TYPE             ##### L 工人                                               GR                                       
+BOR-TYPE             ##### L 农民                                               NM
+BOR-TYPE             ##### L 文艺工作者                                         WY
+BOR-TYPE             ##### L 私营业主                                           SY
+BOR-TYPE             ##### L 待业人员                                           DY
+BOR-TYPE             ##### L 港澳台胞                                           QB
+BOR-TYPE             ##### L 外籍人员                                           WJ
+BOR-TYPE             ##### L 其他             
+	 -->
+	 <!--  
+	<singleNamespace
+		namespace="com.cnebula.um.ejb.entity.usr.UMPrincipalUserTypes">
+		<item key="1" defaultLang="zh_CN">
+			<locale value="学生(1)" lang="en_US" />
+			<locale value="学生(1)" lang="zh_CN" />
+		</item>
+		<item key="2" defaultLang="zh_CN">
+			<locale value="教师 (2)" lang="en_US" />
+			<locale value="教师 (2)" lang="zh_CN" />
+		</item>
+		<item key="3" defaultLang="zh_CN">
+			<locale value="科研人员(3)" lang="en_US" />
+			<locale value="科研人员(3)" lang="zh_CN" />
+		</item>
+		<item key="4" defaultLang="zh_CN">
+			<locale value="机关干部(4)" lang="en_US" />
+			<locale value="机关干部(4)" lang="zh_CN" />
+		</item>
+		<item key="5" defaultLang="zh_CN">
+			<locale value="医务人员(5)" lang="en_US" />
+			<locale value="医务人员(5)" lang="zh_CN" />
+		</item>
+		<item key="6" defaultLang="zh_CN">
+			<locale value="军人(6)" lang="en_US" />
+			<locale value="军人(6)" lang="zh_CN" />
+		</item>
+		<item key="7" defaultLang="zh_CN">
+			<locale value="个体户(7)" lang="en_US" />
+			<locale value="个体户(7)" lang="zh_CN" />
+		</item>
+		<item key="8" defaultLang="zh_CN">
+			<locale value="馆内人员(8)" lang="en_US" />
+			<locale value="馆内人员(8)" lang="zh_CN" />
+		</item>
+		<item key="9" defaultLang="zh_CN">
+			<locale value="职员(9)" lang="en_US" />
+			<locale value="职员(9)" lang="zh_CN" />
+		</item>
+		<item key="10" defaultLang="zh_CN">
+			<locale value="工人(10)" lang="en_US" />
+			<locale value="工人(10)" lang="zh_CN" />
+		</item>
+		<item key="11" defaultLang="zh_CN">
+			<locale value="农民(11)" lang="en_US" />
+			<locale value="农民(11)" lang="zh_CN" />
+		</item>
+		<item key="12" defaultLang="zh_CN">
+			<locale value="文艺工作者(12)" lang="en_US" />
+			<locale value="文艺工作者(12)" lang="zh_CN" />
+		</item>
+		<item key="13" defaultLang="zh_CN">
+			<locale value="私营业主 (13)" lang="en_US" />
+			<locale value="私营业主 (13)" lang="zh_CN" />
+		</item>
+		<item key="14" defaultLang="zh_CN">
+			<locale value="待业人员(14)" lang="en_US" />
+			<locale value="待业人员(14)" lang="zh_CN" />
+		</item>
+		<item key="15" defaultLang="zh_CN">
+			<locale value="港澳台胞(15)" lang="en_US" />
+			<locale value="港澳台胞(15)" lang="zh_CN" />
+		</item>
+		<item key="16" defaultLang="zh_CN">
+			<locale value="外籍人员(16)" lang="en_US" />
+			<locale value="外籍人员(16)" lang="zh_CN" />
+		</item>
+		<item key="50" defaultLang="zh_CN">
+			<locale value="其他(50)" lang="en_US" />
+			<locale value="其他(50)" lang="zh_CN" />
+		</item>
+	</singleNamespace>
+	-->
+	<!--  
+	<singleNamespace namespace="com.cnebula.um.ejb.entity.usr.cardType">
+		<item key="11" defaultLang="zh_CN">
+			<locale value="Type A(1)" lang="en_US" />
+			<locale value="A类读者(11)" lang="zh_CN" />
+		</item>
+		<item key="12" defaultLang="zh_CN">
+			<locale value="Type B(12)" lang="en_US" />
+			<locale value="B类读者(12)" lang="zh_CN" />
+		</item>
+		<item key="21" defaultLang="zh_CN">
+			<locale value="General(21)" lang="en_US" />
+			<locale value="普通读者(21)" lang="zh_CN" />
+		</item>
+		<item key="31" defaultLang="zh_CN">
+			<locale value="VIP(31)" lang="en_US" />
+			<locale value="特许VIP证(31)" lang="zh_CN" />
+		</item>
+		<item key="41" defaultLang="zh_CN">
+			<locale value="Offical Card(41)" lang="en_US" />
+			<locale value="公务证(41)" lang="zh_CN" />
+		</item>
+		<item key="51" defaultLang="zh_CN">
+			<locale value="Inner Staff Card(51)" lang="en_US" />
+			<locale value="馆内职工证(51)" lang="zh_CN" />
+		</item>
+		<item key="61" defaultLang="zh_CN">
+			<locale value="Inner Staff Group Card(61)" lang="en_US" />
+			<locale value="馆内集体证(61)" lang="zh_CN" />
+		</item>
+		<item key="71" defaultLang="zh_CN">
+			<locale value="活动奖励证(71)" lang="en_US" />
+			<locale value="活动奖励证(71)" lang="zh_CN" />
+		</item>
+		<item key="81" defaultLang="zh_CN">
+			<locale value="少儿借阅证(81)" lang="en_US" />
+			<locale value="少儿借阅证(81)" lang="zh_CN" />
+		</item>
+		<item key="13" defaultLang="zh_CN">
+			<locale value="电子图书借阅权限(13)" lang="en_US" />
+			<locale value="电子图书借阅权限(13)" lang="zh_CN" />
+		</item>
+		<item key="32" defaultLang="zh_CN">
+			<locale value="人文之光(32)" lang="en_US" />
+			<locale value="人文之光(32)" lang="zh_CN" />
+		</item>
+	</singleNamespace>
+-->
+<!-- 
+	<singleNamespace
+		namespace="com.cnebula.um.ejb.entity.usr.idCardType">
+		
+		<item key="2" defaultLang="zh_CN">
+			<locale value="ID Card(2)" lang="en_US" />
+			<locale value="身份证(2)" lang="zh_CN" />
+		</item>
+	
+		<item key="4" defaultLang="zh_CN">
+			<locale value="Officer Card(4)" lang="en_US" />
+			<locale value="军官证(4)" lang="zh_CN" />
+		</item>
+		
+		<item key="5" defaultLang="zh_CN">
+			<locale value="Personal Identification Number(5)" lang="en_US" />
+			<locale value="个人识别号PIN(5)" lang="zh_CN" />
+		</item>
+		<item key="6" defaultLang="zh_CN">
+			<locale value="护照号(6)" lang="en_US" />
+			<locale value="Passport(6)" lang="zh_CN" />
+		</item>
+		<item key="1" defaultLang="zh_CN">
+			<locale value="Library Card(1)" lang="en_US" />
+			<locale value="图书卡(1)" lang="zh_CN" />
+		</item>
+		
+		<item key="6" defaultLang="zh_CN">
+			<locale value="Passport(6)" lang="en_US" />
+			<locale value="护照号(6)" lang="zh_CN" />
+		</item>
+		<item key="9" defaultLang="zh_CN">
+			<locale value="Other ID(9)" lang="en_US" />
+			<locale value="其他标识(9)" lang="zh_CN" />
+		</item>
+		<item key="3" defaultLang="zh_CN">
+			<locale value="Student Card(3)" lang="en_US" />
+			<locale value="学生证(3)" lang="zh_CN" />
+		</item>
+	</singleNamespace>
+	 -->
+	<singleNamespace
+		namespace="com.cnebula.um.ejb.entity.usr.idCardUpdateType">
+		<item key="0" defaultLang="zh_CN">
+			<locale value="Hidden(0)" lang="en_US" />
+			<locale value="不可见(0)" lang="zh_CN" />
+		</item>
+		<item key="1" defaultLang="zh_CN">
+			<locale value="Read Only(1)" lang="en_US" />
+			<locale value="只读(1)" lang="zh_CN" />
+		</item>
+		<item key="2" defaultLang="zh_CN">
+			<locale value="Only Password Updatable(2)" lang="en_US" />
+			<locale value="仅密码可更改(2)" lang="zh_CN" />
+		</item>
+		<item key="3" defaultLang="zh_CN">
+			<locale value="Only Id Updatable(3)" lang="en_US" />
+			<locale value="仅条码可更改(3)" lang="zh_CN" />
+		</item>
+		<item key="4" defaultLang="zh_CN">
+			<locale value="Updatable(4)" lang="en_US" />
+			<locale value="可更改(4)" lang="zh_CN" />
+		</item>
+	</singleNamespace>
+
+	<singleNamespace
+		namespace="com.cnebula.um.ejb.entity.usr.idCardLoginType">
+		<item key="0" defaultLang="zh_CN">
+			<locale value="Login Desabled(0)" lang="en_US" />
+			<locale value="不可登录(0)" lang="zh_CN" />
+		</item>
+		<item key="1" defaultLang="zh_CN">
+			<locale value="Login by ID(1)" lang="en_US" />
+			<locale value="可仅凭条码登录(1)" lang="zh_CN" />
+		</item>
+		<item key="2" defaultLang="zh_CN">
+			<locale value="Login by ID and Password(2)" lang="en_US" />
+			<locale value="凭条码和密码登录(2)" lang="zh_CN" />
+		</item>
+	</singleNamespace>
+
+	<singleNamespace
+		namespace="com.cnebula.um.ejb.entity.perm.roleType">
+		<item key="0" defaultLang="zh_CN">
+			<locale value="Exclusive(0)" lang="en_US" />
+			<locale value="扣权(0)" lang="zh_CN" />
+		</item>
+		<item key="1" defaultLang="zh_CN">
+			<locale value="Normal(1)" lang="en_US" />
+			<locale value="正常(1)" lang="zh_CN" />
+		</item>
+	</singleNamespace>
+
+	<!-- 补充ejb.manage/ otherEntity中 -->
+	<singleNamespace namespace="com.cnebula.perm.Operation.Names">
+	
+	
+		<item key="allInOneCreate" defaultLang="zh_CN">
+			<locale value="hotKey Create" lang="en_US" />
+			<locale value="快捷办理" lang="zh_CN" />
+		</item>
+		<item key="allInOneCreate/image" defaultLang="zh_CN">
+			<locale value="/UM/allInOneCreate.png" lang="zh_CN" />
+		</item>
+	
+		<item key="allInOneCreate/image48" defaultLang="zh_CN">
+			<locale value="/UM/allInOneCreate48.png" lang="zh_CN" />
+		</item>
+		
+		<item key="batchCreate" defaultLang="zh_CN">
+			<locale value="Batch Create" lang="en_US" />
+			<locale value="批量办证" lang="zh_CN" />
+		</item>
+		<item key="batchCreate/image" defaultLang="zh_CN">
+			<locale value="/UM/BatchCreate.png" lang="zh_CN" />
+		</item>
+	
+		<item key="batchCreate/image48" defaultLang="zh_CN">
+			<locale value="/UM/BatchCreate48.png" lang="zh_CN" />
+		</item>
+		
+	
+		<item key="reportLoss" defaultLang="zh_CN">
+			<locale value="reportLoss" lang="en_US" />
+			<locale value="挂失(reportLoss)" lang="zh_CN" />
+		</item>
+		<item key="reportLoss/image" defaultLang="zh_CN">
+			<locale value="/UM/reportLoss.png" lang="zh_CN" />
+		</item>
+		<item key="cancelReportLoss" defaultLang="zh_CN">
+			<locale value="cancelReportLoss" lang="en_US" />
+			<locale value="解除挂失(cancelReportLoss)" lang="zh_CN" />
+		</item>
+		
+		<item key="revokeCard" defaultLang="zh_CN">
+			<locale value="revokeCard" lang="en_US" />
+			<locale value="退卡(revokeCard)" lang="zh_CN" />
+		</item>
+		
+		<item key="revokeCard/image" defaultLang="zh_CN">
+			<locale value="/UM/revokeCard.png" lang="zh_CN" />
+		</item>
+		
+		<item key="cancelReportLoss/image" defaultLang="zh_CN">
+			<locale value="/UM/cancelReportLoss.png" lang="zh_CN" />
+		</item>
+		<item key="stop" defaultLang="zh_CN">
+			<locale value="stop" lang="en_US" />
+			<locale value="停用(stop)" lang="zh_CN" />
+		</item>
+		<item key="stop/image" defaultLang="zh_CN">
+			<locale value="/UM/stop.png" lang="zh_CN" />
+		</item>
+		<item key="verify" defaultLang="zh_CN">
+			<locale value="verify" lang="en_US" />
+			<locale value="审核(verify)" lang="zh_CN" />
+		</item>
+		<item key="verify/image" defaultLang="zh_CN">
+			<locale value="/UM/verify.png" lang="zh_CN" />
+		</item>
+		<item key="activate" defaultLang="zh_CN">
+			<locale value="activate" lang="en_US" />
+			<locale value="启用(activate)" lang="zh_CN" />
+		</item>
+		<item key="activate/image" defaultLang="zh_CN">
+			<locale value="/UM/activate.png" lang="zh_CN" />
+		</item>
+		<item key="loginByNamePassword" defaultLang="zh_CN">
+			<locale value="loginByNamePassword" lang="en_US" />
+			<locale value="用户名密码登录(loginByNamePassword)" lang="zh_CN" />
+		</item>
+		<item key="loginByIp" defaultLang="zh_CN">
+			<locale value="loginByIp" lang="en_US" />
+			<locale value="IP登录(loginByIp)" lang="zh_CN" />
+		</item>
+		<item key="logout" defaultLang="zh_CN">
+			<locale value="logout" lang="en_US" />
+			<locale value="注销(logout)" lang="zh_CN" />
+		</item>
+		<item key="logout" defaultLang="zh_CN">
+			<locale value="logout" lang="en_US" />
+			<locale value="注销(logout)" lang="zh_CN" />
+		</item>
+		<item key="logAnalyse" defaultLang="zh_CN">
+			<locale value="logAnalyse" lang="en_US" />
+			<locale value="日志统计(logAnalyse)" lang="zh_CN" />
+		</item>
+		<item key="logAnalyse/image" defaultLang="zh_CN">
+			<locale value="/UM/logAnalyse.png" lang="zh_CN" />
+		</item>
+		<item key="logAnalyse/image48" defaultLang="zh_CN">
+			<locale value="/UM/logAnalyse48.png" lang="zh_CN" />
+		</item>
+		<item key="changePassword" defaultLang="zh_CN">
+			<locale value="changePassword" lang="en_US" />
+			<locale value="修改密码(changePassword)" lang="zh_CN" />
+		</item>
+		<item key="changePassword/image" defaultLang="zh_CN">
+			<locale value="/UM/changePassword.png" lang="zh_CN" />
+		</item>
+		<item key="changePassword/image48" defaultLang="zh_CN">
+			<locale value="/UM/changePassword48.png" lang="zh_CN" />
+		</item>
+		<item key="import" defaultLang="zh_CN">
+			<locale value="Import Data" lang="en_US" />
+			<locale value="数据导入(Import Data)" lang="zh_CN" />
+		</item>
+		<item key="import/image" defaultLang="zh_CN">
+			<locale value="/UM/import.png" lang="zh_CN" />
+		</item>
+		<item key="import/image48" defaultLang="zh_CN">
+			<locale value="/UM/import48.png" lang="zh_CN" />
+		</item>
+		<item key="export" defaultLang="zh_CN">
+			<locale value="Export Data" lang="en_US" />
+			<locale value="数据导出(Export Data)" lang="zh_CN" />
+		</item>
+		<item key="export/image" defaultLang="zh_CN">
+			<locale value="/UM/export.png" lang="zh_CN" />
+		</item>
+		<item key="export/image48" defaultLang="zh_CN">
+			<locale value="/UM/export48.png" lang="zh_CN" />
+		</item>
+		
+		<item key="usrCashReport" defaultLang="zh_CN">
+			<locale value="User Cash" lang="en_US" />
+			<locale value="用户统计(User Cash)" lang="zh_CN" />
+		</item>
+		<item key="usrCashReport/image" defaultLang="zh_CN">
+			<locale value="/UM/usrCashReport.png" lang="zh_CN" />
+		</item>
+		<item key="logAnalyse/image48" defaultLang="zh_CN">
+			<locale value="/UM/usrCashReport48.png" lang="zh_CN" />
+		</item>
+		
+		
+		<item key="cardCashReport" defaultLang="zh_CN">
+			<locale value="User Cash" lang="en_US" />
+			<locale value="图书卡统计(User Cash)" lang="zh_CN" />
+		</item>
+		<item key="cardCashReport/image" defaultLang="zh_CN">
+			<locale value="/UM/cardCashReport.png" lang="zh_CN" />
+		</item>
+		<item key="cardCashReport/image48" defaultLang="zh_CN">
+			<locale value="/UM/cardCashReport48.png" lang="zh_CN" />
+		</item>
+		
+		<item key="lossCardCashReport" defaultLang="zh_CN">
+			<locale value="User Cash" lang="en_US" />
+			<locale value="挂失卡统计(User Cash)" lang="zh_CN" />
+		</item>
+		<item key="lossCardCashReport/image" defaultLang="zh_CN">
+			<locale value="/UM/lossCardCashReport.png" lang="zh_CN" />
+		</item>
+		<item key="lossCardCashReport/image48" defaultLang="zh_CN">
+			<locale value="/UM/lossCardCashReport.png" lang="zh_CN" />
+		</item>
+		
+		<item key="stopCardCashReport" defaultLang="zh_CN">
+			<locale value="User Cash" lang="en_US" />
+			<locale value="已退卡统计(User Cash)" lang="zh_CN" />
+		</item>
+		<item key="stopCardCashReport/image" defaultLang="zh_CN">
+			<locale value="/UM/stopCardCashReport.png" lang="zh_CN" />
+		</item>
+		<item key="stopCardCashReport/image48" defaultLang="zh_CN">
+			<locale value="/UM/stopCardCashReport48.png" lang="zh_CN" />
+		</item>
+		
+		<item key="creditCash" defaultLang="zh_CN">
+			<locale value="Credit Cash" lang="en_US" />
+			<locale value="缴纳押金" lang="zh_CN" />
+		</item>
+		<item key="creditCash/image" defaultLang="zh_CN">
+			<locale value="/UM/creditCash.png" lang="zh_CN" />
+		</item>
+		<item key="creditCash/image48" defaultLang="zh_CN">
+			<locale value="/UM/creditCash48.png" lang="zh_CN" />
+		</item>
+		
+		
+		<item key="debitCash" defaultLang="zh_CN">
+			<locale value="Debit Cash" lang="en_US" />
+			<locale value="退还押金" lang="zh_CN" />
+		</item>
+		<item key="debitCash/image" defaultLang="zh_CN">
+			<locale value="/UM/debitCash.png" lang="zh_CN" />
+		</item>
+		<item key="debitCash/image48" defaultLang="zh_CN">
+			<locale value="/UM/debitCash48.png" lang="zh_CN" />
+		</item>
+		
+	</singleNamespace>
+	<singleNamespace namespace="com.cnebula.adminUI.statistics">
+		<item key="count(id)" defaultLang="zh_CN">
+			<locale value="Total NUmber" lang="en_US" />
+			<locale value="总数" lang="zh_CN" />
+		</item>
+		<item key="Dimension" defaultLang="zh_CN">
+			<locale value="Dimension" lang="en_US" />
+			<locale value="维度" lang="zh_CN" />
+		</item>
+		<item key="Resource" defaultLang="zh_CN">
+			<locale value="Resource" lang="en_US" />
+			<locale value="资源" lang="zh_CN" />
+		</item>
+		<item key="TimeRange" defaultLang="zh_CN">
+			<locale value="TimeRange" lang="en_US" />
+			<locale value="时间范围" lang="zh_CN" />
+		</item>
+		<item key="StartDate" defaultLang="zh_CN">
+			<locale value="Start Date" lang="en_US" />
+			<locale value="起始日期" lang="zh_CN" />
+		</item>
+		<item key="EndDate" defaultLang="zh_CN">
+			<locale value="End Date" lang="en_US" />
+			<locale value="结束日期" lang="zh_CN" />
+		</item>
+		<item key="ResourceOperationConstraint" defaultLang="zh_CN">
+			<locale value="Resource Operation Constraint" lang="en_US" />
+			<locale value="资源操作约束" lang="zh_CN" />
+		</item>
+		<item key="ResourceType" defaultLang="zh_CN">
+			<locale value="Resource Type" lang="en_US" />
+			<locale value="资源类型" lang="zh_CN" />
+		</item>
+		<item key="OperationType" defaultLang="zh_CN">
+			<locale value="Operation Type" lang="en_US" />
+			<locale value="操作类型" lang="zh_CN" />
+		</item>
+		<item key="StatisticsConstraint" defaultLang="zh_CN">
+			<locale value="Statistics Constraint" lang="en_US" />
+			<locale value="统计约束" lang="zh_CN" />
+		</item>
+		<item key="StatisticsNumber" defaultLang="zh_CN">
+			<locale value="Statistics Number" lang="en_US" />
+			<locale value="统计总数" lang="zh_CN" />
+		</item>
+		<item key="Execute" defaultLang="zh_CN">
+			<locale value="Execute" lang="en_US" />
+			<locale value="执行统计" lang="zh_CN" />
+		</item>
+		<item key="OperationStatus" defaultLang="zh_CN">
+			<locale value="Operation Status" lang="en_US" />
+			<locale value="操作状态" lang="zh_CN" />
+		</item>
+	</singleNamespace>
+	<singleNamespace
+		namespace="com.cnebula.adminUI.statistics.TimeGradType">
+
+		<!--  Time_Grad_Items = {"","Year", "Month", "Week", "Day"};-->
+		<item key="Year" defaultLang="zh_CN">
+			<locale value="Year" lang="en_US" />
+			<locale value="年" lang="zh_CN" />
+		</item>
+		<item key="Month" defaultLang="zh_CN">
+			<locale value="Month" lang="en_US" />
+			<locale value="月" lang="zh_CN" />
+		</item>
+		<item key="Week" defaultLang="zh_CN">
+			<locale value="Week" lang="en_US" />
+			<locale value="周" lang="zh_CN" />
+		</item>
+		<item key="Day" defaultLang="zh_CN">
+			<locale value="Day" lang="en_US" />
+			<locale value="日" lang="zh_CN" />
+		</item>
+		<item key="YearMonth" defaultLang="zh_CN">
+			<locale value="YearMonth" lang="en_US" />
+			<locale value="年月" lang="zh_CN" />
+		</item>
+		<item key="YearWeek" defaultLang="zh_CN">
+			<locale value="YearWeek" lang="en_US" />
+			<locale value="年周" lang="zh_CN" />
+		</item>
+		<item key="YearDay" defaultLang="zh_CN">
+			<locale value="YearDay" lang="en_US" />
+			<locale value="年日" lang="zh_CN" />
+		</item>
+	</singleNamespace>
+	<singleNamespace
+		namespace="com.cnebula.adminUI.statistics.ResGradType">
+		<item key="Type" defaultLang="zh_CN">
+			<locale value="Type" lang="en_US" />
+			<locale value="类型" lang="zh_CN" />
+		</item>
+		<item key="Instance" defaultLang="zh_CN">
+			<locale value="Instance" lang="en_US" />
+			<locale value="实例" lang="zh_CN" />
+		</item>
+	</singleNamespace>
+	<singleNamespace
+		namespace="com.cnebula.adminUI.statistics.StatusType">
+
+		<item key="0" defaultLang="zh_CN">
+			<locale value="normal" lang="en_US" />
+			<locale value="正常" lang="zh_CN" />
+		</item>
+		<item key="-6" defaultLang="zh_CN">
+			<locale value="fail" lang="en_US" />
+			<locale value="失败" lang="zh_CN" />
+		</item>
+		<item key="-1" defaultLang="zh_CN">
+			<locale value="No Permission" lang="en_US" />
+			<locale value="没有权限" lang="zh_CN" />
+		</item>
+		<item key="-2" defaultLang="zh_CN">
+			<locale value="No Cascade Permission" lang="en_US" />
+			<locale value="没有级联权限" lang="zh_CN" />
+		</item>
+		<item key="-3" defaultLang="zh_CN">
+			<locale value="General Error" lang="en_US" />
+			<locale value="一般错误" lang="zh_CN" />
+		</item>
+		<item key="-4" defaultLang="zh_CN">
+			<locale value="Cascade Error" lang="en_US" />
+			<locale value="级联错误" lang="zh_CN" />
+		</item>
+		<item key="-5" defaultLang="zh_CN">
+			<locale value="Dependency" lang="en_US" />
+			<locale value="依赖错误" lang="zh_CN" />
+		</item>
+	</singleNamespace>
+	<singleNamespace
+		namespace="com.cnebula.um.entity.generalop">
+
+		<item key="create" defaultLang="zh_CN">
+			<locale value="create" lang="en_US" />
+			<locale value="创建" lang="zh_CN" />
+		</item>
+		<item key="delete" defaultLang="zh_CN">
+			<locale value="delete" lang="en_US" />
+			<locale value="删除" lang="zh_CN" />
+		</item>
+		<item key="update" defaultLang="zh_CN">
+			<locale value="update" lang="en_US" />
+			<locale value="更新" lang="zh_CN" />
+		</item>
+		<item key="view" defaultLang="zh_CN">
+			<locale value="view" lang="en_US" />
+			<locale value="查看" lang="zh_CN" />
+		</item>
+		
+	</singleNamespace>
+
+	<singleNamespace
+	
+	
+		namespace="com.cnebula.um.entity.importMode">
+
+		<item key="1" defaultLang="zh_CN">
+			<locale value="Create All" lang="en_US" />
+			<locale value="全新创建" lang="zh_CN" />
+		</item>
+		<item key="2" defaultLang="zh_CN">
+			<locale value="Update Basic Attributes" lang="en_US" />
+			<locale value="基本属性更新" lang="zh_CN" />
+		</item>
+		<item key="3" defaultLang="zh_CN">
+			<locale value="Update All" lang="en_US" />
+			<locale value="完全更新" lang="zh_CN" />
+		</item>
+		<item key="5" defaultLang="zh_CN">
+			<locale value="Append" lang="en_US" />
+			<locale value="追加更新" lang="zh_CN" />
+		</item>
+		
+	</singleNamespace>
+	
+	<singleNamespace
+	
+		namespace="com.cnebula.common.data.import">
+
+		<item key="simple" defaultLang="zh_CN">
+			<locale value="Simple Data" lang="en_US" />
+			<locale value="简单数据" lang="zh_CN" />
+		</item>
+		<item key="general" defaultLang="zh_CN">
+			<locale value="General Data" lang="en_US" />
+			<locale value="一般数据" lang="zh_CN" />
+		</item>
+		<item key="full" defaultLang="zh_CN">
+			<locale value="Detail Data" lang="en_US" />
+			<locale value="详细数据" lang="zh_CN" />
+		</item>
+		
+	</singleNamespace>
+	
+	<!--
+	* 密码方案：
+	 * 1，原始密码
+	 * 2，身份证后六位
+	 * 3，电子邮件找回
+	 * 4，姓名+生日
+	-->
+		<singleNamespace
+		namespace="com.cnebula.um.ejb.entity.syn.MultiSynTaskConfigInfo.passwordType">
+		<item key="1" defaultLang="zh_CN">
+			<locale value="Old password(1)" lang="en_US" />
+			<locale value="原始密码(1)" lang="zh_CN" />
+		</item>
+		<item key="2" defaultLang="zh_CN">
+			<locale value="Last six word of ID card" lang="en_US" />
+			<locale value="身份证后六位(2)" lang="zh_CN" />
+		</item>
+		<item key="3" defaultLang="zh_CN">
+			<locale value="Find by email(3)" lang="en_US" />
+			<locale value="电子邮件找回(3)" lang="zh_CN" />
+		</item>
+		<item key="4" defaultLang="zh_CN">
+			<locale value="Name+birthday(4)" lang="en_US" />
+			<locale value="姓名+生日(4)" lang="zh_CN" />
+		</item>
+	</singleNamespace>
+
+</i18nMultiNamespace>

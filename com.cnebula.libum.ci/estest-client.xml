@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Build Core" default="es.unit.test">
+	
+	<import file="build-util_1_0.xml"/>
+	
+	<property file="preset.properties"></property>
+	
+	<property file="${BUILD_PROPERTY_LOCATION}"></property>
+	
+	<property file="${local.root}/local-build.properties"></property>
+	
+	<property file="build-global.properties"></property>
+	
+	<target name="es.unit.test" >
+			<es.junit/> 
+	</target>
+	
+</project>
