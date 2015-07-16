@@ -4,14 +4,17 @@
 	<cfg confPoint="com.cnebula.common.ejb.IDataSourceService">
 		<DataSourceServiceCfg version="1.0">
 			<dataSources>
-				<!-- 本系统基本数据库配置 -->
-				<dataSource type="h2" url="jdbc:h2:~/h2dbs/um;CACHE_SIZE=40960"
-					user="sa" password="" maxConnections="20"
+				本系统基本数据库配置
+				<dataSource type="mysql" host="#{db_host}" database="#{db_sid}"
+					user="#{db_user}" password="#{db_password}" maxConnections="20"
 					minConnections="5" maxPrepareStmtCacheSize="0"
 					jndiName="java:comp/env/jdbc/calisumDS" 
 					dirverClassLibPath="jdbcDrivers/default">
 					<extensions>
 						<property name="toplink.logging.level" value="INFO" />
+<!--						           <property name="toplink.logging.level" value="FINE" />-->
+<!--						           <property name="toplink.ddl-generation" value="create-tables" />-->
+<!--						           <property name="toplink.ddl-generation.output-mode" value="database"/>-->
 					</extensions>
 				</dataSource>
 			</dataSources>

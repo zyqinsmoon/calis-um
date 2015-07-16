@@ -3,7 +3,7 @@
 	<targetDefinition>
 		<target id="ft" type="file">
 			<paramList>
-				<param name="rootdir" value="../com.cnebula.nebulet.local/deploy/instance" />
+				<param name="rootdir" value="./log" />
 			</paramList>
 			<formatter type="fieldList" />
 		</target>
@@ -26,7 +26,6 @@
 				<!--
 					见http://192.168.2.212:8080/hudson/view/Nebula%E5%B9%B3%E5%8F%B0/job/cnebula_platform_doc/ws/ejb/ejbHistory.htm
 				-->
-				<package name="com.cnebula.common.ejb.impl" filter="info" />
 				<package name="com.atomikos" filter="error" />
 			</packageList>
 			<targetList>

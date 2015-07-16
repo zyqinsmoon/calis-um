@@ -162,7 +162,7 @@ ALTER TABLE PERM_DelegateAuth ADD CONSTRAINT PERM_DGAUTH_SAAS_TENANT_id FOREIGN 
 
 ALTER TABLE um_role add code VARCHAR(255);
 ALTER TABLE UM_Principle add userGroup NUMERIC(10);
-ALTER TABLE UM_Principle add maxConcurrentNUMERIC NUMERIC(10);
+ALTER TABLE UM_Principle add maxConcurrentNumber NUMERIC(10);
 ALTER TABLE UM_Principle add background NUMERIC(10);
 ALTER TABLE UM_Principle add directlyUser NUMERIC(1) default 0;
 ALTER TABLE UM_Principle add collegeName VARCHAR(255);

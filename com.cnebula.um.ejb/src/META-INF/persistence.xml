@@ -47,6 +47,7 @@
 			<property name="toplink.logging.level" value="INFO" />
 			<property name="toplink.target-database" value="PostgreSQL" />
 			<property name="toplink.target-database" value="Oracle" />
+			<property name="toplink.target-database" value="MySQL" />
 			<property name="toplink.target-database"
 				value="oracle.toplink.essentials.platform.database.H2Platform" />
 			<!-- start postgresSQL创建表 -->
