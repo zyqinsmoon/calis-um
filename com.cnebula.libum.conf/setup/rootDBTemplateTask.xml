@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SQLTaskConfig name="initDB" datasource="java:/comp/env/jdbc/calisumDS">
 	<SQLTask name="UM initial sql task" cancelCondition="select 1 from SEQ_EntityIdGenerator">
-		<ddl file="setup/createAll.sql" charset="UTF-8"/>
-		<ddl file="setup/initData.sql" charset="UTF-8" lineBreaker="newline" template="/setup/sqltplt/initData.sql.tplt.properties"/>
-		<ddl file="setup/ci-support.sql" charset="UTF-8" ></ddl>
-		<ddl file="setup/initUM.sql" charset="UTF-8"></ddl>
+		<ddl file="setup/mysql/createAll.sql" charset="UTF-8"/>
+		<ddl file="setup/mysql/initData.sql" charset="UTF-8" lineBreaker="newline" template="/setup/sqltplt/initData.sql.tplt.properties"/>
+		<ddl file="setup/mysql/ci-support.sql" charset="UTF-8" ></ddl>
+		<ddl file="setup/mysql/initUM.sql" charset="UTF-8"></ddl>
 	</SQLTask>
 </SQLTaskConfig>
